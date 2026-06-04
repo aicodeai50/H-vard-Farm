@@ -4,7 +4,7 @@ Profesjonell nettside for Søndre Haugen gård: bryllup, selskaper, gårdsopplev
 
 ## Deploy (Railway — anbefalt)
 
-1. [railway.app](https://railway.app) → **New Project** → GitHub → `havard50/H-vard-Farm`
+1. [railway.app](https://railway.app) → **New Project** → GitHub → `aicodeai50/H-vard-Farm`
 2. **Root Directory:** `website`
 3. Railway kjører `npm start` (statisk server via `serve`)
 4. **Custom domain:** `farm.legal` under Networking

@@ -8,6 +8,7 @@ const SITE = {
   emailBobil: "Bobil@sondrehaugen.no",
   address: "Søndre Haugen gård, 2436 Våler i Østfold",
   domain: "farm.legal",
+  url: "https://farm.legal",
 };
 
 function headerHTML(active = "", transparent = false) {
@@ -77,8 +78,8 @@ function footerHTML() {
       <p style="margin-top:0.75rem;font-size:0.9rem;opacity:0.85">${SITE.address}</p>
     </div>
     <div>
-      <h4>Domene</h4>
-      <a href="https://${SITE.domain}">${SITE.domain}</a>
+      <h4>Nettsted</h4>
+      <a href="${SITE.url}">${SITE.domain}</a>
       <a href="nyheter.html">Nyheter</a>
       <a href="kontakt.html">Book visning</a>
     </div>

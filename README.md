@@ -1,6 +1,8 @@
 # Håvard-Farm — Søndre Haugen gård
 
-## Nettside (farm.legal)
+**Offisielt domene:** https://farm.legal
+
+## Nettside
 
 Den ferdige nettsiden ligger i mappen **`website/`**.
 
