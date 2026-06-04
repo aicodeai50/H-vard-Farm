@@ -13,7 +13,7 @@
   --white: #ffffff;
   --shadow: 0 4px 24px rgba(44, 36, 25, 0.1);
   --shadow-lg: 0 12px 48px rgba(26, 60, 52, 0.16);
-  --gradient-hero: linear-gradient(165deg, rgba(26, 60, 52, 0.72) 0%, rgba(44, 36, 25, 0.82) 100%);
+  --gradient-hero: linear-gradient(165deg, rgba(26, 60, 52, 0.52) 0%, rgba(44, 36, 25, 0.62) 100%);
   --gradient-cta: linear-gradient(135deg, #1a3c34 0%, #2c2419 55%, #3d2e35 100%);
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-script: "Pinyon Script", cursive;
@@ -413,7 +413,7 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 }
 
 .hero-bg--bryllup {
-  background: var(--gradient-hero), url("../assets/images/property/barn-exterior-red.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/hero-barn.jpg") center/cover no-repeat;
 }
 
 .hero-bg--selskap {
@@ -425,7 +425,7 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 }
 
 .hero-bg--om {
-  background: var(--gradient-hero), url("../assets/images/property/grounds.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/farm-landscape.jpg") center/cover no-repeat;
 }
 
 .prose-home {
@@ -539,7 +539,8 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   width: min(200px, 40vw);
   margin: 0 auto 2rem;
   border-radius: 50%;
-  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.35));
+  filter: drop-shadow(0 6px 28px rgba(0, 0, 0, 0.45));
+  box-shadow: 0 0 0 4px rgba(246, 239, 228, 0.25);
 }
 
 .hero-buttons {
@@ -1401,9 +1402,11 @@ textarea { min-height: 140px; resize: vertical; }
 }
 
 .hero-logo-large {
-  width: min(260px, 55vw);
-  margin: 0 auto 1.5rem;
-  filter: drop-shadow(0 6px 28px rgba(0,0,0,0.4));
+  width: min(280px, 58vw);
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  filter: drop-shadow(0 8px 36px rgba(0, 0, 0, 0.5));
+  box-shadow: 0 0 0 5px rgba(246, 239, 228, 0.3);
 }
 
 .section--cream {

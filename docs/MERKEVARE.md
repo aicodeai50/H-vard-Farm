@@ -8,9 +8,9 @@ Filer:
 
 Designet er **original vektorgrafikk** (ikke stock):
 
-- **Hexagonal skjold** — ikke rund signet/seal
-- **Haugen-knutt** — sammenhengende sti (monogram + port mellom «hauger»)
-- **Asymmetrisk møne** — fem ulike spisser
+- **Sirkelsegl** — gårdsillustrasjon (gul våningshus + rød låve) i sirkel
+- **Bue-tekst** — «SØNDRE HAUGEN» / «GÅRD · Svinndal»
+- **Tagline** — «BRYLLUP · SELSKAP · FEST»
 - **Hjerte** — signatur nederst
 
 ## Fargepalett — Nordic fireside

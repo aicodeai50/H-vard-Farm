@@ -1,16 +1,25 @@
 # Property photos
 
-Photos for the website focus on **the barn, outdoor areas, guest house, and motorhome parking** — not the main house interior.
+Cropped from FINN/WhatsApp gallery screenshots. Originals are kept in `_screenshots/`.
 
-Sources: listing gallery ([FINN 427386872](https://www.finn.no/realestate/homes/ad.html?finnkode=427386872)) for development. Replace with your own photography when ready.
+Regenerate after adding screenshots:
+
+```bash
+node scripts/crop-gallery-photos.js
+```
 
 | File | Use |
 |------|-----|
-| `barn-exterior.jpg` | Hero, gallery |
-| `barn-hall.jpg` | Barn event space |
-| `barn-event.jpg` | Culture / events |
-| `outdoor-barn.jpg` | Outdoor barn & weddings |
-| `guest-house.jpg` | Guest house |
-| `grounds.jpg` | Countryside / about page |
-| `area-wide.jpg` | Wide shot of the estate |
-| `motorhome-area.jpg` | Motorhome parking |
+| `hero-aerial.jpg` | Homepage hero background (drone) |
+| `hero-barn.jpg` | Bryllup page hero |
+| `barn-exterior-red.jpg` | Red barn exterior, gallery |
+| `farm-overview.jpg` | Farm aerial close-up |
+| `farm-landscape.jpg` | Wide estate / grounds |
+| `barn-dining.jpg` | Event hall interior |
+| `barn-hall-rustic.jpg` | Lounge / projector room |
+| `barn-games.jpg` | Games room |
+| `barn-lounge.jpg` | Chandelier hallway |
+| `guest-house.jpg` | Guest house kitchen |
+| `motorhome-garage.jpg` | Bobilhotell |
+
+**Note:** No main house (våningshus) interior until copy and photos are approved.

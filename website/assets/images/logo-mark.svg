@@ -1,12 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Søndre Haugen gård">
-  <defs>
-    <linearGradient id="mk-pine" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1a3c34"/>
-      <stop offset="100%" stop-color="#2d5a4f"/>
-    </linearGradient>
-  </defs>
-  <path d="M60 8 L104 34 L104 76 L60 102 L16 76 L16 34 Z" fill="#f6efe4" stroke="url(#mk-pine)" stroke-width="2"/>
-  <path d="M60 28 C48 28 40 38 40 50 C40 58 46 64 54 66 C40 70 32 80 32 92 C32 104 44 112 60 112 C76 112 88 104 88 92 C88 80 80 70 66 66 C74 64 80 58 80 50 C80 38 72 28 60 28 Z" fill="none" stroke="url(#mk-pine)" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M60 38 L60 98" stroke="#1a3c34" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="60" cy="22" r="3" fill="#c17f59"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Søndre Haugen">
+  <circle cx="32" cy="32" r="30" fill="#f6efe4" stroke="#1a3c34" stroke-width="2"/>
+  <circle cx="32" cy="32" r="24" fill="#1a3c34"/>
+  <path d="M18 38 L32 24 L46 38 Z" fill="#a64d3f"/>
+  <rect x="22" y="38" width="20" height="10" fill="#d4a855"/>
+  <text x="32" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="7" font-weight="700" fill="#1a3c34">SHG</text>
 </svg>

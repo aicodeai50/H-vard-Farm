@@ -6,12 +6,16 @@
   "homepage": "https://farm.legal",
   "scripts": {
     "start": "node start.js",
-    "dev": "node start.js"
+    "dev": "node start.js",
+    "crop-photos": "node scripts/crop-gallery-photos.js"
   },
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
     "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.2"
   }
 }

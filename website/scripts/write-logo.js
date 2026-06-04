@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Søndre Haugen gård">
+const fs = require("fs");
+const path = require("path");
+
+const logo = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="S\u00f8ndre Haugen g\u00e5rd">
   <defs>
     <linearGradient id="ring-gold" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#e8dcc8"/>
@@ -16,11 +19,11 @@
   <circle cx="200" cy="200" r="176" fill="none" stroke="#1a3c34" stroke-width="1.5" opacity="0.35"/>
   <path id="top-arc" fill="none" d="M 72 118 A 128 128 0 0 1 328 118"/>
   <text font-family="Georgia, 'Cormorant Garamond', serif" font-size="17" font-weight="700" letter-spacing="0.22em" fill="#1a3c34">
-    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">SØNDRE HAUGEN</textPath>
+    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">S\u00d8NDRE HAUGEN</textPath>
   </text>
   <path id="bottom-arc" fill="none" d="M 328 282 A 128 128 0 0 1 72 282"/>
   <text font-family="Georgia, 'Cormorant Garamond', serif" font-size="15" font-weight="600" letter-spacing="0.28em" fill="#c17f59">
-    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">GÅRD · Svinndal</textPath>
+    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">G\u00c5RD \u00b7 Svinndal</textPath>
   </text>
   <g clip-path="url(#circle-clip)">
     <rect x="32" y="32" width="336" height="336" fill="url(#sky)"/>
@@ -46,6 +49,10 @@
     <circle cx="278" cy="206" r="12" fill="#2d5a4f"/>
   </g>
   <circle cx="200" cy="200" r="168" fill="none" stroke="#f6efe4" stroke-width="2.5" opacity="0.9"/>
-  <text x="200" y="318" text-anchor="middle" font-family="Georgia, serif" font-size="9.5" letter-spacing="0.14em" fill="#1a3c34" opacity="0.85">BRYLLUP · SELSKAP · FEST</text>
+  <text x="200" y="318" text-anchor="middle" font-family="Georgia, serif" font-size="9.5" letter-spacing="0.14em" fill="#1a3c34" opacity="0.85">BRYLLUP \u00b7 SELSKAP \u00b7 FEST</text>
   <path transform="translate(200 338) scale(0.55)" d="M0 6 C-10 -5 -18 -2 -9 7 C0 16 0 16 0 16 C0 16 0 16 9 7 C18 -2 10 -5 0 6 Z" fill="#a64d3f"/>
 </svg>
+`;
+
+fs.writeFileSync(path.join(__dirname, "..", "assets", "images", "logo.svg"), logo, "utf8");
+console.log("wrote logo.svg");
