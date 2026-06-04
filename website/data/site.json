@@ -14,12 +14,13 @@
     "pool": "12 × 6 m heated pool",
     "services": ["Weddings", "Events", "Celebrations", "Motorhome storage", "Farm experiences"],
     "images": {
-      "hero": "assets/images/property/exterior.jpg",
-      "estate": "assets/images/property/estate.jpg",
-      "buildings": "assets/images/property/buildings.jpg",
+      "hero": "assets/images/property/barn-exterior.jpg",
+      "area": "assets/images/property/area-wide.jpg",
+      "outdoor": "assets/images/property/outdoor-barn.jpg",
       "grounds": "assets/images/property/grounds.jpg",
       "barn": "assets/images/property/barn-hall.jpg",
-      "pool": "assets/images/property/pool.jpg"
+      "guestHouse": "assets/images/property/guest-house.jpg",
+      "motorhome": "assets/images/property/motorhome-area.jpg"
     },
     "finnListing": "https://www.finn.no/realestate/homes/ad.html?finnkode=427386872"
   },
