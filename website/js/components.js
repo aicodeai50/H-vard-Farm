@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260605-brand",
+  assetVer: "20260605-full",
 };
 
 function t(key, fallback) {
@@ -58,7 +58,7 @@ function buildNav(active = "") {
 <header class="site-header" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen Gård — ${t("nav.home")}">
-      <img src="${assetUrl("assets/images/logo-header.png")}" alt="Søndre Haugen Gård" class="logo-lockup" width="200" height="56" />
+      <img src="${assetUrl("assets/images/logo-brand.png")}" alt="Søndre Haugen Gård" class="logo-lockup logo-lockup--full" width="72" height="72" />
     </a>
     <nav class="nav-desktop" aria-label="Main menu">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">${t("common.enquire")}</a></nav>
     ${langSwitcherHTML()}

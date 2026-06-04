@@ -18,7 +18,7 @@
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-script: "Pinyon Script", cursive;
   --font-sans: "Source Sans 3", system-ui, sans-serif;
-  --header-h: 72px;
+  --header-h: 84px;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -268,10 +268,15 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   object-position: left center;
 }
 
+.logo-lockup--full {
+  height: 72px;
+  max-width: min(72px, 18vw);
+}
+
 @media (max-width: 400px) {
-  .logo-lockup {
-    height: 48px;
-    max-width: 200px;
+  .logo-lockup--full {
+    height: 56px;
+    max-width: 56px;
   }
 }
 
