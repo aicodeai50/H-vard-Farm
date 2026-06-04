@@ -1,41 +1,38 @@
 # Neste steg — farm.legal
 
-## ✅ Ferdig
+## ✅ Ferdig (kode)
 
-- [x] Full nettside (alle sider, meny, CTA, skjema, SEO)
-- [x] GitHub: aicodeai50 + havard50
-- [x] Live: https://farm.legal
-- [x] Fase 2: historie, galleri, mobil-CTA
-- [x] Egen merkevare (logo, OG-bilde, ingen Unsplash)
-- [x] Produksjonsklar UI (kontrast, lister, personvern, tilgjengelighet)
+- [x] Alle sider live — arrangement, bryllup, selskap, lokaler, om gården, fakta, opplevelser, nyheter, kontakt, bobil, prospekt
+- [x] Ekte gårdsbilder (WhatsApp/drone) — ikke stock
+- [x] Norsk + engelsk (i18n)
+- [x] GitHub → Railway auto-deploy på **https://farm.legal**
+- [x] SEO: schema.org, sitemap, Google Search Console
+- [x] Kontaktskjema (FormSubmit → post@sondrehaugen.no)
+- [x] Utskriftsvennlig prospekt (`prospekt.html`)
 
-## 🔲 Gjør nå (Håvard / Sandra)
+## 🔲 Gjør manuelt (Håvard / Sandra)
 
-### A. Ekte bilder (viktigst for «eksklusiv» følelse)
+### 1. Test kontaktskjema ← **viktigst nå**
 
-1. Ta dronebilder / foto på gården
-2. Legg i `website/assets/images/` (se `README` der)
-3. Push til GitHub → auto-deploy
+1. Gå til https://farm.legal/kontakt.html
+2. Send en testforespørsel
+3. **Aktiver FormSubmit** — første e-post til `post@sondrehaugen.no` krever bekreftelse  
+   → Steg for steg: **`docs/KONTAKT-SKJEMA.md`**
 
-### B. Test kontaktskjema ← **gjør dette nå**
+### 2. Google Business
 
-1. https://farm.legal/kontakt.html → send test
-2. Aktiver FormSubmit i `post@sondrehaugen.no` (første e-post) — steg for steg: **`docs/KONTAKT-SKJEMA.md`**
+Følg **`docs/GOOGLE-BUSINESS.md`** — adresse, åpningstider, bilder, lenke til farm.legal
 
-### C. Google Business
+### 3. Flere bilder (valgfritt)
 
-Følg `docs/GOOGLE-BUSINESS.md`
+Legg nye foto i `website/assets/images/property/` og push — se `website/assets/images/README.md`
 
-### D. Calendly (valgfritt)
+### 4. Senere (når du har det)
 
-1. Opprett gratis konto på calendly.com
-2. Lim inn lenke i `website/js/components.js` → `calendly: "https://..."`
-3. Push → visningsbooking vises automatisk på Kontakt
-
-### E. Railway (hvis ikke farm.legal peker dit ennå)
-
-1. railway.app → `aicodeai50/H-vard-Farm`
-2. Custom domain `farm.legal` + DNS Name.com
+| Ting | Hvor |
+|------|------|
+| PDF-prospekt | `website/assets/docs/` + lenke fra kontakt |
+| Calendly visningsbooking | `website/js/components.js` → `calendly: "https://..."` |
 
 ---
 
@@ -45,4 +42,4 @@ Følg `docs/GOOGLE-BUSINESS.md`
 |--|--|
 | Side | https://farm.legal |
 | GitHub | https://github.com/aicodeai50/H-vard-Farm |
-| Bildeguide | `website/assets/images/README.md` |
+| Push-guide | `PUSH-TO-GITHUB.md` |
