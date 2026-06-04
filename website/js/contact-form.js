@@ -33,6 +33,7 @@ window.updateContactFormI18n = updateContactFormI18n;
     bobil: "bobil",
     visning: "visning",
     opplevelser: "opplevelser",
+    prospekt: "prospekt",
   };
   const t = params.get("type");
   if (t && typeMap[t] && typeEl) typeEl.value = typeMap[t];
