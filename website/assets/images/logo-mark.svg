@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Søndre Haugen gård">
+  <circle cx="60" cy="60" r="58" fill="#f7f3eb" stroke="#2a4538" stroke-width="2"/>
+  <path d="M45 28h30l-8 12H53z" fill="none" stroke="#2a4538" stroke-width="1.5"/>
+  <rect x="38" y="42" width="18" height="14" rx="1" fill="#8b3a3a"/>
+  <rect x="52" y="40" width="14" height="16" rx="1" fill="#b8956a"/>
+  <rect x="66" y="44" width="16" height="12" rx="1" fill="#8b3a3a"/>
+  <ellipse cx="60" cy="58" rx="28" ry="8" fill="#3d5c4a" opacity=".35"/>
+  <text x="60" y="78" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#3a3228" letter-spacing="1">SØNDRE HAUGEN</text>
+  <text x="60" y="92" text-anchor="middle" font-family="cursive" font-size="14" fill="#2a4538">gård</text>
+  <text x="60" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="5" fill="#5c4f3f" letter-spacing=".5">EVENT · SELSKAP · BRYLLUP</text>
+</svg>

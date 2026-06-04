@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "https://www.farm.legal/*"
+  to = "https://farm.legal/:splat"
+  status = 301
+  force = true

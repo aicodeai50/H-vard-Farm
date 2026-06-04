@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kontakt Søndre Haugen gård — forespørsel, bryllup, arrangement, bobil og book visning." />
+  <title>Kontakt | Søndre Haugen gård</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pinyon+Script&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/images/logo-mark.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="site-header" data-active="kontakt"></div>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Ta kontakt</p>
+      <h1>Kontakt oss</h1>
+      <p class="lead">Send forespørsel, book visning eller spør om bobilplass — vi svarer så snart vi kan.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="align-items:start">
+        <div>
+          <h2 class="mb-1">Direkte kontakt</h2>
+          <p class="mb-1"><strong>Telefon:</strong> <a href="tel:+4790198671">901 98 671</a></p>
+          <p class="mb-1"><strong>Generell e-post:</strong> <a href="mailto:post@sondrehaugen.no">post@sondrehaugen.no</a></p>
+          <p class="mb-1"><strong>Bobilhotell:</strong> <a href="mailto:Bobil@sondrehaugen.no">Bobil@sondrehaugen.no</a></p>
+          <p class="mb-2"><strong>Adresse:</strong><br />Søndre Haugen gård<br />2436 Våler i Østfold</p>
+          <p style="font-size:0.9rem;color:var(--earth-light)">Nettside: <strong>farm.legal</strong></p>
+        </div>
+        <div class="form-section">
+          <h3 class="mb-1">Send forespørsel</h3>
+          <form data-form id="contact-form" name="kontakt" method="POST" action="/takk.html" data-netlify="true" netlify-honeypot="bot">
+            <input type="hidden" name="form-name" value="kontakt" />
+            <p class="sr-only"><label>Ikke fyll ut: <input name="bot" /></label></p>
+            <div class="form-grid form-grid-2">
+              <div>
+                <label for="navn">Navn *</label>
+                <input type="text" id="navn" name="navn" required autocomplete="name" />
+              </div>
+              <div>
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-grid mt-2">
+              <div>
+                <label for="epost">E-post *</label>
+                <input type="email" id="epost" name="epost" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-grid mt-2">
+              <div>
+                <label for="type">Type henvendelse *</label>
+                <select id="type" name="type" required>
+                  <option value="">Velg …</option>
+                  <option value="bryllup">Bryllup</option>
+                  <option value="arrangement">Selskap / arrangement</option>
+                  <option value="bobil">Bobilhotell</option>
+                  <option value="visning">Book visning</option>
+                  <option value="opplevelser">Opplevelser (interesse)</option>
+                  <option value="annet">Annet</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-grid form-grid-2 mt-2">
+              <div>
+                <label for="dato">Ønsket dato (ca.)</label>
+                <input type="date" id="dato" name="dato" />
+              </div>
+              <div>
+                <label for="gjester">Antall gjester / kjøretøy</label>
+                <input type="text" id="gjester" name="gjester" placeholder="f.eks. 80 gjester eller bobil 7m" />
+              </div>
+            </div>
+            <div class="form-grid mt-2">
+              <div>
+                <label for="melding">Melding *</label>
+                <textarea id="melding" name="melding" required placeholder="Fortell oss om ditt arrangement eller bobil …"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-green mt-2" style="width:100%">Send forespørsel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="visning">
+    <div class="container text-center">
+      <h2 class="mb-1">Book visning på gården</h2>
+      <p class="lead mx-auto mb-2">Se lokaler, uteområder og bobilområdet i egen ro. Velg «Book visning» i skjemaet over, eller ring oss direkte.</p>
+      <a href="tel:+4790198671" class="btn btn-primary">Ring 901 98 671</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-2">Kart</h2>
+      <div style="border-radius:4px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:16/9;max-height:420px">
+        <iframe
+          title="Kart — Søndre Haugen gård, Våler"
+          src="https://maps.google.com/maps?q=Våler+2436+Østfold+Norway&z=11&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;min-height:320px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="text-center mt-1" style="font-size:0.9rem;color:var(--earth-light)">2436 Våler i Østfold — oppdater kartkoordinater ved behov.</p>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const type = document.getElementById("type");
+      const map = { bryllup: "bryllup", arrangement: "arrangement", bobil: "bobil", visning: "visning", opplevelser: "opplevelser" };
+      const t = params.get("type");
+      if (t && map[t] && type) type.value = map[t];
+    })();
+  </script>
+</body>
+</html>
