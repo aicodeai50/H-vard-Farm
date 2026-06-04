@@ -7,7 +7,7 @@ Statisk side som kjører med Node + `serve`. Railway setter `PORT` automatisk.
 ## 1. Opprett prosjekt
 
 1. [railway.app](https://railway.app) → **New Project**
-2. **Deploy from GitHub repo** → `havard50/H-vard-Farm`
+2. **Deploy from GitHub repo** → `aicodeai50/H-vard-Farm`
 3. **Settings → Root Directory** → `website`
 4. Railway oppdager `package.json` og kjører `npm start`
 
