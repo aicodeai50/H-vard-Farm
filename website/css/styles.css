@@ -254,18 +254,52 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
   text-decoration: none;
   flex-shrink: 0;
+  min-width: 0;
 }
 
-.logo-img {
-  height: 64px;
-  width: auto;
-  max-width: min(200px, 40vw);
-  object-fit: contain;
-  object-position: left center;
+.logo-mark {
+  width: 52px;
+  height: 52px;
   flex-shrink: 0;
+  display: block;
+}
+
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  min-width: 0;
+}
+
+.logo-name {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--earth);
+  white-space: nowrap;
+}
+
+.logo-sub {
+  font-family: var(--font-script);
+  font-size: 1.35rem;
+  color: var(--green);
+  letter-spacing: 0.02em;
+  margin-top: 0.1rem;
+}
+
+@media (max-width: 480px) {
+  .logo-wordmark {
+    display: none;
+  }
+
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .nav-link {
@@ -1402,15 +1436,39 @@ textarea { min-height: 140px; resize: vertical; }
   body { padding-bottom: 4rem; }
 }
 
-.footer-logo {
-  display: inline-block;
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1rem;
+  text-decoration: none;
 }
 
-.footer-logo img {
-  max-width: 140px;
-  height: auto;
-  opacity: 0.95;
+.footer-mark {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  filter: brightness(0) saturate(100%) invert(78%) sepia(18%) saturate(620%) hue-rotate(345deg) brightness(96%) contrast(92%);
+}
+
+.footer-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+}
+
+.footer-sub {
+  font-family: var(--font-script);
+  font-size: 1.25rem;
+  color: var(--gold);
 }
 
 .section--cream {

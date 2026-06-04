@@ -1,14 +1,4 @@
-/**
- * Vector brand marks (no embedded photo) for web header/footer.
- * Full print logo: assets/images/logo-brand.png (official composite).
- * Run: node scripts/write-logo-brand.js
- */
-const fs = require("fs");
-const path = require("path");
-
-const outDir = path.join(__dirname, "..", "assets", "images");
-
-const GABLE = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" role="img" aria-hidden="true">
   <g fill="none" stroke="#5c4f3f" stroke-linecap="round" stroke-linejoin="round">
     <path d="M48 92 L200 8 L352 92" stroke-width="2.4"/>
     <path d="M200 8 L200 0" stroke-width="2"/>
@@ -22,11 +12,5 @@ const GABLE = `
     <path d="M58 92 H342" stroke-width="3"/>
     <path d="M82 92 V78 M118 92 V74 M158 92 V70 M200 92 V66 M242 92 V70 M282 92 V74 M318 92 V78" stroke-width="1.8"/>
     <path d="M72 92 V84 M328 92 V84" stroke-width="2.2"/>
-  </g>`;
-
-const logoMark = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" role="img" aria-hidden="true">
-  ${GABLE}
-</svg>`;
-
-fs.writeFileSync(path.join(outDir, "logo-mark.svg"), logoMark, "utf8");
-console.log("Wrote logo-mark.svg");
+  </g>
+</svg>

@@ -9,9 +9,9 @@
   "lang": "en",
   "icons": [
     {
-      "src": "/assets/images/logo-brand.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "/assets/images/logo-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any"
     }
   ]
