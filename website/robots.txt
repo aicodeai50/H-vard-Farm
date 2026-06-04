@@ -1,3 +1,4 @@
+# Equivalent to Next.js MetadataRoute.Robots (farm.legal)
 User-agent: *
 Allow: /
 

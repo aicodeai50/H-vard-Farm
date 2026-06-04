@@ -1,6 +1,9 @@
-/** Canonical URL and Open Graph — always farm.legal */
+/** SEO metadata first — canonical, robots, sitemap, Open Graph (farm.legal) */
 (function () {
   const BASE = "https://farm.legal";
+  const SITEMAP = BASE + "/sitemap.xml";
+  const GOOGLE_VERIFY = "1iAOryKfYzwHdKX1Cw8k0UISIsqrgIic3TlDsAYub8M";
+
   const path = window.location.pathname.replace(/\\/g, "/");
   const canonicalPath =
     path === "/" || path === "/index.html" || path.endsWith("/index.html")
@@ -10,44 +13,62 @@
         : "/" + path;
   const canonical = BASE + canonicalPath;
 
+  const isNoindexPage = /\/(takk|404)\.html$/i.test(path);
+
+  function prependToHead(node) {
+    const head = document.head;
+    const anchor = head.querySelector("meta, link, title, script");
+    if (anchor) head.insertBefore(node, anchor);
+    else head.appendChild(node);
+  }
+
   function setMeta(attr, key, content) {
     let el = document.querySelector("meta[" + attr + '="' + key + '"]');
     if (!el) {
       el = document.createElement("meta");
       el.setAttribute(attr, key);
-      document.head.appendChild(el);
+      prependToHead(el);
     }
     el.setAttribute("content", content);
   }
 
-  let link = document.querySelector('link[rel="canonical"]');
-  if (!link) {
-    link = document.createElement("link");
-    link.rel = "canonical";
-    document.head.appendChild(link);
+  function ensureLink(rel, href, attrs) {
+    let el = document.querySelector('link[rel="' + rel + '"]');
+    if (!el) {
+      el = document.createElement("link");
+      el.rel = rel;
+      prependToHead(el);
+    }
+    el.href = href;
+    if (attrs) {
+      Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+    }
+    return el;
   }
-  link.href = canonical;
 
+  /* --- Metadata first (Search Console, crawlers) --- */
+  setMeta("name", "google-site-verification", GOOGLE_VERIFY);
+  setMeta("name", "robots", isNoindexPage ? "noindex, follow" : "index, follow");
+  ensureLink("sitemap", SITEMAP, { type: "application/xml", title: "Sitemap" });
+
+  /* --- Canonical --- */
+  ensureLink("canonical", canonical);
+
+  /* --- Open Graph / Twitter --- */
   setMeta("property", "og:url", canonical);
-  setMeta("name", "google-site-verification", "1iAOryKfYzwHdKX1Cw8k0UISIsqrgIic3TlDsAYub8M");
   setMeta("property", "og:site_name", "Søndre Haugen Farm");
   setMeta("property", "og:image", BASE + "/assets/images/property/exterior.jpg");
   setMeta("property", "og:image:width", "1280");
   setMeta("property", "og:image:height", "960");
   setMeta("name", "twitter:image", BASE + "/assets/images/property/exterior.jpg");
+  setMeta("name", "twitter:card", "summary_large_image");
 
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {
-    const apple = document.createElement("link");
-    apple.rel = "apple-touch-icon";
-    apple.href = "/assets/images/logo.svg";
-    document.head.appendChild(apple);
+    ensureLink("apple-touch-icon", "/assets/images/logo.svg");
   }
 
   if (!document.querySelector('link[rel="manifest"]')) {
-    const manifest = document.createElement("link");
-    manifest.rel = "manifest";
-    manifest.href = "/site.webmanifest";
-    document.head.appendChild(manifest);
+    ensureLink("manifest", "/site.webmanifest");
   }
 
   let theme = document.querySelector('meta[name="theme-color"]');
