@@ -10,6 +10,8 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   tagline: "EVENT · SELSKAP · BRYLLUP · FEST",
+  /** Sett Calendly-lenke når klar, f.eks. https://calendly.com/sondrehaugen/visning */
+  calendly: "",
 };
 
 function headerHTML(active = "", transparent = false) {

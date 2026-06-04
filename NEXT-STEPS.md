@@ -1,58 +1,46 @@
-# Neste steg — farm.legal live
+# Neste steg — farm.legal
 
-Sjekkliste i rekkefølge. Kryss av når ferdig.
+## ✅ Ferdig
 
-## 1. Railway (5 min)
+- [x] Full nettside (alle sider, meny, CTA, skjema, SEO)
+- [x] GitHub: aicodeai50 + havard50
+- [x] Live: https://farm.legal
+- [x] Fase 2: historie, galleri, mobil-CTA
 
-1. Gå til https://railway.app/new
-2. **Deploy from GitHub repo** → `aicodeai50/H-vard-Farm`
-3. **Settings → Root Directory:** la stå **tom** (bruker rot-`package.json`) *eller* sett `website`
-4. Vent til deploy er **Success** — noter URL: `https://xxxx.up.railway.app`
-5. Åpne URL i nettleser — du skal se Søndre Haugen gård
+## 🔲 Gjør nå (Håvard / Sandra)
 
-## 2. Domene farm.legal (10 min)
+### A. Ekte bilder (viktigst for «eksklusiv» følelse)
 
-1. Railway → prosjekt → **Settings → Networking → + Custom Domain**
-2. Legg til: `farm.legal` og `www.farm.legal`
-3. Logg inn **Name.com** → **farm.legal** → DNS Records
-4. Legg inn det Railway viser (CNAME / A-records)
-5. Fjern gammel **A** `@` → `91.195.240.94` (parkering)
-6. Vent 15 min–24 t — test https://farm.legal
+1. Ta dronebilder / foto på gården
+2. Legg i `website/assets/images/` (se `README` der)
+3. Push til GitHub → auto-deploy
 
-Detaljer: `website/DEPLOY-DNS.md`
+### B. Test kontaktskjema
 
-## 3. Kontaktskjema (2 min)
+1. https://farm.legal/kontakt.html → send test
+2. Aktiver FormSubmit i `post@sondrehaugen.no` (første e-post)
 
-1. Send test via https://farm.legal/kontakt.html
-2. Aktiver **FormSubmit** — første gang: klikk lenke i e-post til `post@sondrehaugen.no`
+### C. Google Business
 
-## 4. Bilder (når du har filer)
+Følg `docs/GOOGLE-BUSINESS.md`
 
-- Legg dronebilder i `website/assets/images/`
-- Oppdater `website/css/styles.css` (`.hero-bg`)
-- `git push origin main` → Railway deployer på nytt
+### D. Calendly (valgfritt)
 
-## 5. Valgfritt
+1. Opprett gratis konto på calendly.com
+2. Lim inn lenke i `website/js/components.js` → `calendly: "https://..."`
+3. Push → visningsbooking vises automatisk på Kontakt
 
-- [ ] Koble **havard50** og **aicodeai50** — begge har samme kode; bruk `.\PUSH-BOTH.ps1`
-- [ ] Netlify backup: https://sondre-haugen-gard.netlify.app
+### E. Railway (hvis ikke farm.legal peker dit ennå)
 
-## Hurtigkommandoer
+1. railway.app → `aicodeai50/H-vard-Farm`
+2. Custom domain `farm.legal` + DNS Name.com
 
-```powershell
-# Lokal forhåndsvisning
-cd website
-npm start
-
-# Push begge GitHub
-cd ..
-.\PUSH-BOTH.ps1
-```
+---
 
 ## Lenker
 
-| Hva | URL |
-|-----|-----|
+| | |
+|--|--|
+| Side | https://farm.legal |
 | GitHub | https://github.com/aicodeai50/H-vard-Farm |
-| Domene | https://farm.legal |
-| Railway dashboard | https://railway.app/dashboard |
+| Bildeguide | `website/assets/images/README.md` |

@@ -35,7 +35,7 @@
         </div>
         <div class="form-section">
           <h3 class="mb-1">Send forespørsel</h3>
-          <form id="contact-form" name="kontakt" method="POST" action="https://formsubmit.co/post@sondrehaugen.no">
+          <form id="contact-form" name="kontakt" method="POST" action="https://formsubmit.co/post@sondrehaugen.no" aria-label="Kontaktskjema">
             <input type="hidden" name="_subject" value="Forespørsel fra farm.legal" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
@@ -95,10 +95,25 @@
   </section>
 
   <section class="section section--dark" id="visning">
-    <div class="container text-center">
-      <h2 class="mb-1">Book visning på gården</h2>
-      <p class="lead mx-auto mb-2">Se lokaler, uteområder og bobilområdet i egen ro. Velg «Book visning» i skjemaet over, eller ring oss direkte.</p>
-      <a href="tel:+4790198671" class="btn btn-primary">Ring 901 98 671</a>
+    <div class="container">
+      <div class="text-center mb-2">
+        <h2 class="mb-1">Book visning på gården</h2>
+        <p class="lead mx-auto">Se våningshus, låve, utearealer og bobilområde — uforpliktende omvisning med en av oss på gården.</p>
+      </div>
+      <div id="booking-visning" class="booking-fallback">
+        <div class="grid-2" style="max-width:720px;margin:0 auto">
+          <div class="feel-card" style="background:rgba(255,255,255,0.08);border:1px solid rgba(247,243,235,0.2)">
+            <strong style="color:var(--gold)">Ring oss</strong>
+            <p style="opacity:0.9;margin:0.5rem 0"><a href="tel:+4790198671" style="color:var(--cream)">901 98 671</a></p>
+            <a href="tel:+4790198671" class="btn btn-primary">Ring nå</a>
+          </div>
+          <div class="feel-card" style="background:rgba(255,255,255,0.08);border:1px solid rgba(247,243,235,0.2)">
+            <strong style="color:var(--gold)">Send forespørsel</strong>
+            <p style="opacity:0.9;margin:0.5rem 0">Velg «Book visning» i skjemaet over.</p>
+            <a href="#contact-form" class="btn btn-outline">Gå til skjema</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -120,9 +135,15 @@
     </div>
   </section>
 
+  <div class="sticky-cta" aria-label="Hurtigkontakt">
+    <a href="#contact-form" class="cta-primary">Forespørsel</a>
+    <a href="tel:+4790198671" class="cta-secondary">Ring</a>
+  </div>
+
   <div id="site-footer"></div>
-  <script src="js/meta.js"></script>
   <script src="js/components.js"></script>
+  <script src="js/meta.js"></script>
+  <script src="js/booking.js"></script>
   <script src="js/main.js"></script>
   <script>
     (function () {
