@@ -346,14 +346,57 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: var(--gradient-hero), url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/exterior.jpg") center/cover no-repeat;
 }
 
-.hero-bg--bryllup,
-.hero-bg--selskap,
-.hero-bg--bobil,
+.hero-bg--bryllup {
+  background: var(--gradient-hero), url("../assets/images/property/grounds.jpg") center/cover no-repeat;
+}
+
+.hero-bg--selskap {
+  background: var(--gradient-hero), url("../assets/images/property/barn-hall.jpg") center/cover no-repeat;
+}
+
+.hero-bg--bobil {
+  background: var(--gradient-hero), url("../assets/images/property/estate.jpg") center/cover no-repeat;
+}
+
 .hero-bg--om {
-  background: var(--gradient-hero), url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/buildings.jpg") center/cover no-repeat;
+}
+
+.property-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.gallery-item .property-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.feature-img .property-photo {
+  border-radius: var(--radius-lg);
+  min-height: 280px;
+  aspect-ratio: 4/3;
+}
+
+.card .property-photo {
+  aspect-ratio: 4/3;
+  border-radius: 0;
+}
+
+.gretsch-note {
+  padding: 1rem 1.25rem;
+  background: rgba(26, 60, 52, 0.06);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 .hero-content {
@@ -1166,18 +1209,38 @@ textarea { min-height: 140px; resize: vertical; }
   filter: brightness(1.06);
 }
 
+.gallery-item figcaption,
 .gallery-item span {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 2;
+  margin: 0;
   padding: 0.75rem;
   background: linear-gradient(transparent, rgba(26, 60, 52, 0.92));
   color: var(--cream);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
+}
+
+.hero-tagline {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.gretsch-compact {
+  font-size: 0.95rem;
+  color: var(--earth);
+}
+
+.gretsch-compact a {
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 /* Sticky mobile CTA */

@@ -1,30 +1,48 @@
 {
   "farm": {
-    "name": "Søndre Haugen gård",
+    "name": "Søndre Haugen Farm",
     "domain": "https://farm.legal",
-    "established": "1700-tallet",
-    "location": "Svinndallinna · 2436 Våler i Østfold",
-    "street": "Svinndallinna",
-    "postalCode": "2436",
-    "locality": "Våler",
-    "motto": "Historiske omgivelser for livets store øyeblikk",
-    "brandLine": "Historisk. Ekte. Din.",
-    "services": ["Bryllup", "Selskap", "Arrangementer", "Bobilhotell", "Gårdsopplevelser"]
+    "established": "1760",
+    "location": "Svinndallinna 190 · 1593 Svinndal · Våler, Østfold",
+    "street": "Svinndallinna 190",
+    "postalCode": "1593",
+    "locality": "Svinndal",
+    "region": "Våler, Østfold",
+    "motto": "Historic settings for life's greatest moments",
+    "brandLine": "Historic. Real. Yours.",
+    "plotArea": "10,171 m²",
+    "pool": "12 × 6 m heated pool",
+    "services": ["Weddings", "Events", "Celebrations", "Motorhome storage", "Farm experiences"],
+    "images": {
+      "hero": "assets/images/property/exterior.jpg",
+      "estate": "assets/images/property/estate.jpg",
+      "buildings": "assets/images/property/buildings.jpg",
+      "grounds": "assets/images/property/grounds.jpg",
+      "barn": "assets/images/property/barn-hall.jpg",
+      "pool": "assets/images/property/pool.jpg"
+    },
+    "finnListing": "https://www.finn.no/realestate/homes/ad.html?finnkode=427386872"
   },
   "founder": {
     "name": "Håvard Pedersen",
-    "role": "Vertskap & drift",
+    "role": "Host & operations",
     "musicUrl": "https://havardpederse.netlify.app",
-    "musicLabel": "Musikk · Håvard Pedersen",
+    "musicLabel": "Music · Håvard Pedersen",
     "musicTagline": "Raw. Real. Live.",
-    "bioShort": "Håvard Pedersen er norsk gitarist, sanger og låtskriver — fra Vardø til Oslo. Gretsch- og Mezzabarba-endorsed, med John Norum og Ronni Le Tekrø på plate, og nye økter med Peter Michelsen på The Norwegian Sound. På scenen leverer han blues-rock med The Blues Is Alright Band; på Søndre Haugen gård skaper han historiske rammer for bryllup, selskap og bobilgjester.",
-    "traits": ["Ekte", "Kvalitet", "100 % live", "Skreddersøm", "Kultur & arrangement"],
+    "bioShort": "Håvard Pedersen is a Norwegian guitarist, singer, and songwriter — from Vardø to Oslo. At Søndre Haugen Farm he creates historic frames for weddings, celebrations, and motorhome guests; on stage he delivers blues-rock with The Blues Is Alright Band.",
+    "traits": ["Authentic", "Quality", "100% live", "Tailored", "Culture & events"],
     "highlights": [
-      "Gretsch-endorsed artist · Mezzabarba",
-      "Plategjester: John Norum · Ronni Le Tekrø",
-      "Studio: Peter Michelsen · The Norwegian Sound, Mjøndalen",
-      "Live: Håvard Pedersen & The Blues Is Alright Band"
-    ]
+      "Endorsed artist · the Gretsch Company",
+      "Mezzabarba · The Blues Is Alright Band",
+      "Album guests: John Norum · Ronni Le Tekrø",
+      "Studio: Peter Michelsen · The Norwegian Sound, Mjøndalen"
+    ],
+    "gretsch": {
+      "title": "Gretsch endorsement",
+      "body": "Håvard is an official Gretsch-endorsed artist — welcomed into the Gretsch family in the spirit of the Gretsch 135th anniversary. Endorsed logos are approved for marketing; the focus is Håvard and the Gretsch Company.",
+      "publicNote": "In public posts and social media, please reference the Gretsch Company only (not individual contacts at Gretsch).",
+      "moreUrl": "om-garden.html"
+    }
   },
   "contact": {
     "phone": "901 98 671",

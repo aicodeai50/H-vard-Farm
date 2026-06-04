@@ -1,4 +1,4 @@
-/** Kontaktskjema — FormSubmit + URL-forhåndsutfylling */
+/** Contact form — FormSubmit + URL prefill */
 (function () {
   const FORM_NEXT = "https://farm.legal/takk.html";
   const form = document.getElementById("contact-form");
@@ -20,7 +20,7 @@
   if (t && typeMap[t] && typeEl) typeEl.value = typeMap[t];
 
   const niva = (params.get("niva") || "").toLowerCase();
-  const nivaLabel = { ute: "Ute", inne: "Inne", premium: "Premium" }[niva];
+  const nivaLabel = { ute: "Outdoor", inne: "Indoor", premium: "Premium" }[niva];
   if (nivaLabel && typeEl?.value === "bobil") {
     let hidden = form.querySelector('input[name="bobil_niva"]');
     if (!hidden) {
@@ -32,15 +32,15 @@
     hidden.value = nivaLabel;
     const melding = document.getElementById("melding");
     if (melding && !melding.value.trim()) {
-      melding.placeholder = `Ønsker ${nivaLabel}-plass — beskriv kjøretøy, lengde og periode …`;
+      melding.placeholder = `Interested in ${nivaLabel} storage — describe vehicle, length, and season …`;
     }
   }
 
   form.addEventListener("submit", function () {
     const btn = form.querySelector('button[type="submit"]');
     if (btn) {
-      btn.textContent = "Sender …";
       btn.disabled = true;
+      btn.textContent = "Sending …";
     }
   });
 })();

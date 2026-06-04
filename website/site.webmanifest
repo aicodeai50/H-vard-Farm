@@ -1,12 +1,12 @@
 {
-  "name": "Søndre Haugen gård",
+  "name": "Søndre Haugen Farm",
   "short_name": "Søndre Haugen",
-  "description": "Bryllup, selskap og bobilhotell i Våler — farm.legal",
+  "description": "Weddings, events, and motorhome storage in Svinndal — farm.legal",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f6efe4",
   "theme_color": "#1a3c34",
-  "lang": "nb",
+  "lang": "en",
   "icons": [
     {
       "src": "/assets/images/logo.svg",

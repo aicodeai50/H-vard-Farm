@@ -1,13 +1,11 @@
 (function () {
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
-  const mobileNav = document.querySelector(".nav-mobile");
+  const mobileNav = document.getElementById("nav-mobile");
   const closeBtn = document.querySelector(".nav-mobile-close");
 
   if (header) {
-    const onScroll = () => {
-      header.classList.toggle("scrolled", window.scrollY > 40);
-    };
+    const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
@@ -24,9 +22,7 @@
 
   toggle?.addEventListener("click", openMobile);
   closeBtn?.addEventListener("click", closeMobile);
-  mobileNav?.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", closeMobile);
-  });
+  mobileNav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMobile));
 
   document.querySelectorAll("form[data-form]").forEach((form) => {
     form.addEventListener("submit", (e) => {
@@ -34,7 +30,7 @@
       const btn = form.querySelector('button[type="submit"]');
       const original = btn?.textContent;
       if (btn) {
-        btn.textContent = "Takk — vi tar kontakt snart";
+        btn.textContent = "Thank you — we will be in touch";
         btn.disabled = true;
       }
       setTimeout(() => {
