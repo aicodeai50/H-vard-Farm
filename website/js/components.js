@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260604-barn",
+  assetVer: "20260604-flex",
 };
 
 function t(key, fallback) {
@@ -112,6 +112,7 @@ function footerHTML() {
       <a href="kontakt.html#visning">${t("common.bookVisit")}</a>
       <a href="nyheter.html">${t("nav.news")}</a>
       <a href="om-garden.html">${t("nav.about")}</a>
+      <a href="https://www.facebook.com/share/1D2QnLT5sP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">${t("footer.facebook")}</a>
       <a href="personvern.html">${t("common.privacy")}</a>
     </div>
   </div>

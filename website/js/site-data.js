@@ -1,6 +1,6 @@
 /** Live site data — data/site.json with inline fallback if fetch fails */
 (function () {
-  const ASSET_VER = "20260604-barn";
+  const ASSET_VER = "20260604-flex";
   const FALLBACK = {
     assetVer: ASSET_VER,
     farm: {
