@@ -12,18 +12,21 @@ Nettside, Railway-deploy og dokumentasjon for Søndre Haugen gård (bryllup, sel
 | **`docs/`** | Brief til webbyrå |
 | **`DOMAIN.md`** | Domene farm.legal |
 
-## GitHub er tom?
+## GitHub — push til begge kontoer
 
-Koden ligger på denne PC-en. **Dobbeltklikk eller kjør:**
+| Konto | Repo | Status |
+|-------|------|--------|
+| **havard50** | https://github.com/havard50/H-vard-Farm | ✅ Synket (siste kode) |
+| **aicodeai50** | https://github.com/aicodeai50/H-vard-Farm | ⏳ Du må pushe én gang (innlogging) |
+
+**Kjør i PowerShell på din PC** (Cursor kan ikke logge inn som aicodeai50):
 
 ```powershell
 cd "c:\Users\sandr\OneDrive\Documents\Håvard-Farm"
-.\PUSH-AICODEAI50.ps1
+.\PUSH-BOTH.ps1
 ```
 
-Logg inn som **aicodeai50** når Git spør.
-
-**Repo:** https://github.com/aicodeai50/H-vard-Farm
+Eller: `git push origin main` (pusher til begge når begge er innlogget i Git).
 
 ## Deploy (Railway)
 
