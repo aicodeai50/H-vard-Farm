@@ -1,16 +1,20 @@
-/* Søndre Haugen gård — farm.legal */
+/* Søndre Haugen gård — farm.legal — Nordic fireside palette */
 :root {
-  --earth: #3a3228;
-  --earth-light: #5c4f3f;
-  --cream: #f7f3eb;
-  --cream-dark: #e8e0d0;
-  --green: #2a4538;
-  --green-light: #3d5c4a;
-  --gold: #b8956a;
-  --red: #8b3a3a;
+  --earth: #2c2419;
+  --earth-light: #5a4a3a;
+  --cream: #f6efe4;
+  --cream-dark: #e5d9c8;
+  --green: #1a3c34;
+  --green-light: #2d5a4f;
+  --gold: #c17f59;
+  --gold-light: #d4a07a;
+  --red: #a64d3f;
+  --fern: #4a7c59;
   --white: #ffffff;
-  --shadow: 0 4px 24px rgba(58, 50, 40, 0.12);
-  --shadow-lg: 0 12px 48px rgba(58, 50, 40, 0.18);
+  --shadow: 0 4px 24px rgba(44, 36, 25, 0.1);
+  --shadow-lg: 0 12px 48px rgba(26, 60, 52, 0.16);
+  --gradient-hero: linear-gradient(165deg, rgba(26, 60, 52, 0.72) 0%, rgba(44, 36, 25, 0.82) 100%);
+  --gradient-cta: linear-gradient(135deg, #1a3c34 0%, #2c2419 55%, #3d2e35 100%);
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-script: "Pinyon Script", cursive;
   --font-sans: "Source Sans 3", system-ui, sans-serif;
@@ -34,9 +38,10 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--earth);
-  background: var(--cream);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  background-attachment: fixed;
 }
 
 img {
@@ -46,7 +51,7 @@ img {
 }
 
 a {
-  color: var(--green);
+  color: var(--green-light);
   text-decoration: none;
   transition: color var(--transition);
 }
@@ -341,18 +346,14 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(42, 69, 56, 0.55) 0%, rgba(58, 50, 40, 0.75) 100%),
-    url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
 }
 
 .hero-bg--bryllup,
 .hero-bg--selskap,
 .hero-bg--bobil,
 .hero-bg--om {
-  background:
-    linear-gradient(180deg, rgba(42, 69, 56, 0.5) 0%, rgba(58, 50, 40, 0.8) 100%),
-    url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
 }
 
 .hero-content {
@@ -470,6 +471,7 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   border-radius: 4px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold-light);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
@@ -581,6 +583,7 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   box-shadow: var(--shadow);
   text-align: center;
   border-top: 4px solid var(--green);
+  border-bottom: 2px solid var(--cream-dark);
   position: relative;
 }
 
@@ -771,9 +774,10 @@ textarea { min-height: 140px; resize: vertical; }
 /* Page header (subpages) */
 .page-hero {
   padding: calc(var(--header-h) + 4rem) 0 3rem;
-  background: var(--green);
+  background: var(--gradient-cta);
   color: var(--cream);
   text-align: center;
+  border-bottom: 3px solid var(--gold);
 }
 
 .page-hero h1 { color: var(--cream); }
@@ -821,7 +825,7 @@ textarea { min-height: 140px; resize: vertical; }
 .cta-band {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--green) 0%, var(--earth) 100%);
+  background: var(--gradient-cta);
   color: var(--cream);
 }
 
@@ -866,13 +870,14 @@ textarea { min-height: 140px; resize: vertical; }
 
 /* Brand strip under hero */
 .brand-strip {
-  background: var(--earth);
+  background: linear-gradient(90deg, var(--green) 0%, var(--earth) 50%, var(--green) 100%);
   color: var(--cream);
   padding: 1.25rem 0;
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  border-block: 2px solid var(--gold);
 }
 
 .brand-strip img {
@@ -934,7 +939,8 @@ textarea { min-height: 140px; resize: vertical; }
 }
 
 .trust-section {
-  background: var(--cream-dark);
+  background: linear-gradient(180deg, var(--cream-dark) 0%, var(--cream) 100%);
+  border-block: 1px solid rgba(193, 127, 89, 0.35);
 }
 
 .trust-list {
@@ -1053,7 +1059,7 @@ textarea { min-height: 140px; resize: vertical; }
   right: 0;
   z-index: 900;
   padding: 0.75rem 1rem;
-  background: rgba(42, 69, 56, 0.96);
+  background: rgba(26, 60, 52, 0.96);
   backdrop-filter: blur(8px);
   gap: 0.5rem;
   box-shadow: 0 -4px 20px rgba(0,0,0,0.15);

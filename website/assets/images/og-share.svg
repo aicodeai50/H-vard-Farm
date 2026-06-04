@@ -1,41 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Søndre Haugen gård  Historisk. Ekte. Din.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Søndre Haugen gård">
   <defs>
-    <linearGradient id="og-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3d5c4a"/>
-      <stop offset="45%" stop-color="#2a4538"/>
-      <stop offset="100%" stop-color="#3a3228"/>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2d5a4f"/>
+      <stop offset="50%" stop-color="#1a3c34"/>
+      <stop offset="100%" stop-color="#2c2419"/>
     </linearGradient>
-    <linearGradient id="og-hill" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2a4538" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#3a3228" stop-opacity="0.95"/>
-    </linearGradient>
-    <filter id="og-glow">
-      <feGaussianBlur stdDeviation="8" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
-  <rect width="1200" height="630" fill="url(#og-sky)"/>
-  <!-- Rolling hills  original silhouette -->
-  <path d="M0 420 Q300 360 600 400 T1200 380 L1200 630 L0 630 Z" fill="url(#og-hill)" opacity="0.85"/>
-  <path d="M0 480 Q400 440 800 470 T1200 450 L1200 630 L0 630 Z" fill="#2a4538" opacity="0.5"/>
-  <!-- Subtle mønepryd line -->
-  <g stroke="#b8956a" stroke-width="2" opacity="0.4" fill="none">
-    <path d="M600 80 L600 100 M600 80 C580 95 560 108 540 120 M600 80 C620 95 640 108 660 120"/>
-    <circle cx="600" cy="86" r="5" fill="#b8956a" stroke="none"/>
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <path d="M0 400 Q400 340 600 370 T1200 350 L1200 630 L0 630 Z" fill="#1a3c34" opacity="0.5"/>
+  <g transform="translate(600 260) scale(1.15)">
+    <path d="M0 -80 L104 -34 L104 76 L0 122 L-104 76 L-104 -34 Z" fill="#f6efe4" stroke="#c17f59" stroke-width="2"/>
+    <path d="M0 -48 C-32 -48 -52 -26 -52 0 C-52 18 -36 32 -16 36 C-48 44 -60 64 -60 90 C-60 118 -34 140 0 140 C34 140 60 118 60 90 C60 64 48 44 16 36 C36 32 52 18 52 0 C52 -26 32 -48 0 -48 Z" fill="none" stroke="#1a3c34" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 -28 L0 118" stroke="#c17f59" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="-62" r="6" fill="#c17f59"/>
   </g>
-  <!-- Mini seal -->
-  <g transform="translate(600 290)">
-    <circle r="118" fill="#f7f3eb" stroke="#b8956a" stroke-width="2"/>
-    <circle r="108" fill="none" stroke="#2a4538" stroke-width="1" opacity="0.35"/>
-    <g transform="translate(0 -8)">
-      <path d="M-52 -18 L-32 -34 L-8 -18 L-8 28 L-52 28 Z" fill="#8b3a3a" stroke="#3a3228" stroke-width="1"/>
-      <path d="M-8 -24 L0 -34 L8 -24 L8 32 L-8 32 Z" fill="#b8956a" stroke="#3a3228" stroke-width="1"/>
-      <path d="M8 -16 L28 -30 L48 -16 L48 24 L8 24 Z" fill="#8b3a3a" stroke="#3a3228" stroke-width="1"/>
-      <path d="M-6 6 C-12 -4 -20 -2 -10 6 C0 14 0 14 0 14 C0 14 0 14 10 6 C20 -2 12 -4 6 6 Z" fill="#8b3a3a"/>
-    </g>
-  </g>
-  <text x="600" y="455" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#f7f3eb" letter-spacing="8">SØNDRE HAUGEN</text>
-  <text x="600" y="510" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-style="italic" fill="#e8dcc8">gård</text>
-  <text x="600" y="555" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#b8956a" letter-spacing="6">HISTORISK · EKTE · DIN</text>
-  <text x="600" y="595" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#f7f3eb" opacity="0.75" letter-spacing="2">farm.legal · Våler, Østfold</text>
+  <text x="600" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#f6efe4" letter-spacing="6">S&#216;NDRE HAUGEN</text>
+  <text x="600" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-style="italic" fill="#e5d9c8">g&#229;rd</text>
+  <text x="600" y="548" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#d4a07a" letter-spacing="5">HISTORISK &#183; EKTE &#183; DIN</text>
+  <text x="600" y="590" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#f6efe4" opacity="0.8">farm.legal</text>
 </svg>

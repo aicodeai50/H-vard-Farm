@@ -1,28 +1,36 @@
 # Merkevare — Søndre Haugen gård
 
-## Original logo
+## Original logo (2026)
 
-Fil: `website/assets/images/logo.svg`
+Filer:
+- `website/assets/images/logo.svg` — full hex shield + knot monogram
+- `website/assets/images/logo-mark.svg` — compact favicon / small UI
 
-Designet er **originalt vektorgrafikk** for dette prosjektet:
+Designet er **original vektorgrafikk** (ikke stock):
 
-- Symmetrisk **mønepryd** (takornament)
-- **Laftede bygg** i gårdens røde/gule toner
-- **Hjerte og grønnskjær** — fra etablert visuell identitet
-- Ring med kurvet typografi: SØNDRE HAUGEN · gård · EVENT · SELSKAP · BRYLLUP · FEST
+- **Hexagonal skjold** — ikke rund signet/seal
+- **Haugen-knutt** — sammenhengende sti (monogram + port mellom «hauger»)
+- **Asymmetrisk møne** — fem ulike spisser
+- **Hjerte** — signatur nederst
 
-Bruk alltid `logo.svg` — ikke generiske stock-logoer.
+## Fargepalett — Nordic fireside
+
+| Token | Hex | Bruk |
+|-------|-----|------|
+| Pine | `#1a3c34` | Primær grønn, header, knapper |
+| Pine light | `#2d5a4f` | Hover, gradienter |
+| Bark | `#2c2419` | Tekst, footer, jord |
+| Linen | `#f6efe4` | Bakgrunn |
+| Copper | `#c17f59` | Aksent, øyenbryn, lenker på mørk bakgrunn |
+| Barn | `#a64d3f` | Hjerte, varme detaljer |
+
+CSS-variabler: `website/css/styles.css` (`:root`).
 
 ## Kobling til Håvard Pedersen
 
-| Plattform | URL |
-|-----------|-----|
+| | |
+|--|--|
 | Gård | https://farm.legal |
 | Musikk | https://havardpederse.netlify.app |
 
-**Musikk-tagline:** Raw. Real. Live.  
-**Gård-tagline:** Historisk. Ekte. Din.
-
-## Live data
-
-Rediger `website/data/site.json` — lastes dynamisk på forsiden (ekte prosjekt, ikke hardkodet mock).
+**Musikk:** Raw. Real. Live. · **Gård:** Historisk. Ekte. Din.

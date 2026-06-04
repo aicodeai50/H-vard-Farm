@@ -1,25 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-label="Søndre Haugen gård — illustrasjon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-label="Søndre Haugen gård">
   <defs>
-    <linearGradient id="ph-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3d5c4a"/>
-      <stop offset="55%" stop-color="#2a4538"/>
-      <stop offset="100%" stop-color="#3a3228"/>
-    </linearGradient>
-    <linearGradient id="ph-field" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2a4538"/>
-      <stop offset="100%" stop-color="#4a6b58"/>
+    <linearGradient id="cf-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2d5a4f"/>
+      <stop offset="60%" stop-color="#1a3c34"/>
+      <stop offset="100%" stop-color="#2c2419"/>
     </linearGradient>
   </defs>
-  <rect width="900" height="675" fill="url(#ph-sky)"/>
-  <path d="M0 420 Q300 360 450 390 T900 370 L900 675 L0 675 Z" fill="url(#ph-field)" opacity="0.9"/>
-  <g opacity="0.4" fill="#1a1814">
-    <rect x="200" y="320" width="100" height="55"/><polygon points="250,285 300,320 200,320"/>
-    <rect x="420" y="300" width="160" height="75"/><polygon points="500,255 580,300 420,300"/>
-    <rect x="620" y="330" width="110" height="50"/><polygon points="675,300 730,330 620,330"/>
+  <rect width="900" height="675" fill="url(#cf-bg)"/>
+  <path d="M450 120 L580 200 L580 340 L450 420 L320 340 L320 200 Z" fill="#f6efe4" fill-opacity="0.12" stroke="#c17f59" stroke-width="1.5"/>
+  <g transform="translate(450 280)">
+    <path d="M0 -42 C-28 -42 -44 -22 -44 2 C-44 18 -32 30 -16 34 C-44 40 -56 58 -56 82 C-56 108 -32 128 0 128 C32 128 56 108 56 82 C56 58 44 40 16 34 C32 30 44 18 44 2 C44 -22 28 -42 0 -42 Z" fill="none" stroke="#f6efe4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M0 -22 L0 108" stroke="#d4a07a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="-58" r="5" fill="#c17f59"/>
   </g>
-  <circle cx="450" cy="240" r="56" fill="#f7f3eb" stroke="#b8956a" stroke-width="2"/>
-  <path d="M430 228 L450 212 L470 228 L470 258 L430 258 Z" fill="#8b3a3a"/>
-  <path d="M450 220 L465 228 L480 240 L480 258 L450 258 Z" fill="#b8956a"/>
-  <text x="450" y="480" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="600" fill="#f7f3eb">Søndre Haugen gård</text>
-  <text x="450" y="518" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#e8dcc8" letter-spacing="0.08em">Våler · Østfold · farm.legal</text>
+  <text x="450" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="600" fill="#f6efe4">S&#248;ndre Haugen g&#229;rd</text>
+  <text x="450" y="538" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#d4a07a" letter-spacing="0.12em">V&#229;ler &#183; &#216;stfold</text>
 </svg>

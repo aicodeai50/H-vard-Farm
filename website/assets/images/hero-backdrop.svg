@@ -1,32 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="hb-sky" x1="0" y1="0" x2="0.3" y2="1">
-      <stop offset="0%" stop-color="#4a6b58"/>
-      <stop offset="40%" stop-color="#2a4538"/>
-      <stop offset="100%" stop-color="#3a3228"/>
+    <linearGradient id="hb-sky" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#2d5a4f"/>
+      <stop offset="35%" stop-color="#1a3c34"/>
+      <stop offset="100%" stop-color="#2c2419"/>
     </linearGradient>
-    <radialGradient id="hb-light" cx="70%" cy="25%" r="50%">
-      <stop offset="0%" stop-color="#faf6ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#2a4538" stop-opacity="0"/>
+    <radialGradient id="hb-glow" cx="65%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#d4a07a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1a3c34" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1920" height="1080" fill="url(#hb-sky)"/>
-  <rect width="1920" height="1080" fill="url(#hb-light)"/>
-  <path d="M0 720 Q480 620 960 680 T1920 640 L1920 1080 L0 1080 Z" fill="#2a4538" opacity="0.55"/>
-  <path d="M0 820 Q640 740 1280 800 T1920 760 L1920 1080 L0 1080 Z" fill="#3a3228" opacity="0.7"/>
-  <!-- Distant farm line -->
-  <g opacity="0.35" fill="#1a1814">
-    <rect x="380" y="580" width="120" height="70" rx="2"/>
-    <polygon points="440,540 500,580 380,580"/>
-    <rect x="720" y="560" width="200" height="95" rx="2"/>
-    <polygon points="820,500 920,560 720,560"/>
-    <rect x="1180" y="590" width="140" height="65" rx="2"/>
-    <polygon points="1250,555 1320,590 1180,590"/>
-  </g>
-  <!-- Foreground field texture -->
-  <g opacity="0.08" stroke="#f7f3eb" stroke-width="1">
-    <line x1="0" y1="900" x2="1920" y2="880"/>
-    <line x1="0" y1="940" x2="1920" y2="920"/>
-    <line x1="0" y1="980" x2="1920" y2="960"/>
+  <rect width="1920" height="1080" fill="url(#hb-glow)"/>
+  <path d="M0 700 Q520 600 960 660 T1920 620 L1920 1080 L0 1080 Z" fill="#1a3c34" opacity="0.6"/>
+  <path d="M0 800 Q680 720 1280 780 T1920 740 L1920 1080 L0 1080 Z" fill="#2c2419" opacity="0.75"/>
+  <g opacity="0.32" fill="#0f2420">
+    <rect x="360" y="560" width="130" height="72"/><polygon points="425,520 490,560 360,560"/>
+    <rect x="760" y="540" width="210" height="95"/><polygon points="865,490 970,540 760,540"/>
+    <rect x="1180" y="570" width="150" height="65"/><polygon points="1255,535 1330,570 1180,570"/>
   </g>
 </svg>

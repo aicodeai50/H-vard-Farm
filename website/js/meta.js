@@ -53,7 +53,7 @@
   if (!theme) {
     theme = document.createElement("meta");
     theme.name = "theme-color";
-    theme.content = "#2a4538";
+    theme.content = "#1a3c34";
     document.head.appendChild(theme);
   }
 })();
