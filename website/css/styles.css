@@ -920,9 +920,86 @@ textarea { min-height: 140px; resize: vertical; }
   margin-bottom: 0.5rem;
 }
 
+.feel-card .feel-desc {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--earth-light);
+  line-height: 1.5;
+}
+
 .feel-card p,
 .feel-card .btn {
   margin-top: 0.75rem;
+}
+
+.trust-section {
+  background: var(--cream-dark);
+}
+
+.trust-list {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.prose {
+  max-width: 42rem;
+}
+
+.prose h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background: var(--gold);
+  color: var(--earth);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.footer-bottom a {
+  color: var(--gold);
+}
+
+.footer-bottom a:hover {
+  color: var(--cream);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Gallery */

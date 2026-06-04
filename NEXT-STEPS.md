@@ -7,6 +7,7 @@
 - [x] Live: https://farm.legal
 - [x] Fase 2: historie, galleri, mobil-CTA
 - [x] Egen merkevare (logo, OG-bilde, ingen Unsplash)
+- [x] Produksjonsklar UI (kontrast, lister, personvern, tilgjengelighet)
 
 ## 🔲 Gjør nå (Håvard / Sandra)
 

@@ -35,6 +35,7 @@ function headerHTML(active = "", transparent = false) {
   const mobileLinks = links.map(([href, label]) => `<a href="${href}">${label}</a>`).join("");
 
   return `
+<a class="skip-link" href="#main">Hopp til innhold</a>
 <header class="site-header${t}" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen gård — forsiden">
@@ -86,13 +87,44 @@ function footerHTML() {
       <a href="kontakt.html#visning">Book visning</a>
       <a href="nyheter.html">Nyheter</a>
       <a href="https://havardpederse.netlify.app" target="_blank" rel="noopener">Håvard Pedersen · musikk</a>
+      <a href="personvern.html">Personvern</a>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>&copy; ${year} Søndre Haugen gård · ${SITE.domain} · et prosjekt under Håvard Pedersen</span>
-    <span>2436 Våler i Østfold</span>
+    <span>&copy; ${year} Søndre Haugen gård · ${SITE.domain}</span>
+    <span><a href="personvern.html">Personvern</a> · Svinndallinna, 2436 Våler</span>
   </div>
 </footer>`;
+}
+
+/** Wrap page sections in main landmark for accessibility */
+function wrapMainContent() {
+  if (document.getElementById("main")) return;
+  const header = document.getElementById("site-header");
+  const footer = document.getElementById("site-footer");
+  if (!header || !footer) return;
+
+  const main = document.createElement("main");
+  main.id = "main";
+  main.tabIndex = -1;
+
+  const keepOutside = new Set(["site-header", "site-footer", "noscript-nav"]);
+  let node = header.nextSibling;
+  const toMove = [];
+
+  while (node && node !== footer) {
+    const next = node.nextSibling;
+    if (node.nodeType === 1) {
+      const id = node.id;
+      const tag = node.tagName;
+      if (tag !== "SCRIPT" && !keepOutside.has(id)) toMove.push(node);
+    }
+    node = next;
+  }
+
+  if (!toMove.length) return;
+  footer.parentNode.insertBefore(main, footer);
+  toMove.forEach((el) => main.appendChild(el));
 }
 
 function initLayout() {
@@ -100,6 +132,7 @@ function initLayout() {
   const f = document.getElementById("site-footer");
   if (h) h.innerHTML = headerHTML(h.dataset.active || "", h.dataset.transparent === "true");
   if (f) f.innerHTML = footerHTML();
+  wrapMainContent();
 }
 
 if (document.readyState === "loading") {
