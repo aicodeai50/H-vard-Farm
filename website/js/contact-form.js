@@ -30,16 +30,18 @@ window.updateContactFormI18n = updateContactFormI18n;
   const typeMap = {
     bryllup: "bryllup",
     arrangement: "arrangement",
+    selskap: "arrangement",
+    firma: "firma",
+    moter: "firma",
     bobil: "bobil",
     visning: "visning",
-    opplevelser: "opplevelser",
     prospekt: "prospekt",
   };
   const t = params.get("type");
   if (t && typeMap[t] && typeEl) typeEl.value = typeMap[t];
 
   const niva = (params.get("niva") || "").toLowerCase();
-  const nivaLabel = { ute: "Outdoor", inne: "Indoor", premium: "Premium" }[niva];
+  const nivaLabel = { ute: "Ute", inne: "Inne", premium: "Premium" }[niva];
   if (nivaLabel && typeEl?.value === "bobil") {
     let hidden = form.querySelector('input[name="bobil_niva"]');
     if (!hidden) {
@@ -51,7 +53,8 @@ window.updateContactFormI18n = updateContactFormI18n;
     hidden.value = nivaLabel;
     const melding = document.getElementById("melding");
     if (melding && !melding.value.trim()) {
-      melding.placeholder = `Interested in ${nivaLabel} storage — describe vehicle, length, and season …`;
+      const ph = t("form.messagePhMotor", "Describe vehicle, length, and season …");
+      melding.placeholder = ph.replace("{level}", nivaLabel);
     }
   }
 

@@ -1,4 +1,35 @@
-<!DOCTYPE html>
+const fs = require("fs");
+const path = require("path");
+
+const root = path.join(__dirname, "..");
+
+const redirects = {
+  "garden-fakta.html": {
+    url: "lokaler.html",
+    title: "Gården — fakta",
+    link: "Gå til Lokaler →",
+    canonical: "https://farm.legal/lokaler.html",
+  },
+};
+
+for (const [name, cfg] of Object.entries(redirects)) {
+  const html = `<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0;url=${cfg.url}" />
+  <link rel="canonical" href="${cfg.canonical}" />
+  <title>${cfg.title} | Søndre Haugen Gård</title>
+  <script>location.replace("${cfg.url}");</script>
+</head>
+<body><p><a href="${cfg.url}">${cfg.link}</a></p></body>
+</html>
+`;
+  fs.writeFileSync(path.join(root, name), html, "utf8");
+  console.log("redirect:", name);
+}
+
+const bobil = `<!DOCTYPE html>
 <html lang="nb">
 <head>
   <meta charset="UTF-8" />
@@ -138,3 +169,7 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+`;
+
+fs.writeFileSync(path.join(root, "bobilhotell.html"), bobil, "utf8");
+console.log("wrote bobilhotell.html");
