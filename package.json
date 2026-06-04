@@ -1,0 +1,12 @@
+{
+  "name": "h-vard-farm",
+  "private": true,
+  "description": "Søndre Haugen gård — deploy root for Railway (runs website/)",
+  "scripts": {
+    "build": "npm ci --prefix website",
+    "start": "npm start --prefix website"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
