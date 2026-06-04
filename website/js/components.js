@@ -13,7 +13,7 @@ const SITE = {
   /** Sett Calendly-lenke når klar, f.eks. https://calendly.com/sondrehaugen/visning */
   calendly: "",
   /** Bump when logo/CSS changes — busts browser cache */
-  assetVer: "20260604-hex",
+  assetVer: "20260604-pro",
 };
 
 function assetUrl(path) {

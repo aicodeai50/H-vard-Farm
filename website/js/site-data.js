@@ -4,7 +4,7 @@ window.SHG = window.SHG || {};
 fetch("data/site.json")
   .then((r) => r.json())
   .then((data) => {
-    window.SHG = data;
+    window.SHG = { assetVer: "20260604-pro", ...data };
     document.dispatchEvent(new CustomEvent("shg-data-ready", { detail: data }));
   })
   .catch(() => {

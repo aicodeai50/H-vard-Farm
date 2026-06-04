@@ -15,9 +15,16 @@
     "name": "Håvard Pedersen",
     "role": "Vertskap & drift",
     "musicUrl": "https://havardpederse.netlify.app",
-    "musicLabel": "Musikk · live · kultur",
-    "bioShort": "Håvard Pedersen er musiker, arrangør og gründer — fra Vardø til Oslo, med Gretsch- og Mezzabarba-samarbeid og tiår på scenen. Søndre Haugen gård er hans visjon om et sted der historie, natur og arrangementer møtes med samme ekthet som musikken: raw on stage, refined on the farm.",
-    "traits": ["Ekte", "Kvalitet", "Uavhengig drift", "Skreddersøm", "Kultur & arrangement"]
+    "musicLabel": "Musikk · Håvard Pedersen",
+    "musicTagline": "Raw. Real. Live.",
+    "bioShort": "Håvard Pedersen er norsk gitarist, sanger og låtskriver — fra Vardø til Oslo. Gretsch- og Mezzabarba-endorsed, med John Norum og Ronni Le Tekrø på plate, og nye økter med Peter Michelsen på The Norwegian Sound. På scenen leverer han blues-rock med The Blues Is Alright Band; på Søndre Haugen gård skaper han historiske rammer for bryllup, selskap og bobilgjester.",
+    "traits": ["Ekte", "Kvalitet", "100 % live", "Skreddersøm", "Kultur & arrangement"],
+    "highlights": [
+      "Gretsch-endorsed artist · Mezzabarba",
+      "Plategjester: John Norum · Ronni Le Tekrø",
+      "Studio: Peter Michelsen · The Norwegian Sound, Mjøndalen",
+      "Live: Håvard Pedersen & The Blues Is Alright Band"
+    ]
   },
   "contact": {
     "phone": "901 98 671",
