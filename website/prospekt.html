@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prospekt | Søndre Haugen Gård</title>
+  <link rel="stylesheet" href="css/styles.css?v=20260606-all" />
+  <link rel="icon" href="assets/images/logo-icon.png?v=20260606-all" type="image/png" />
+  <style>
+    @media print {
+      .site-header, .site-footer, .sticky-cta, .prospekt-actions, .no-print { display: none !important; }
+      body { background: #fff; }
+      .prospekt-sheet { box-shadow: none; margin: 0; max-width: none; }
+    }
+    .prospekt-sheet {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      border-radius: 4px;
+    }
+    .prospekt-logo { max-width: 120px; margin: 0 auto 1rem; }
+    .prospekt-tagline {
+      text-align: center;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--green);
+      margin-bottom: 2rem;
+    }
+    .prospekt-grid {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    @media (min-width: 600px) {
+      .prospekt-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .prospekt-grid img { border-radius: 4px; aspect-ratio: 4/3; object-fit: cover; width: 100%; }
+    .prospekt-actions { text-align: center; margin: 2rem 0; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body data-page="prospekt">
+  <div id="site-header" data-active=""></div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="prospekt-actions no-print">
+        <button type="button" class="btn btn-primary" onclick="window.print()" data-i18n="prospekt.print">Skriv ut / lagre som PDF</button>
+        <a href="kontakt.html?type=prospekt#contact-form" class="btn btn-outline" data-i18n="contact.prospekt.btn">Be om visning</a>
+      </div>
+
+      <article class="prospekt-sheet" id="prospekt">
+        <img src="assets/images/logo-brand.png?v=20260606-all" alt="Søndre Haugen Gård" class="prospekt-logo" width="120" height="120" />
+        <p class="prospekt-tagline" data-i18n="brand.tagline">Et sted for livets store og små øyeblikk.</p>
+
+        <h1 style="text-align:center;font-size:1.75rem;margin-bottom:0.5rem" data-i18n="prospekt.h1">Søndre Haugen Gård</h1>
+        <p style="text-align:center;color:var(--earth-light);margin-bottom:1.5rem" data-i18n="prospekt.sub">Arrangementssted · Svinndallinna 190 · 1593 Svinndal</p>
+
+        <p data-i18n="prospekt.intro">Historisk gård i rolige omgivelser — bryllup, selskap, møter og firma. Fleksible løsninger fra enkel lokalleie til komplett pakke.</p>
+
+        <h2 style="margin-top:1.5rem" data-i18n="prospekt.offers.h2">Vi tilbyr</h2>
+        <ul class="list-visible list-visible--light">
+          <li data-i18n="prospekt.offers.1">Bryllup, lovefest og selskap</li>
+          <li data-i18n="prospekt.offers.2">Møter, kurs og firmaarrangementer</li>
+          <li data-i18n="prospekt.offers.3">Utearrangementer og seremonier</li>
+          <li data-i18n="prospekt.offers.4">Mat og servering — eller bring egen løsning</li>
+          <li data-i18n="prospekt.offers.5">Bobilparkering for reisende gjester</li>
+        </ul>
+
+        <p class="mt-2" data-i18n="home.capacity">Plass til inntil ca. 100 personer innendørs.</p>
+
+        <div class="prospekt-grid">
+          <img src="assets/images/property/hero-aerial.jpg?v=20260606-all" alt="" data-i18n-alt="home.img.flex.rent" />
+          <img src="assets/images/property/barn-dining.jpg?v=20260606-all" alt="" data-i18n-alt="home.img.food" />
+        </div>
+
+        <h2 style="margin-top:1.5rem" data-i18n="prospekt.contact.h2">Kontakt</h2>
+        <p data-i18n-html="prospekt.contact.p">Telefon: <a href="tel:+4790198671">901 98 671</a><br />
+        E-post: <a href="mailto:post@sondrehaugen.no">post@sondrehaugen.no</a><br />
+        farm.legal</p>
+      </article>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/i18n.js?v=20260606-all"></script>
+  <script src="js/components.js?v=20260606-all"></script>
+  <script src="js/meta.js?v=20260606-all"></script>
+  <script src="js/main.js?v=20260606-all"></script>
+</body>
+</html>

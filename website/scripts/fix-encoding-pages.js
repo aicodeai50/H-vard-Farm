@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const VER = "20260606-home";
+const VER = "20260606-all";
 const root = path.join(__dirname, "..");
 
 const redirects = [
