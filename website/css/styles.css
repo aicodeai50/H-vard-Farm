@@ -404,14 +404,15 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-bg,
+.hero-bg--barn {
   position: absolute;
   inset: 0;
-  background: var(--gradient-hero), url("../assets/images/property/exterior.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/barn-exterior.jpg") center/cover no-repeat;
 }
 
 .hero-bg--bryllup {
-  background: var(--gradient-hero), url("../assets/images/property/grounds.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/outdoor-barn.jpg") center/cover no-repeat;
 }
 
 .hero-bg--selskap {
@@ -419,11 +420,35 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 }
 
 .hero-bg--bobil {
-  background: var(--gradient-hero), url("../assets/images/property/estate.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/motorhome-area.jpg") center/cover no-repeat;
 }
 
 .hero-bg--om {
-  background: var(--gradient-hero), url("../assets/images/property/buildings.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/grounds.jpg") center/cover no-repeat;
+}
+
+.prose-home {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.prose-home .lead {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--earth);
+}
+
+.event-types {
+  columns: 2;
+  column-gap: 2rem;
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .event-types {
+    columns: 1;
+  }
 }
 
 .property-photo {

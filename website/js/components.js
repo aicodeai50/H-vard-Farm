@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260604-i18n",
+  assetVer: "20260604-barn",
 };
 
 function t(key, fallback) {
@@ -111,7 +111,7 @@ function footerHTML() {
       <a href="${SITE.url}">${SITE.domain}</a>
       <a href="kontakt.html#visning">${t("common.bookVisit")}</a>
       <a href="nyheter.html">${t("nav.news")}</a>
-      <a href="https://havardpederse.netlify.app" target="_blank" rel="noopener">${t("footer.music")}</a>
+      <a href="om-garden.html">${t("nav.about")}</a>
       <a href="personvern.html">${t("common.privacy")}</a>
     </div>
   </div>

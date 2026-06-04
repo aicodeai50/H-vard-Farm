@@ -1,5 +1,16 @@
 # Property photos
 
-Images in this folder were sourced from the property listing gallery ([FINN 427386872](https://www.finn.no/realestate/homes/ad.html?finnkode=427386872)) for site development at **Svinndallinna 190, 1593 Svinndal**.
+Photos for the website focus on **the barn, outdoor areas, guest house, and motorhome parking** — not the main house interior.
 
-Replace or supplement with your own photography when available. Confirm rights with the broker/owner before wider commercial use beyond the farm’s own marketing.
+Sources: listing gallery ([FINN 427386872](https://www.finn.no/realestate/homes/ad.html?finnkode=427386872)) for development. Replace with your own photography when ready.
+
+| File | Use |
+|------|-----|
+| `barn-exterior.jpg` | Hero, gallery |
+| `barn-hall.jpg` | Barn event space |
+| `barn-event.jpg` | Culture / events |
+| `outdoor-barn.jpg` | Outdoor barn & weddings |
+| `guest-house.jpg` | Guest house |
+| `grounds.jpg` | Countryside / about page |
+| `area-wide.jpg` | Wide shot of the estate |
+| `motorhome-area.jpg` | Motorhome parking |
