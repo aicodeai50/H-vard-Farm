@@ -2,10 +2,11 @@
 
 Cropped from FINN/WhatsApp gallery screenshots. Originals are kept in `_screenshots/`.
 
-Regenerate after adding screenshots:
+Regenerate after adding screenshots (requires `npm install sharp` locally first):
 
 ```bash
-node scripts/crop-gallery-photos.js
+npm install sharp
+npm run crop-photos
 ```
 
 | File | Use |

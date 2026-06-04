@@ -15,8 +15,5 @@
   },
   "dependencies": {
     "serve": "^14.2.4"
-  },
-  "devDependencies": {
-    "sharp": "^0.34.2"
   }
 }
