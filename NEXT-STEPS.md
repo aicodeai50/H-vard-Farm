@@ -6,6 +6,7 @@
 - [x] GitHub: aicodeai50 + havard50
 - [x] Live: https://farm.legal
 - [x] Fase 2: historie, galleri, mobil-CTA
+- [x] Egen merkevare (logo, OG-bilde, ingen Unsplash)
 
 ## 🔲 Gjør nå (Håvard / Sandra)
 

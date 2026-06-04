@@ -6,7 +6,7 @@
 4. Kategori: **Gård** / **Eventlokale** / **Bryllupsplanlegger** (velg det som passer)
 5. Nettside: **https://farm.legal**
 6. Telefon: **901 98 671**
-7. Last opp logo (`website/assets/images/logo-mark.svg` eller PNG)
+7. Last opp logo (`website/assets/images/logo.svg` eller eksporter PNG fra den)
 8. Last opp 5–10 bilder fra gården (drone, bygg, låve)
 9. Beskrivelse (kort):
 

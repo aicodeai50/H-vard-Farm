@@ -293,31 +293,16 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   inset: 0;
   background:
     linear-gradient(180deg, rgba(42, 69, 56, 0.55) 0%, rgba(58, 50, 40, 0.75) 100%),
-    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80") center/cover no-repeat;
+    url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
 }
 
-.hero-bg--bryllup {
-  background:
-    linear-gradient(180deg, rgba(42, 69, 56, 0.5) 0%, rgba(58, 50, 40, 0.8) 100%),
-    url("https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80") center/cover no-repeat;
-}
-
-.hero-bg--selskap {
-  background:
-    linear-gradient(180deg, rgba(42, 69, 56, 0.5) 0%, rgba(58, 50, 40, 0.8) 100%),
-    url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80") center/cover no-repeat;
-}
-
-.hero-bg--bobil {
-  background:
-    linear-gradient(180deg, rgba(42, 69, 56, 0.55) 0%, rgba(58, 50, 40, 0.75) 100%),
-    url("https://images.unsplash.com/photo-1523987355524-c7b5ee577a42?w=1920&q=80") center/cover no-repeat;
-}
-
+.hero-bg--bryllup,
+.hero-bg--selskap,
+.hero-bg--bobil,
 .hero-bg--om {
   background:
     linear-gradient(180deg, rgba(42, 69, 56, 0.5) 0%, rgba(58, 50, 40, 0.8) 100%),
-    url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80") center/cover no-repeat;
+    url("../assets/images/hero-backdrop.svg") center/cover no-repeat;
 }
 
 .hero-content {

@@ -30,4 +30,15 @@
 
   setMeta("property", "og:url", canonical);
   setMeta("property", "og:site_name", "Søndre Haugen gård");
+  setMeta("property", "og:image", BASE + "/assets/images/og-share.svg");
+  setMeta("property", "og:image:width", "1200");
+  setMeta("property", "og:image:height", "630");
+  setMeta("name", "twitter:image", BASE + "/assets/images/og-share.svg");
+
+  if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+    const apple = document.createElement("link");
+    apple.rel = "apple-touch-icon";
+    apple.href = "/assets/images/logo.svg";
+    document.head.appendChild(apple);
+  }
 })();
