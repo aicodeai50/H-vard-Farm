@@ -1,21 +1,19 @@
 (function () {
-  const toggle = document.querySelector(".nav-toggle");
-  const mobileNav = document.getElementById("nav-mobile");
-  const closeBtn = document.querySelector(".nav-mobile-close");
-
-  const openMobile = () => {
-    mobileNav?.classList.add("open");
-    document.body.style.overflow = "hidden";
-  };
-
   const closeMobile = () => {
-    mobileNav?.classList.remove("open");
+    document.getElementById("nav-mobile")?.classList.remove("open");
     document.body.style.overflow = "";
   };
 
-  toggle?.addEventListener("click", openMobile);
-  closeBtn?.addEventListener("click", closeMobile);
-  mobileNav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMobile));
+  const openMobile = () => {
+    document.getElementById("nav-mobile")?.classList.add("open");
+    document.body.style.overflow = "hidden";
+  };
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".nav-toggle")) openMobile();
+    if (e.target.closest(".nav-mobile-close")) closeMobile();
+    if (e.target.closest("#nav-mobile a")) closeMobile();
+  });
 
   document.querySelectorAll("form[data-form]").forEach((form) => {
     form.addEventListener("submit", (e) => {

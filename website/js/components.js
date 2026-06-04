@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260604-brand",
+  assetVer: "20260604-polish",
 };
 
 function t(key, fallback) {
@@ -34,17 +34,14 @@ function langSwitcherHTML() {
 </div>`;
 }
 
-function buildNav(active = "", overlay = false) {
-  const hc = overlay ? " site-header--overlay" : "";
+function buildNav(active = "") {
   const links = [
-    ["index.html", "nav.home", ""],
     ["arrangement.html", "nav.arrangement", "arrangement"],
     ["bryllup.html", "nav.weddingsLove", "bryllup"],
     ["selskap.html", "nav.parties", "selskap"],
     ["moter-firma.html", "nav.corporate", "moter"],
     ["mat-servering.html", "nav.catering", "mat"],
     ["lokaler.html", "nav.venues", "lokaler"],
-    ["bobilhotell.html", "nav.motorhomes", "bobil"],
     ["kontakt.html", "nav.contact", "kontakt"],
   ];
   const navLinks = links
@@ -58,11 +55,10 @@ function buildNav(active = "", overlay = false) {
   return {
     skip: `<a class="skip-link" href="#main">${t("common.skip")}</a>`,
     header: `
-<header class="site-header${hc}" role="banner">
+<header class="site-header" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen — ${t("nav.home")}">
-      <img src="${assetUrl("assets/images/logo-mark.svg")}" alt="" class="logo-img" width="56" height="40" />
-      <div class="logo-text">SØNDRE HAUGEN<span>${t("brand.tag", "Gård")}</span></div>
+      <img src="${assetUrl("assets/images/logo-brand.png")}" alt="Søndre Haugen Gård" class="logo-img" height="64" />
     </a>
     <nav class="nav-desktop" aria-label="Main menu">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">${t("common.enquire")}</a></nav>
     ${langSwitcherHTML()}
@@ -74,6 +70,7 @@ function buildNav(active = "", overlay = false) {
   <button type="button" class="nav-mobile-close" aria-label="${t("common.closeMenu")}">&times;</button>
   ${langSwitcherHTML()}
   ${mobileLinks}
+  <a href="bobilhotell.html" class="nav-mobile-extra">${t("nav.motorhomes")}</a>
   <a href="kontakt.html" class="btn btn-primary" style="margin-top:1rem">${t("common.enquire")}</a>
 </nav>`,
   };
@@ -85,9 +82,8 @@ function footerHTML() {
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
-      <a href="index.html" class="logo" style="margin-bottom:1rem">
-        <img src="${assetUrl("assets/images/logo.svg")}" alt="" width="120" height="174" style="margin-bottom:0.75rem" />
-        <div class="logo-text" style="color:var(--cream)">SØNDRE HAUGEN<span style="color:var(--gold)">${t("brand.tag")}</span></div>
+      <a href="index.html" class="footer-logo">
+        <img src="${assetUrl("assets/images/logo-brand.png")}" alt="Søndre Haugen Gård" width="140" height="140" />
       </a>
       <p class="footer-tagline">${t("brand.tagline")}</p>
       <p style="opacity:0.85;max-width:300px">${t("footer.blurb")}</p>
@@ -168,15 +164,11 @@ function wrapMainContent() {
   toMove.forEach((el) => main.appendChild(el));
 }
 
-const OVERLAY_PAGES = new Set(["home", "wedding", "events", "motorhome"]);
-
 function initLayout() {
   const h = document.getElementById("site-header");
   const f = document.getElementById("site-footer");
   if (h) {
-    const page = document.body.dataset.page || "";
-    const overlay = h.dataset.transparent === "true" || OVERLAY_PAGES.has(page);
-    const parts = buildNav(h.dataset.active || "", overlay);
+    const parts = buildNav(h.dataset.active || "");
     ensureSkipLink(h, parts.skip);
     h.innerHTML = parts.header;
     ensureMobileNav(h, parts.mobile);
