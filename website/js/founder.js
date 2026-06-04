@@ -8,7 +8,7 @@ function renderFounderBlock() {
       <div class="container">
         <div class="feature-row">
           <div class="founder-mark">
-            <img src="assets/images/logo.svg" alt="" width="160" height="160" />
+            <img src="assets/images/logo.svg?v=20260604-hex" alt="" width="160" height="160" />
             <p class="founder-brand">${window.SHG.farm?.brandLine || ""}</p>
           </div>
           <div>

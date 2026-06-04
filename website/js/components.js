@@ -12,7 +12,14 @@ const SITE = {
   tagline: "EVENT · SELSKAP · BRYLLUP · FEST",
   /** Sett Calendly-lenke når klar, f.eks. https://calendly.com/sondrehaugen/visning */
   calendly: "",
+  /** Bump when logo/CSS changes — busts browser cache */
+  assetVer: "20260604-hex",
 };
+
+function assetUrl(path) {
+  const sep = path.includes("?") ? "&" : "?";
+  return path + sep + "v=" + SITE.assetVer;
+}
 
 function headerHTML(active = "", transparent = false) {
   const t = transparent ? " site-header--transparent" : "";
@@ -39,7 +46,7 @@ function headerHTML(active = "", transparent = false) {
 <header class="site-header${t}" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen gård — forsiden">
-      <img src="assets/images/logo.svg" alt="" class="logo-img" width="52" height="52" />
+      <img src="${assetUrl("assets/images/logo.svg")}" alt="" class="logo-img" width="52" height="52" />
       <div class="logo-text">SØNDRE HAUGEN<span>gård</span></div>
     </a>
     <nav class="nav-desktop" aria-label="Hovedmeny">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">Send forespørsel</a></nav>
@@ -60,7 +67,7 @@ function footerHTML() {
   <div class="container footer-grid">
     <div>
       <a href="index.html" class="logo" style="margin-bottom:1rem">
-        <img src="assets/images/logo.svg" alt="" width="72" height="72" style="margin-bottom:0.75rem" />
+        <img src="${assetUrl("assets/images/logo.svg")}" alt="" width="72" height="72" style="margin-bottom:0.75rem" />
         <div class="logo-text" style="color:var(--cream)">SØNDRE HAUGEN<span style="color:var(--gold)">gård</span></div>
       </a>
       <p class="footer-tagline">${SITE.tagline}</p>
