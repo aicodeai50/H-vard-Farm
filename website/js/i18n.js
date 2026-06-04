@@ -70,7 +70,6 @@
     localStorage.setItem(STORAGE_KEY, lang);
     applyPage();
     if (typeof window.refreshSiteLayout === "function") window.refreshSiteLayout();
-    if (typeof window.renderFounderBlock === "function") window.renderFounderBlock();
     if (typeof window.updateContactFormI18n === "function") window.updateContactFormI18n();
   }
 

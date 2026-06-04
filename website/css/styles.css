@@ -405,22 +405,23 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 }
 
 .hero-bg,
-.hero-bg--barn {
+.hero-bg--barn,
+.hero-bg--aerial {
   position: absolute;
   inset: 0;
-  background: var(--gradient-hero), url("../assets/images/property/barn-exterior.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/hero-aerial.jpg") center/cover no-repeat;
 }
 
 .hero-bg--bryllup {
-  background: var(--gradient-hero), url("../assets/images/property/outdoor-barn.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/barn-exterior-red.jpg") center/cover no-repeat;
 }
 
 .hero-bg--selskap {
-  background: var(--gradient-hero), url("../assets/images/property/barn-hall.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/barn-dining.jpg") center/cover no-repeat;
 }
 
 .hero-bg--bobil {
-  background: var(--gradient-hero), url("../assets/images/property/motorhome-area.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/motorhome-garage.jpg") center/cover no-repeat;
 }
 
 .hero-bg--om {
@@ -519,9 +520,19 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 
 .hero .subtitle {
   font-size: clamp(1rem, 2.2vw, 1.35rem);
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.75rem;
   opacity: 0.95;
   font-weight: 300;
+}
+
+.hero-lead {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 32rem;
+  margin: 0 auto 2rem;
+  opacity: 0.92;
+  line-height: 1.65;
+  font-weight: 300;
+  color: var(--cream);
 }
 
 .hero-logo {

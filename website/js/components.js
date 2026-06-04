@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260604-flex",
+  assetVer: "20260604-manus",
 };
 
 function t(key, fallback) {
@@ -38,12 +38,13 @@ function buildNav(active = "", transparent = false) {
   const tc = transparent ? " site-header--transparent" : "";
   const links = [
     ["index.html", "nav.home", ""],
-    ["om-garden.html", "nav.about", "om"],
-    ["bryllup.html", "nav.weddings", "bryllup"],
-    ["selskap.html", "nav.events", "selskap"],
+    ["arrangement.html", "nav.arrangement", "arrangement"],
+    ["bryllup.html", "nav.weddingsLove", "bryllup"],
+    ["selskap.html", "nav.parties", "selskap"],
+    ["moter-firma.html", "nav.corporate", "moter"],
+    ["mat-servering.html", "nav.catering", "mat"],
+    ["lokaler.html", "nav.venues", "lokaler"],
     ["bobilhotell.html", "nav.motorhomes", "bobil"],
-    ["opplevelser.html", "nav.experiences", "opplevelser"],
-    ["nyheter.html", "nav.news", "nyheter"],
     ["kontakt.html", "nav.contact", "kontakt"],
   ];
   const navLinks = links
@@ -61,7 +62,7 @@ function buildNav(active = "", transparent = false) {
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen — ${t("nav.home")}">
       <img src="${assetUrl("assets/images/logo.svg")}" alt="" class="logo-img" width="52" height="52" />
-      <div class="logo-text">SØNDRE HAUGEN<span>${t("brand.tag", "Farm")}</span></div>
+      <div class="logo-text">SØNDRE HAUGEN<span>${t("brand.tag", "Gård")}</span></div>
     </a>
     <nav class="nav-desktop" aria-label="Main menu">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">${t("common.enquire")}</a></nav>
     ${langSwitcherHTML()}
@@ -93,11 +94,13 @@ function footerHTML() {
     </div>
     <div>
       <h4>${t("footer.explore")}</h4>
-      <a href="bryllup.html">${t("nav.weddings")}</a>
-      <a href="selskap.html">${t("footer.eventsParties")}</a>
-      <a href="bobilhotell.html">${t("footer.motorhomeStorage")}</a>
-      <a href="garden-fakta.html">${t("footer.farmFacts")}</a>
-      <a href="opplevelser.html">${t("nav.experiences")}</a>
+      <a href="arrangement.html">${t("nav.arrangement")}</a>
+      <a href="bryllup.html">${t("nav.weddingsLove")}</a>
+      <a href="selskap.html">${t("nav.parties")}</a>
+      <a href="moter-firma.html">${t("nav.corporate")}</a>
+      <a href="mat-servering.html">${t("nav.catering")}</a>
+      <a href="lokaler.html">${t("nav.venues")}</a>
+      <a href="bobilhotell.html">${t("footer.motorhomeSmall")}</a>
     </div>
     <div>
       <h4>${t("footer.contact")}</h4>
@@ -110,15 +113,16 @@ function footerHTML() {
       <h4>${t("footer.site")}</h4>
       <a href="${SITE.url}">${SITE.domain}</a>
       <a href="kontakt.html#visning">${t("common.bookVisit")}</a>
-      <a href="nyheter.html">${t("nav.news")}</a>
-      <a href="om-garden.html">${t("nav.about")}</a>
       <a href="https://www.facebook.com/share/1D2QnLT5sP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">${t("footer.facebook")}</a>
       <a href="personvern.html">${t("common.privacy")}</a>
     </div>
   </div>
   <div class="container footer-bottom">
     <span>&copy; ${year} Søndre Haugen ${t("brand.tag")} · ${SITE.domain}</span>
-    <span><a href="personvern.html">${t("common.privacy")}</a> · Svinndallinna 190, 1593 Svinndal</span>
+    <span>
+      <a href="https://havardpederse.netlify.app/" target="_blank" rel="noopener noreferrer">${t("footer.musicLink")}</a>
+      · <a href="personvern.html">${t("common.privacy")}</a> · Svinndallinna 190, 1593 Svinndal
+    </span>
   </div>
 </footer>`;
 }
