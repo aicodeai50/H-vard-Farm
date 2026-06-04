@@ -1,4 +1,19 @@
-/** Contact form — FormSubmit + URL prefill */
+/** Contact form — FormSubmit + URL prefill + i18n */
+function t(key, fb) {
+  return window.I18N?.t?.(key, fb) ?? fb ?? key;
+}
+
+function updateContactFormI18n() {
+  const form = document.getElementById("contact-form");
+  if (!form || !window.I18N) return;
+  const subj = form.querySelector('input[name="_subject"]');
+  const auto = form.querySelector('input[name="_autoresponse"]');
+  if (subj) subj.value = t("form.subject");
+  if (auto) auto.value = t("form.autoresponse");
+}
+
+window.updateContactFormI18n = updateContactFormI18n;
+
 (function () {
   const FORM_NEXT = "https://farm.legal/takk.html";
   const form = document.getElementById("contact-form");
@@ -6,6 +21,9 @@
 
   const next = document.getElementById("form-next");
   if (next) next.value = FORM_NEXT;
+  document.addEventListener("i18n-ready", updateContactFormI18n);
+  document.addEventListener("shg-lang-changed", updateContactFormI18n);
+  if (window.I18N?.ready) updateContactFormI18n();
 
   const params = new URLSearchParams(location.search);
   const typeEl = document.getElementById("type");
@@ -40,7 +58,7 @@
     const btn = form.querySelector('button[type="submit"]');
     if (btn) {
       btn.disabled = true;
-      btn.textContent = "Sending …";
+      btn.textContent = t("form.sending", "Sending …");
     }
   });
 })();

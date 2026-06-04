@@ -1,30 +1,25 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Søndre Haugen Farm — weddings, events, motorhome storage, and farm visits. Svinndallinna 190, Svinndal." />
-  <title>Contact | Søndre Haugen Farm</title>
+  <meta name="google-site-verification" content="1iAOryKfYzwHdKX1Cw8k0UISIsqrgIic3TlDsAYub8M" />
+  <meta name="description" content="Kontakt Søndre Haugen gård — bryllup, selskap, bobil og visning." />
+  <title>Kontakt | Søndre Haugen gård</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pinyon+Script&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=20260604-fix" />
-  <link rel="icon" href="assets/images/logo.svg?v=20260604-fix" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=20260604-i18n" />
+  <link rel="icon" href="assets/images/logo.svg?v=20260604-i18n" type="image/svg+xml" />
 </head>
-<body>
-  <noscript>
-    <div class="noscript-fallback" role="navigation" aria-label="Menu without JavaScript">
-      <div class="noscript-nav-inner"><strong>Søndre Haugen Farm</strong> —
-      <a href="index.html">Home</a> · <a href="kontakt.html">Contact</a></div>
-    </div>
-  </noscript>
+<body data-page="contact">
   <div id="site-header" data-active="kontakt"></div>
 
   <header class="page-hero">
     <div class="container">
-      <p class="eyebrow">Get in touch</p>
-      <h1>Contact us</h1>
-      <p class="lead">Send an enquiry, book a visit, or ask about motorhome storage — we reply as soon as we can.</p>
+      <p class="eyebrow" data-i18n="contact.hero.eyebrow">Ta kontakt</p>
+      <h1 data-i18n="contact.hero.h1">Kontakt oss</h1>
+      <p class="lead" data-i18n="contact.hero.sub">Send forespørsel, book visning eller spør om bobilplass.</p>
     </div>
   </header>
 
@@ -32,72 +27,53 @@
     <div class="container">
       <div class="grid-2" style="align-items:start">
         <div>
-          <h2 class="mb-1">Direct contact</h2>
+          <h2 class="mb-1" data-i18n="contact.direct.h2">Direkte kontakt</h2>
           <ul class="list-visible list-visible--light">
-            <li><strong>Phone:</strong> <a href="tel:+4790198671">901 98 671</a></li>
-            <li><strong>Email:</strong> <a href="mailto:post@sondrehaugen.no">post@sondrehaugen.no</a></li>
-            <li><strong>Motorhomes:</strong> <a href="mailto:Bobil@sondrehaugen.no">Bobil@sondrehaugen.no</a></li>
-            <li><strong>Address:</strong> Svinndallinna 190, 1593 Svinndal, Våler, Østfold</li>
-            <li><strong>Website:</strong> farm.legal</li>
+            <li><strong data-i18n="contact.direct.phone">Telefon:</strong> <a href="tel:+4790198671">901 98 671</a></li>
+            <li><strong data-i18n="contact.direct.email">E-post:</strong> <a href="mailto:post@sondrehaugen.no">post@sondrehaugen.no</a></li>
+            <li><strong data-i18n="contact.direct.motor">Bobilhotell:</strong> <a href="mailto:Bobil@sondrehaugen.no">Bobil@sondrehaugen.no</a></li>
+            <li><strong data-i18n="contact.direct.address">Adresse:</strong> Svinndallinna 190, 1593 Svinndal</li>
+            <li><strong data-i18n="contact.direct.web">Nettside:</strong> farm.legal</li>
           </ul>
-          <p class="mb-2"><a href="https://maps.google.com/?q=Svinndallinna+190+Svinndal+Norway" target="_blank" rel="noopener">Open in Google Maps →</a></p>
+          <p class="mb-2"><a href="https://maps.google.com/?q=Svinndallinna+190+Svinndal+Norway" target="_blank" rel="noopener" data-i18n="contact.maps">Åpne i Google Maps →</a></p>
         </div>
         <div class="form-section">
-          <h3 class="mb-1">Send an enquiry</h3>
-          <form id="contact-form" name="contact" method="POST" action="https://formsubmit.co/post@sondrehaugen.no" aria-label="Contact form">
-            <input type="hidden" name="_subject" value="Enquiry from farm.legal" />
+          <h3 class="mb-1" data-i18n="contact.form.h3">Send forespørsel</h3>
+          <form id="contact-form" name="contact" method="POST" action="https://formsubmit.co/post@sondrehaugen.no">
+            <input type="hidden" name="_subject" data-i18n-value="form.subject" value="Forespørsel fra farm.legal" />
             <input type="hidden" name="_captcha" value="true" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" id="form-next" value="https://farm.legal/takk.html" />
-            <input type="hidden" name="_autoresponse" value="Thank you for contacting Søndre Haugen Farm. We will reply as soon as we can — usually within 1–2 business days. farm.legal" />
-            <p class="sr-only" aria-hidden="true"><label>Do not fill in: <input name="_honey" tabindex="-1" autocomplete="off" /></label></p>
+            <input type="hidden" name="_autoresponse" data-i18n-value="form.autoresponse" value="Takk for henvendelsen." />
             <div class="form-grid form-grid-2">
-              <div>
-                <label for="navn">Name *</label>
-                <input type="text" id="navn" name="navn" required autocomplete="name" />
-              </div>
-              <div>
-                <label for="telefon">Phone</label>
-                <input type="tel" id="telefon" name="telefon" autocomplete="tel" />
-              </div>
+              <div><label for="navn" data-i18n="form.name">Navn *</label><input type="text" id="navn" name="navn" required /></div>
+              <div><label for="telefon" data-i18n="form.phone">Telefon</label><input type="tel" id="telefon" name="telefon" /></div>
+            </div>
+            <div class="form-grid mt-2">
+              <div><label for="epost" data-i18n="form.email">E-post *</label><input type="email" id="epost" name="email" required /></div>
             </div>
             <div class="form-grid mt-2">
               <div>
-                <label for="epost">Email *</label>
-                <input type="email" id="epost" name="email" required autocomplete="email" />
-              </div>
-            </div>
-            <div class="form-grid mt-2">
-              <div>
-                <label for="type">Enquiry type *</label>
+                <label for="type" data-i18n="form.type">Type henvendelse *</label>
                 <select id="type" name="type" required>
-                  <option value="">Choose …</option>
-                  <option value="bryllup">Wedding</option>
-                  <option value="arrangement">Event / party</option>
-                  <option value="bobil">Motorhome storage</option>
-                  <option value="visning">Book a visit</option>
-                  <option value="opplevelser">Experiences (interest)</option>
-                  <option value="annet">Other</option>
+                  <option value="" data-i18n="form.typeChoose">Velg …</option>
+                  <option value="bryllup" data-i18n="form.typeWedding">Bryllup</option>
+                  <option value="arrangement" data-i18n="form.typeEvent">Selskap / arrangement</option>
+                  <option value="bobil" data-i18n="form.typeMotor">Bobilhotell</option>
+                  <option value="visning" data-i18n="form.typeVisit">Book visning</option>
+                  <option value="opplevelser" data-i18n="form.typeExp">Opplevelser (interesse)</option>
+                  <option value="annet" data-i18n="form.typeOther">Annet</option>
                 </select>
               </div>
             </div>
             <div class="form-grid form-grid-2 mt-2">
-              <div>
-                <label for="dato">Preferred date (approx.)</label>
-                <input type="date" id="dato" name="dato" />
-              </div>
-              <div>
-                <label for="gjester">Guests / vehicle</label>
-                <input type="text" id="gjester" name="gjester" placeholder="e.g. 80 guests or 7 m motorhome" />
-              </div>
+              <div><label for="dato" data-i18n="form.date">Ønsket dato (ca.)</label><input type="date" id="dato" name="dato" /></div>
+              <div><label for="gjester" data-i18n="form.guests">Antall gjester / kjøretøy</label><input type="text" id="gjester" name="gjester" data-i18n-placeholder="form.guestsPh" /></div>
             </div>
             <div class="form-grid mt-2">
-              <div>
-                <label for="melding">Message *</label>
-                <textarea id="melding" name="melding" required placeholder="Tell us about your event or motorhome …"></textarea>
-              </div>
+              <div><label for="melding" data-i18n="form.message">Melding *</label><textarea id="melding" name="melding" required data-i18n-placeholder="form.messagePh"></textarea></div>
             </div>
-            <button type="submit" class="btn btn-green mt-2" style="width:100%">Send enquiry</button>
+            <button type="submit" class="btn btn-green mt-2" style="width:100%" data-i18n="form.submit">Send forespørsel</button>
           </form>
         </div>
       </div>
@@ -105,22 +81,20 @@
   </section>
 
   <section class="section section--dark" id="visning">
-    <div class="container">
-      <div class="text-center mb-2">
-        <h2 class="mb-1">Book a visit to the farm</h2>
-        <p class="lead mx-auto">See the farmhouse, barn, grounds, and motorhome area — a no-obligation tour with our team.</p>
-      </div>
+    <div class="container text-center">
+      <h2 class="mb-1" data-i18n="contact.visit.h2">Book visning på gården</h2>
+      <p class="lead mx-auto mb-2" data-i18n="contact.visit.p">Se våningshus, låve, utearealer og bobilområde.</p>
       <div id="booking-visning" class="booking-fallback">
         <div class="grid-2" style="max-width:720px;margin:0 auto">
           <div class="feel-card feel-card--dark">
-            <strong>Call us</strong>
+            <strong data-i18n="contact.visit.call">Ring oss</strong>
             <p><a href="tel:+4790198671">901 98 671</a></p>
-            <a href="tel:+4790198671" class="btn btn-primary">Call now</a>
+            <a href="tel:+4790198671" class="btn btn-primary" data-i18n="contact.visit.callBtn">Ring nå</a>
           </div>
           <div class="feel-card feel-card--dark">
-            <strong>Send enquiry</strong>
-            <p>Choose “Book a visit” in the form above.</p>
-            <a href="#contact-form" class="btn btn-outline">Go to form</a>
+            <strong data-i18n="contact.visit.form">Send forespørsel</strong>
+            <p data-i18n="contact.visit.formHint">Velg «Book visning» i skjemaet over.</p>
+            <a href="#contact-form" class="btn btn-outline" data-i18n="contact.visit.formBtn">Gå til skjema</a>
           </div>
         </div>
       </div>
@@ -129,28 +103,21 @@
 
   <section class="section">
     <div class="container">
-      <h2 class="text-center mb-2">Map</h2>
+      <h2 class="text-center mb-2" data-i18n="contact.map.h2">Kart</h2>
       <div style="border-radius:4px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:16/9;max-height:420px">
-        <iframe
-          title="Map — Søndre Haugen Farm, Svinndal"
-          src="https://maps.google.com/maps?q=Svinndallinna+190+Svinndal+Norway&z=14&output=embed"
-          width="100%"
-          height="100%"
-          style="border:0;min-height:320px"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Map" src="https://maps.google.com/maps?q=Svinndallinna+190+Svinndal+Norway&z=14&output=embed" width="100%" height="100%" style="border:0;min-height:320px" loading="lazy"></iframe>
       </div>
-      <p class="text-center mt-1" style="font-size:0.9rem;color:var(--earth-light)">Svinndallinna 190, 1593 Svinndal — local bus stop «Søndre Haugen».</p>
+      <p class="text-center mt-1" style="font-size:0.9rem;color:var(--earth-light)" data-i18n="contact.map.note">Svinndallinna 190, 1593 Svinndal</p>
     </div>
   </section>
 
-  <div class="sticky-cta" aria-label="Quick contact">
-    <a href="#contact-form" class="cta-primary">Enquire</a>
-    <a href="tel:+4790198671" class="cta-secondary">Call</a>
+  <div class="sticky-cta">
+    <a href="#contact-form" class="cta-primary" data-i18n="common.enquire">Send forespørsel</a>
+    <a href="tel:+4790198671" class="cta-secondary" data-i18n="common.call">Ring</a>
   </div>
 
   <div id="site-footer"></div>
+  <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
   <script src="js/meta.js"></script>
   <script src="js/booking.js"></script>

@@ -29,6 +29,7 @@
   link.href = canonical;
 
   setMeta("property", "og:url", canonical);
+  setMeta("name", "google-site-verification", "1iAOryKfYzwHdKX1Cw8k0UISIsqrgIic3TlDsAYub8M");
   setMeta("property", "og:site_name", "Søndre Haugen Farm");
   setMeta("property", "og:image", BASE + "/assets/images/property/exterior.jpg");
   setMeta("property", "og:image:width", "1280");

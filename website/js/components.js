@@ -1,7 +1,6 @@
-/** Shared header/footer — loads immediately (no empty page without menu) */
+/** Shared header/footer + language switcher */
 const SITE = {
   name: "Søndre Haugen",
-  tag: "Farm",
   phone: "901 98 671",
   phoneDisplay: "901 98 671",
   email: "post@sondrehaugen.no",
@@ -9,54 +8,72 @@ const SITE = {
   address: "Svinndallinna 190 · 1593 Svinndal · Våler, Østfold",
   domain: "farm.legal",
   url: "https://farm.legal",
-  tagline: "EVENTS · CELEBRATIONS · WEDDINGS · FEST",
   calendly: "",
-  assetVer: "20260604-fix",
+  assetVer: "20260604-i18n",
 };
+
+function t(key, fallback) {
+  return window.I18N?.t?.(key, fallback) ?? fallback ?? key;
+}
 
 function assetUrl(path) {
   const sep = path.includes("?") ? "&" : "?";
   return path + sep + "v=" + SITE.assetVer;
 }
 
+function langSwitcherHTML() {
+  const lang = window.I18N?.lang || "nb";
+  return `
+<div class="lang-switch" role="group" aria-label="${t("common.lang", "Language")}">
+  <button type="button" class="lang-btn${lang === "nb" ? " lang-btn--active" : ""}" data-lang="nb" aria-pressed="${lang === "nb"}" title="${t("common.langNo", "Norwegian")}">
+    <span class="lang-flag" aria-hidden="true">🇳🇴</span><span class="lang-code">NO</span>
+  </button>
+  <button type="button" class="lang-btn${lang === "en" ? " lang-btn--active" : ""}" data-lang="en" aria-pressed="${lang === "en"}" title="${t("common.langEn", "English")}">
+    <span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span>
+  </button>
+</div>`;
+}
+
 function buildNav(active = "", transparent = false) {
-  const t = transparent ? " site-header--transparent" : "";
+  const tc = transparent ? " site-header--transparent" : "";
   const links = [
-    ["index.html", "Home", ""],
-    ["om-garden.html", "About", "om"],
-    ["bryllup.html", "Weddings", "bryllup"],
-    ["selskap.html", "Events", "selskap"],
-    ["bobilhotell.html", "Motorhomes", "bobil"],
-    ["opplevelser.html", "Experiences", "opplevelser"],
-    ["nyheter.html", "News", "nyheter"],
-    ["kontakt.html", "Contact", "kontakt"],
+    ["index.html", "nav.home", ""],
+    ["om-garden.html", "nav.about", "om"],
+    ["bryllup.html", "nav.weddings", "bryllup"],
+    ["selskap.html", "nav.events", "selskap"],
+    ["bobilhotell.html", "nav.motorhomes", "bobil"],
+    ["opplevelser.html", "nav.experiences", "opplevelser"],
+    ["nyheter.html", "nav.news", "nyheter"],
+    ["kontakt.html", "nav.contact", "kontakt"],
   ];
   const navLinks = links
-    .map(([href, label, key]) => {
-      const cls = key === active ? ' class="nav-link active"' : ' class="nav-link"';
-      return `<a href="${href}"${cls}>${label}</a>`;
+    .map(([href, key, k]) => {
+      const cls = k === active ? ' class="nav-link active"' : ' class="nav-link"';
+      return `<a href="${href}"${cls}>${t(key)}</a>`;
     })
     .join("");
-  const mobileLinks = links.map(([href, label]) => `<a href="${href}">${label}</a>`).join("");
+  const mobileLinks = links.map(([href, key]) => `<a href="${href}">${t(key)}</a>`).join("");
 
   return {
-    skip: `<a class="skip-link" href="#main">Skip to content</a>`,
+    skip: `<a class="skip-link" href="#main">${t("common.skip")}</a>`,
     header: `
-<header class="site-header${t}" role="banner">
+<header class="site-header${tc}" role="banner">
   <div class="header-inner">
-    <a href="index.html" class="logo" aria-label="Søndre Haugen Farm — home">
+    <a href="index.html" class="logo" aria-label="Søndre Haugen — ${t("nav.home")}">
       <img src="${assetUrl("assets/images/logo.svg")}" alt="" class="logo-img" width="52" height="52" />
-      <div class="logo-text">SØNDRE HAUGEN<span>Farm</span></div>
+      <div class="logo-text">SØNDRE HAUGEN<span>${t("brand.tag", "Farm")}</span></div>
     </a>
-    <nav class="nav-desktop" aria-label="Main menu">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">Enquire</a></nav>
-    <button type="button" class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-desktop" aria-label="Main menu">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">${t("common.enquire")}</a></nav>
+    ${langSwitcherHTML()}
+    <button type="button" class="nav-toggle" aria-label="${t("common.openMenu")}"><span></span><span></span><span></span></button>
   </div>
 </header>`,
     mobile: `
 <nav class="nav-mobile" aria-label="Mobile menu" id="nav-mobile">
-  <button type="button" class="nav-mobile-close" aria-label="Close menu">&times;</button>
+  <button type="button" class="nav-mobile-close" aria-label="${t("common.closeMenu")}">&times;</button>
+  ${langSwitcherHTML()}
   ${mobileLinks}
-  <a href="kontakt.html" class="btn btn-primary" style="margin-top:1rem">Enquire</a>
+  <a href="kontakt.html" class="btn btn-primary" style="margin-top:1rem">${t("common.enquire")}</a>
 </nav>`,
   };
 }
@@ -69,62 +86,57 @@ function footerHTML() {
     <div>
       <a href="index.html" class="logo" style="margin-bottom:1rem">
         <img src="${assetUrl("assets/images/logo.svg")}" alt="" width="72" height="72" style="margin-bottom:0.75rem" />
-        <div class="logo-text" style="color:var(--cream)">SØNDRE HAUGEN<span style="color:var(--gold)">Farm</span></div>
+        <div class="logo-text" style="color:var(--cream)">SØNDRE HAUGEN<span style="color:var(--gold)">${t("brand.tag")}</span></div>
       </a>
-      <p class="footer-tagline">${SITE.tagline}</p>
-      <p style="opacity:0.85;max-width:300px">Historic farm estate for weddings, events, and motorhome storage — Svinndal, Østfold.</p>
+      <p class="footer-tagline">${t("brand.tagline")}</p>
+      <p style="opacity:0.85;max-width:300px">${t("footer.blurb")}</p>
     </div>
     <div>
-      <h4>Explore</h4>
-      <a href="bryllup.html">Weddings</a>
-      <a href="selskap.html">Events &amp; parties</a>
-      <a href="bobilhotell.html">Motorhome storage</a>
-      <a href="garden-fakta.html">Farm facts</a>
-      <a href="opplevelser.html">Experiences</a>
+      <h4>${t("footer.explore")}</h4>
+      <a href="bryllup.html">${t("nav.weddings")}</a>
+      <a href="selskap.html">${t("footer.eventsParties")}</a>
+      <a href="bobilhotell.html">${t("footer.motorhomeStorage")}</a>
+      <a href="garden-fakta.html">${t("footer.farmFacts")}</a>
+      <a href="opplevelser.html">${t("nav.experiences")}</a>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h4>${t("footer.contact")}</h4>
       <a href="tel:+4790198671">${SITE.phoneDisplay}</a>
       <a href="mailto:${SITE.email}">${SITE.email}</a>
       <a href="mailto:${SITE.emailBobil}">${SITE.emailBobil}</a>
       <p style="margin-top:0.75rem;font-size:0.9rem;opacity:0.85">${SITE.address}</p>
     </div>
     <div>
-      <h4>Site</h4>
+      <h4>${t("footer.site")}</h4>
       <a href="${SITE.url}">${SITE.domain}</a>
-      <a href="kontakt.html#visning">Book a visit</a>
-      <a href="nyheter.html">News</a>
-      <a href="https://havardpederse.netlify.app" target="_blank" rel="noopener">Håvard Pedersen · music</a>
-      <a href="personvern.html">Privacy</a>
+      <a href="kontakt.html#visning">${t("common.bookVisit")}</a>
+      <a href="nyheter.html">${t("nav.news")}</a>
+      <a href="https://havardpederse.netlify.app" target="_blank" rel="noopener">${t("footer.music")}</a>
+      <a href="personvern.html">${t("common.privacy")}</a>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>&copy; ${year} Søndre Haugen Farm · ${SITE.domain}</span>
-    <span><a href="personvern.html">Privacy</a> · Svinndallinna 190, 1593 Svinndal</span>
+    <span>&copy; ${year} Søndre Haugen ${t("brand.tag")} · ${SITE.domain}</span>
+    <span><a href="personvern.html">${t("common.privacy")}</a> · Svinndallinna 190, 1593 Svinndal</span>
   </div>
 </footer>`;
 }
 
 function ensureSkipLink(beforeEl, html) {
-  let skip = document.querySelector(".skip-link");
-  if (!skip) {
-    const wrap = document.createElement("div");
-    wrap.innerHTML = html.trim();
-    skip = wrap.firstElementChild;
-    beforeEl.parentNode.insertBefore(skip, beforeEl);
-  }
+  const existing = document.querySelector(".skip-link");
+  if (existing) existing.remove();
+  const wrap = document.createElement("div");
+  wrap.innerHTML = html.trim();
+  beforeEl.parentNode.insertBefore(wrap.firstElementChild, beforeEl);
 }
 
 function ensureMobileNav(afterEl, html) {
-  let nav = document.getElementById("nav-mobile");
   const wrap = document.createElement("div");
   wrap.innerHTML = html.trim();
   const fresh = wrap.firstElementChild;
-  if (!nav) {
-    afterEl.insertAdjacentElement("afterend", fresh);
-  } else {
-    nav.replaceWith(fresh);
-  }
+  let nav = document.getElementById("nav-mobile");
+  if (!nav) afterEl.insertAdjacentElement("afterend", fresh);
+  else nav.replaceWith(fresh);
 }
 
 function wrapMainContent() {
@@ -137,21 +149,15 @@ function wrapMainContent() {
   main.id = "main";
   main.tabIndex = -1;
 
-  const keepOutside = new Set(["site-header", "site-footer", "nav-mobile"]);
   let node = headerMount.nextSibling;
   const toMove = [];
-
   while (node && node !== footer) {
     const next = node.nextSibling;
-    if (node.nodeType === 1) {
-      const id = node.id;
-      if (node.tagName !== "SCRIPT" && id !== "nav-mobile" && !keepOutside.has(id)) {
-        toMove.push(node);
-      }
+    if (node.nodeType === 1 && node.id !== "nav-mobile" && node.id !== "site-header" && node.id !== "site-footer" && node.tagName !== "SCRIPT") {
+      toMove.push(node);
     }
     node = next;
   }
-
   if (!toMove.length) return;
   footer.parentNode.insertBefore(main, footer);
   toMove.forEach((el) => main.appendChild(el));
@@ -165,13 +171,30 @@ function initLayout() {
     ensureSkipLink(h, parts.skip);
     h.innerHTML = parts.header;
     ensureMobileNav(h, parts.mobile);
+    window.I18N?.bindLangButtons?.();
   }
   if (f) f.innerHTML = footerHTML();
   wrapMainContent();
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initLayout);
-} else {
+window.refreshSiteLayout = initLayout;
+
+function bootSite() {
   initLayout();
+  window.I18N?.applyPage?.();
+  window.I18N?.bindLangButtons?.();
+}
+
+document.addEventListener("i18n-ready", bootSite);
+document.addEventListener("shg-lang-changed", () => {
+  initLayout();
+  window.I18N?.bindLangButtons?.();
+});
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.I18N?.ready) bootSite();
+  });
+} else if (window.I18N?.ready) {
+  bootSite();
 }

@@ -206,6 +206,67 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   background: var(--cream);
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.75rem;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid rgba(26, 60, 52, 0.2);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--earth);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn:hover {
+  border-color: var(--gold);
+}
+
+.lang-btn--active {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--cream);
+}
+
+.lang-flag {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.site-header--transparent:not(.scrolled) .lang-btn {
+  background: rgba(26, 60, 52, 0.35);
+  border-color: rgba(246, 239, 228, 0.35);
+  color: var(--cream);
+}
+
+.site-header--transparent:not(.scrolled) .lang-btn--active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--earth);
+}
+
+.nav-mobile .lang-switch {
+  margin: 0 0 1.25rem;
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .header-inner .lang-switch {
+    display: none;
+  }
+}
+
 .header-inner {
   display: flex;
   align-items: center;
