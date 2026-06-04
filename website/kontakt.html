@@ -12,6 +12,13 @@
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
 </head>
 <body>
+  <noscript>
+    <div class="noscript-fallback" role="navigation" aria-label="Meny uten JavaScript">
+      <div class="noscript-nav-inner"><strong>Søndre Haugen gård</strong> —
+      <a href="index.html">Hjem</a> · <a href="om-garden.html">Om gården</a> · <a href="bryllup.html">Bryllup</a> ·
+      <a href="selskap.html">Selskap</a> · <a href="bobilhotell.html">Bobil</a> · <a href="kontakt.html">Kontakt</a></div>
+    </div>
+  </noscript>
   <div id="site-header" data-active="kontakt"></div>
 
   <header class="page-hero">
@@ -27,12 +34,14 @@
       <div class="grid-2" style="align-items:start">
         <div>
           <h2 class="mb-1">Direkte kontakt</h2>
-          <p class="mb-1"><strong>Telefon:</strong> <a href="tel:+4790198671">901 98 671</a></p>
-          <p class="mb-1"><strong>Generell e-post:</strong> <a href="mailto:post@sondrehaugen.no">post@sondrehaugen.no</a></p>
-          <p class="mb-1"><strong>Bobilhotell:</strong> <a href="mailto:Bobil@sondrehaugen.no">Bobil@sondrehaugen.no</a></p>
-          <p class="mb-2"><strong>Adresse:</strong><br />Søndre Haugen gård<br />Svinndallinna · 2436 Våler i Østfold</p>
+          <ul class="list-visible list-visible--light">
+            <li><strong>Telefon:</strong> <a href="tel:+4790198671">901 98 671</a></li>
+            <li><strong>E-post:</strong> <a href="mailto:post@sondrehaugen.no">post@sondrehaugen.no</a></li>
+            <li><strong>Bobilhotell:</strong> <a href="mailto:Bobil@sondrehaugen.no">Bobil@sondrehaugen.no</a></li>
+            <li><strong>Adresse:</strong> Søndre Haugen gård, Svinndallinna · 2436 Våler i Østfold</li>
+            <li><strong>Nettside:</strong> farm.legal</li>
+          </ul>
           <p class="mb-2"><a href="https://maps.google.com/?q=Svinndallinna+190+Svinndal+Norway" target="_blank" rel="noopener">Åpne i Google Maps →</a></p>
-          <p style="font-size:0.9rem;color:var(--earth-light)">Nettside: <strong>farm.legal</strong></p>
         </div>
         <div class="form-section">
           <h3 class="mb-1">Send forespørsel</h3>
@@ -104,14 +113,14 @@
       </div>
       <div id="booking-visning" class="booking-fallback">
         <div class="grid-2" style="max-width:720px;margin:0 auto">
-          <div class="feel-card" style="background:rgba(255,255,255,0.08);border:1px solid rgba(247,243,235,0.2)">
-            <strong style="color:var(--gold)">Ring oss</strong>
-            <p style="opacity:0.9;margin:0.5rem 0"><a href="tel:+4790198671" style="color:var(--cream)">901 98 671</a></p>
+          <div class="feel-card feel-card--dark">
+            <strong>Ring oss</strong>
+            <p><a href="tel:+4790198671">901 98 671</a></p>
             <a href="tel:+4790198671" class="btn btn-primary">Ring nå</a>
           </div>
-          <div class="feel-card" style="background:rgba(255,255,255,0.08);border:1px solid rgba(247,243,235,0.2)">
-            <strong style="color:var(--gold)">Send forespørsel</strong>
-            <p style="opacity:0.9;margin:0.5rem 0">Velg «Book visning» i skjemaet over.</p>
+          <div class="feel-card feel-card--dark">
+            <strong>Send forespørsel</strong>
+            <p>Velg «Book visning» i skjemaet over.</p>
             <a href="#contact-form" class="btn btn-outline">Gå til skjema</a>
           </div>
         </div>

@@ -12,6 +12,14 @@
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
 </head>
 <body>
+  <noscript>
+    <div class="noscript-fallback" role="navigation" aria-label="Meny uten JavaScript">
+      <div class="noscript-nav-inner"><strong>S�ndre Haugen g�rd</strong> �
+      <a href="index.html">Hjem</a> � <a href="om-garden.html">Om g�rden</a> � <a href="bryllup.html">Bryllup</a> �
+      <a href="selskap.html">Selskap</a> � <a href="bobilhotell.html">Bobil</a> � <a href="opplevelser.html">Opplevelser</a> �
+      <a href="nyheter.html">Nyheter</a> � <a href="kontakt.html">Kontakt</a></div>
+    </div>
+  </noscript>
   <div id="site-header" data-active="bryllup"></div>
 
   <section class="hero" style="min-height:75vh">
@@ -48,11 +56,11 @@
           <h2>Skreddersøm fra første møte</h2>
           <p class="mb-1">Hvert bryllup er unikt. Vi hjelper dere med å finne flyt mellom seremoni, foto, middag og fest — og tilpasser lokaler og uteareal etter antall gjester og ønsker.</p>
           <p class="mb-2">Med over 1 200 m² samlet under tak og store uteområder kan dere kombinere intim vielse med storslått fest — alt på ett sted.</p>
-          <ul style="list-style:none;font-size:0.95rem;color:var(--earth-light)">
-            <li style="padding:0.35rem 0">✓ Personlig planlegging</li>
-            <li style="padding:0.35rem 0">✓ Fleksible lokaler</li>
-            <li style="padding:0.35rem 0">✓ Bassengområde for sommerbryllup</li>
-            <li style="padding:0.35rem 0">✓ Parkering og tilkomst</li>
+          <ul class="list-check">
+            <li>Personlig planlegging</li>
+            <li>Fleksible lokaler</li>
+            <li>Bassengområde for sommerbryllup</li>
+            <li>Parkering og tilkomst</li>
           </ul>
         </div>
         <div class="feature-img">
@@ -65,16 +73,12 @@
   <section class="section section--dark">
     <div class="container text-center">
       <h2 class="mb-1">Ofte stilte spørsmål</h2>
-      <div class="grid-2 mt-2" style="text-align:left;max-width:800px;margin-inline:auto">
-        <div>
-          <h3 style="font-size:1.2rem;margin-bottom:0.5rem">Kan vi ha vielse utendørs?</h3>
-          <p style="opacity:0.9">Ja — gården har store grønne områder egnet for utendørs seremoni, med innendørs alternativ ved dårlig vær.</p>
-        </div>
-        <div>
-          <h3 style="font-size:1.2rem;margin-bottom:0.5rem">Hvor mange gjester?</h3>
-          <p style="opacity:0.9">Kapasitet avhenger av opplegg — kontakt oss med ønsket antall, så foreslår vi beste løsning.</p>
-        </div>
-      </div>
+      <ul class="list-visible list-visible--dark" style="max-width:36rem;margin-inline:auto;text-align:left">
+        <li><strong>Kan vi ha vielse utendørs?</strong> — Ja. Store grønne områder med innendørs alternativ ved dårlig vær.</li>
+        <li><strong>Hvor mange gjester?</strong> — Kapasitet avhenger av opplegg — kontakt oss med antall, så foreslår vi løsning.</li>
+        <li><strong>Overnatting?</strong> — Etter avtale i våningshus — spør i forespørselen.</li>
+        <li><strong>Catering?</strong> — Dere velger leverandør eller vi kobler dere med lokale.</li>
+      </ul>
     </div>
   </section>
 

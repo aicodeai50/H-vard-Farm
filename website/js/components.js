@@ -6,7 +6,7 @@ const SITE = {
   phoneDisplay: "901 98 671",
   email: "post@sondrehaugen.no",
   emailBobil: "Bobil@sondrehaugen.no",
-  address: "Søndre Haugen gård, 2436 Våler i Østfold",
+  address: "Svinndallinna · 2436 Våler i Østfold",
   domain: "farm.legal",
   url: "https://farm.legal",
   tagline: "EVENT · SELSKAP · BRYLLUP · FEST",
