@@ -16,10 +16,10 @@
 2. Legg i `website/assets/images/` (se `README` der)
 3. Push til GitHub → auto-deploy
 
-### B. Test kontaktskjema
+### B. Test kontaktskjema ← **gjør dette nå**
 
 1. https://farm.legal/kontakt.html → send test
-2. Aktiver FormSubmit i `post@sondrehaugen.no` (første e-post)
+2. Aktiver FormSubmit i `post@sondrehaugen.no` (første e-post) — steg for steg: **`docs/KONTAKT-SKJEMA.md`**
 
 ### C. Google Business
 

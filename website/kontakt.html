@@ -30,7 +30,8 @@
           <p class="mb-1"><strong>Telefon:</strong> <a href="tel:+4790198671">901 98 671</a></p>
           <p class="mb-1"><strong>Generell e-post:</strong> <a href="mailto:post@sondrehaugen.no">post@sondrehaugen.no</a></p>
           <p class="mb-1"><strong>Bobilhotell:</strong> <a href="mailto:Bobil@sondrehaugen.no">Bobil@sondrehaugen.no</a></p>
-          <p class="mb-2"><strong>Adresse:</strong><br />Søndre Haugen gård<br />2436 Våler i Østfold</p>
+          <p class="mb-2"><strong>Adresse:</strong><br />Søndre Haugen gård<br />Svinndallinna · 2436 Våler i Østfold</p>
+          <p class="mb-2"><a href="https://maps.google.com/?q=Svinndallinna+190+Svinndal+Norway" target="_blank" rel="noopener">Åpne i Google Maps →</a></p>
           <p style="font-size:0.9rem;color:var(--earth-light)">Nettside: <strong>farm.legal</strong></p>
         </div>
         <div class="form-section">
@@ -39,7 +40,8 @@
             <input type="hidden" name="_subject" value="Forespørsel fra farm.legal" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" id="form-next" value="/takk.html" />
+            <input type="hidden" name="_next" id="form-next" value="https://farm.legal/takk.html" />
+            <input type="hidden" name="_autoresponse" value="Takk for henvendelsen til Søndre Haugen gård. Vi svarer så snart vi kan — vanligvis innen 1–2 virkedager. Vennlig hilsen oss på gården. farm.legal" />
             <p class="sr-only" aria-hidden="true"><label>Ikke fyll ut: <input name="_honey" tabindex="-1" autocomplete="off" /></label></p>
             <div class="form-grid form-grid-2">
               <div>
@@ -54,7 +56,7 @@
             <div class="form-grid mt-2">
               <div>
                 <label for="epost">E-post *</label>
-                <input type="email" id="epost" name="epost" required autocomplete="email" />
+                <input type="email" id="epost" name="email" required autocomplete="email" />
               </div>
             </div>
             <div class="form-grid mt-2">
@@ -123,7 +125,7 @@
       <div style="border-radius:4px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:16/9;max-height:420px">
         <iframe
           title="Kart — Søndre Haugen gård, Våler"
-          src="https://maps.google.com/maps?q=Våler+2436+Østfold+Norway&z=11&output=embed"
+          src="https://maps.google.com/maps?q=Svinndallinna+190+Svinndal+Norway&z=14&output=embed"
           width="100%"
           height="100%"
           style="border:0;min-height:320px"
@@ -131,7 +133,7 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <p class="text-center mt-1" style="font-size:0.9rem;color:var(--earth-light)">2436 Våler i Østfold — oppdater kartkoordinater ved behov.</p>
+      <p class="text-center mt-1" style="font-size:0.9rem;color:var(--earth-light)">Svinndallinna · 2436 Våler — holdeplass «Søndre Haugen» på lokalbuss.</p>
     </div>
   </section>
 
@@ -144,17 +146,7 @@
   <script src="js/components.js"></script>
   <script src="js/meta.js"></script>
   <script src="js/booking.js"></script>
+  <script src="js/contact-form.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    (function () {
-      const next = document.getElementById("form-next");
-      if (next) next.value = location.origin + "/takk.html";
-      const params = new URLSearchParams(location.search);
-      const type = document.getElementById("type");
-      const map = { bryllup: "bryllup", arrangement: "arrangement", bobil: "bobil", visning: "visning", opplevelser: "opplevelser" };
-      const t = params.get("type");
-      if (t && map[t] && type) type.value = map[t];
-    })();
-  </script>
 </body>
 </html>

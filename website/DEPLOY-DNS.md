@@ -1,11 +1,27 @@
 # Koble farm.legal — DNS (Name.com)
 
 **Domeneleverandør:** [Name.com](https://www.name.com)  
-**Hosting:** [Railway](https://railway.app) *(primær — se [DEPLOY-RAILWAY.md](./DEPLOY-RAILWAY.md))*
+**Hosting (nå):** [Netlify](https://app.netlify.com) — `sondre-haugen-gard`  
+**Alternativ:** [Railway](https://railway.app) — se [DEPLOY-RAILWAY.md](./DEPLOY-RAILWAY.md)
+
+Rotguide: **`DOMAIN.md`** i repo-roten.
 
 ---
 
-## Railway (anbefalt)
+## Netlify (anbefalt nå)
+
+| Type | Host | Verdi |
+|------|------|--------|
+| **A** | `@` | `75.2.60.5` |
+| **CNAME** | `www` | `sondre-haugen-gard.netlify.app` |
+
+1. Netlify → **Domain management** → `farm.legal` + `www.farm.legal`
+2. Name.com → fjern parkering **A** `@` → `91.195.240.94`
+3. Legg inn tabellen over
+
+---
+
+## Railway (alternativ)
 
 1. Railway → prosjekt → **Settings → Networking → Custom Domain**
 2. Legg til `farm.legal` og `www.farm.legal`

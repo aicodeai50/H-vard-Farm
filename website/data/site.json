@@ -3,7 +3,10 @@
     "name": "Søndre Haugen gård",
     "domain": "https://farm.legal",
     "established": "1700-tallet",
-    "location": "2436 Våler i Østfold",
+    "location": "Svinndallinna · 2436 Våler i Østfold",
+    "street": "Svinndallinna",
+    "postalCode": "2436",
+    "locality": "Våler",
     "motto": "Historiske omgivelser for livets store øyeblikk",
     "brandLine": "Historisk. Ekte. Din.",
     "services": ["Bryllup", "Selskap", "Arrangementer", "Bobilhotell", "Gårdsopplevelser"]

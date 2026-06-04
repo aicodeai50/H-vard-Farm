@@ -41,4 +41,19 @@
     apple.href = "/assets/images/logo.svg";
     document.head.appendChild(apple);
   }
+
+  if (!document.querySelector('link[rel="manifest"]')) {
+    const manifest = document.createElement("link");
+    manifest.rel = "manifest";
+    manifest.href = "/site.webmanifest";
+    document.head.appendChild(manifest);
+  }
+
+  let theme = document.querySelector('meta[name="theme-color"]');
+  if (!theme) {
+    theme = document.createElement("meta");
+    theme.name = "theme-color";
+    theme.content = "#2a4538";
+    document.head.appendChild(theme);
+  }
 })();
