@@ -37,8 +37,8 @@ window.updateContactFormI18n = updateContactFormI18n;
     visning: "visning",
     prospekt: "prospekt",
   };
-  const t = params.get("type");
-  if (t && typeMap[t] && typeEl) typeEl.value = typeMap[t];
+  const typeParam = params.get("type");
+  if (typeParam && typeMap[typeParam] && typeEl) typeEl.value = typeMap[typeParam];
 
   const niva = (params.get("niva") || "").toLowerCase();
   const nivaLabel = { ute: "Ute", inne: "Inne", premium: "Premium" }[niva];

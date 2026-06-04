@@ -9,7 +9,8 @@
     "dev": "node start.js",
     "crop-photos": "node scripts/crop-gallery-photos.js",
     "build-logo": "node scripts/write-logo-brand.js",
-    "crop-logo": "node scripts/crop-logo-header.js"
+    "crop-logo": "node scripts/crop-logo-header.js",
+    "fix-encoding": "node scripts/fix-encoding-pages.js"
   },
   "engines": {
     "node": ">=18"

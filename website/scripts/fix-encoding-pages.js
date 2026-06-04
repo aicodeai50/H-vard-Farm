@@ -1,4 +1,51 @@
-<!DOCTYPE html>
+/** Rewrite pages as UTF-8 without BOM. Run: node scripts/fix-encoding-pages.js */
+const fs = require("fs");
+const path = require("path");
+
+const VER = "20260606-home";
+const root = path.join(__dirname, "..");
+
+const redirects = [
+  {
+    file: "nyheter.html",
+    url: "index.html",
+    canonical: "https://farm.legal/",
+    title: "Nyheter | Søndre Haugen Gård",
+    link: "Gå til forsiden →",
+  },
+  {
+    file: "garden-fakta.html",
+    url: "lokaler.html",
+    canonical: "https://farm.legal/lokaler.html",
+    title: "Gården | Søndre Haugen Gård",
+    link: "Gå til Lokaler →",
+  },
+  {
+    file: "opplevelser.html",
+    url: "arrangement.html",
+    canonical: "https://farm.legal/arrangement.html",
+    title: "Opplevelser | Søndre Haugen Gård",
+    link: "Gå til Arrangement →",
+  },
+];
+
+for (const r of redirects) {
+  const html = `<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0;url=${r.url}" />
+  <link rel="canonical" href="${r.canonical}" />
+  <title>${r.title}</title>
+  <script>location.replace("${r.url}");</script>
+</head>
+<body><p><a href="${r.url}">${r.link}</a></p></body>
+</html>
+`;
+  fs.writeFileSync(path.join(root, r.file), html, "utf8");
+}
+
+const bobil = `<!DOCTYPE html>
 <html lang="nb">
 <head>
   <meta charset="UTF-8" />
@@ -8,8 +55,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Bobilhotell på Søndre Haugen Gård — trygg lagring i Svinndal." />
   <title>Bobilhotell | Søndre Haugen Gård</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260606-home" />
-  <link rel="icon" href="assets/images/logo-icon.png?v=20260606-home" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css?v=${VER}" />
+  <link rel="icon" href="assets/images/logo-icon.png?v=${VER}" type="image/png" />
 </head>
 <body data-page="motorhome">
   <div id="site-header" data-active="bobil"></div>
@@ -112,7 +159,7 @@
   <section class="section" style="background:var(--cream-dark)">
     <div class="container feature-row">
       <div class="feature-img">
-        <img src="assets/images/property/motorhome-garage.jpg?v=20260606-home" alt="" class="property-photo" loading="lazy" data-i18n-alt="home.img.motor" />
+        <img src="assets/images/property/motorhome-garage.jpg?v=${VER}" alt="" class="property-photo" loading="lazy" data-i18n-alt="home.img.motor" />
       </div>
       <div>
         <h2 data-i18n="motor.contact.h2">Trygg lagring · service i fokus</h2>
@@ -132,9 +179,13 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/i18n.js?v=20260606-home"></script>
-  <script src="js/components.js?v=20260606-home"></script>
-  <script src="js/meta.js?v=20260606-home"></script>
-  <script src="js/main.js?v=20260606-home"></script>
+  <script src="js/i18n.js?v=${VER}"></script>
+  <script src="js/components.js?v=${VER}"></script>
+  <script src="js/meta.js?v=${VER}"></script>
+  <script src="js/main.js?v=${VER}"></script>
 </body>
 </html>
+`;
+
+fs.writeFileSync(path.join(root, "bobilhotell.html"), bobil, "utf8");
+console.log("Fixed encoding for bobilhotell + redirect stubs");
