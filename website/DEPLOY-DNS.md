@@ -1,26 +1,55 @@
 # Koble farm.legal til Netlify
 
-Site: **sondre-haugen-gard**  
-Midlertidig URL: https://sondre-haugen-gard.netlify.app
+**Domeneleverandør:** [Name.com](https://www.name.com) *(nameservers: `ns1kpv.name.com` osv.)*  
+**Netlify-site:** sondre-haugen-gard  
+**Midlertidig URL:** https://sondre-haugen-gard.netlify.app
 
-## Steg
+---
+
+## Steg 1 — Legg til domene i Netlify
 
 1. Åpne https://app.netlify.com/projects/sondre-haugen-gard/domain-management  
-2. Klikk **Add a domain** → skriv `farm.legal`  
-3. Netlify viser DNS-poster — bruk disse hos domeneleverandøren (f.eks. Domeneshop, GoDaddy, Namecheap):
+2. **Add domain** → `farm.legal`  
+3. Velg **Add domain** også for `www.farm.legal` (anbefalt)  
+4. Noter DNS-verdiene Netlify viser (IP kan avvike fra tabellen under).
 
-| Type | Host | Verdi |
-|------|------|--------|
-| A | `@` | *(IP fra Netlify, ofte 75.2.60.5)* |
-| CNAME | `www` | `sondre-haugen-gard.netlify.app` |
+---
 
-4. I Netlify: aktiver **HTTPS** (Let's Encrypt) når DNS er propagert.
+## Steg 2 — DNS hos Name.com
 
-## Skjema
+1. Logg inn på https://www.name.com/account/domain/list  
+2. Klikk **farm.legal** → **DNS Records** (eller Manage DNS)  
+3. Legg inn / oppdater:
 
-Kontaktskjemaet bruker Netlify Forms. Etter første deploy:  
-**Site settings → Forms** — bekreft at innsendinger kommer inn, og sett varsel til `post@sondrehaugen.no`.
+| Type | Host | Answer / Value |
+|------|------|----------------|
+| **A** | `@` | `75.2.60.5` *(bruk IP Netlify viser hvis annen)* |
+| **CNAME** | `www` | `sondre-haugen-gard.netlify.app` |
 
-## Bilder
+4. **Fjern** gamle A/CNAME som peker til `91.195.240.94` (parkert side) når du går live.  
+5. Lagre — propagering tar ofte 15 min–48 timer.
 
-Last opp dronebilder til `assets/images/` og oppdater `css/styles.css` (`.hero-bg`) for å erstatte placeholder-bilder.
+### Alternativ: la Netlify styre DNS
+
+I Netlify → **Set up Netlify DNS** → bytt nameservers hos Name.com til Netlify sine (4 stk). Da administrerer du alt i Netlify.
+
+---
+
+## Steg 3 — HTTPS
+
+Når DNS er grønn i Netlify: **HTTPS** aktiveres automatisk (Let's Encrypt).
+
+---
+
+## Steg 4 — Skjema og e-post
+
+**Site settings → Forms** → aktiver varsler til `post@sondrehaugen.no` / `Bobil@sondrehaugen.no`.
+
+---
+
+## Sjekkliste
+
+- [ ] `farm.legal` åpner gårdssiden (ikke parkeringsside)  
+- [ ] `www.farm.legal` redirecter til apex eller omvendt (Netlify-innstilling)  
+- [ ] Kontaktskjema sender til `/takk.html`  
+- [ ] Erstatt placeholder-bilder i `assets/images/`
