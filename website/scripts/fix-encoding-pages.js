@@ -1,49 +1,9 @@
-/** Rewrite pages as UTF-8 without BOM. Run: node scripts/fix-encoding-pages.js */
+/** Rewrite bobilhotell.html as UTF-8. Run: node scripts/fix-encoding-pages.js */
 const fs = require("fs");
 const path = require("path");
 
-const VER = "20260606-all";
+const VER = "20260606-real";
 const root = path.join(__dirname, "..");
-
-const redirects = [
-  {
-    file: "nyheter.html",
-    url: "index.html",
-    canonical: "https://farm.legal/",
-    title: "Nyheter | Søndre Haugen Gård",
-    link: "Gå til forsiden →",
-  },
-  {
-    file: "garden-fakta.html",
-    url: "lokaler.html",
-    canonical: "https://farm.legal/lokaler.html",
-    title: "Gården | Søndre Haugen Gård",
-    link: "Gå til Lokaler →",
-  },
-  {
-    file: "opplevelser.html",
-    url: "arrangement.html",
-    canonical: "https://farm.legal/arrangement.html",
-    title: "Opplevelser | Søndre Haugen Gård",
-    link: "Gå til Arrangement →",
-  },
-];
-
-for (const r of redirects) {
-  const html = `<!DOCTYPE html>
-<html lang="nb">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0;url=${r.url}" />
-  <link rel="canonical" href="${r.canonical}" />
-  <title>${r.title}</title>
-  <script>location.replace("${r.url}");</script>
-</head>
-<body><p><a href="${r.url}">${r.link}</a></p></body>
-</html>
-`;
-  fs.writeFileSync(path.join(root, r.file), html, "utf8");
-}
 
 const bobil = `<!DOCTYPE html>
 <html lang="nb">
@@ -188,4 +148,4 @@ const bobil = `<!DOCTYPE html>
 `;
 
 fs.writeFileSync(path.join(root, "bobilhotell.html"), bobil, "utf8");
-console.log("Fixed encoding for bobilhotell + redirect stubs");
+console.log("Wrote bobilhotell.html (UTF-8)");

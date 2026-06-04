@@ -14,23 +14,4 @@
     if (e.target.closest(".nav-mobile-close")) closeMobile();
     if (e.target.closest("#nav-mobile a")) closeMobile();
   });
-
-  document.querySelectorAll("form[data-form]").forEach((form) => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const original = btn?.textContent;
-      if (btn) {
-        btn.textContent = "Thank you — we will be in touch";
-        btn.disabled = true;
-      }
-      setTimeout(() => {
-        form.reset();
-        if (btn) {
-          btn.textContent = original;
-          btn.disabled = false;
-        }
-      }, 4000);
-    });
-  });
 })();

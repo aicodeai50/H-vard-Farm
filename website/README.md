@@ -49,6 +49,6 @@ Egne bilder ligger i `assets/images/property/`. Oppdater `?v=` i `js/components.
 
 ## Notater
 
-- **Våningshus:** placeholder-tekst — oppdateres når copy er klar
+- **Våningshus:** utvendig visning etter avtale — se `om-garden.html` og `lokaler.html`
 - **Prospekt-PDF:** «Be om prospekt» på kontaktsiden — legg PDF i `assets/docs/` når tilgjengelig
 - **Musikk:** kun lenke i footer til [havardpederse.netlify.app](https://havardpederse.netlify.app/)

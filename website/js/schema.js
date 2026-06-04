@@ -34,7 +34,7 @@
       { "@type": "LocationFeatureSpecification", name: "Outdoor ceremony area" },
       { "@type": "LocationFeatureSpecification", name: "Motorhome parking" },
     ],
-    maximumAttendeeCapacity: 200,
+    maximumAttendeeCapacity: 100,
   };
 
   const script = document.createElement("script");

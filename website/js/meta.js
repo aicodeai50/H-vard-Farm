@@ -1,4 +1,4 @@
-/** SEO metadata first — canonical, robots, sitemap, Open Graph (farm.legal) */
+﻿/** SEO metadata first — canonical, robots, sitemap, Open Graph (farm.legal) */
 (function () {
   const BASE = "https://farm.legal";
   const SITEMAP = BASE + "/sitemap.xml";
@@ -57,10 +57,10 @@
   /* --- Open Graph / Twitter --- */
   setMeta("property", "og:url", canonical);
   setMeta("property", "og:site_name", "Søndre Haugen Farm");
-  setMeta("property", "og:image", BASE + "/assets/images/property/hero-aerial.jpg?v=20260606-all");
+  setMeta("property", "og:image", BASE + "/assets/images/property/hero-aerial.jpg?v=20260606-real");
   setMeta("property", "og:image:width", "1920");
   setMeta("property", "og:image:height", "1080");
-  setMeta("name", "twitter:image", BASE + "/assets/images/property/hero-aerial.jpg?v=20260606-all");
+  setMeta("name", "twitter:image", BASE + "/assets/images/property/hero-aerial.jpg?v=20260606-real");
   setMeta("name", "twitter:card", "summary_large_image");
 
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {

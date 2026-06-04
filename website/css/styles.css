@@ -1131,7 +1131,20 @@ textarea { min-height: 140px; resize: vertical; }
   border-bottom: 3px solid var(--gold);
 }
 
-.page-hero h1 { color: var(--cream); }
+.page-hero--om {
+  position: relative;
+  overflow: hidden;
+}
+.page-hero--om .hero-bg--om {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  z-index: 0;
+}
+.page-hero--om .container {
+  position: relative;
+  z-index: 1;
+}
 .page-hero .lead {
   margin-inline: auto;
   opacity: 0.95;

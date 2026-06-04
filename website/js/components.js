@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260606-all",
+  assetVer: "20260606-real",
 };
 
 function t(key, fallback) {
@@ -70,6 +70,7 @@ function buildNav(active = "") {
   <button type="button" class="nav-mobile-close" aria-label="${t("common.closeMenu")}">&times;</button>
   ${langSwitcherHTML()}
   ${mobileLinks}
+  <a href="om-garden.html" class="nav-mobile-extra">${t("nav.about")}</a>
   <a href="bobilhotell.html" class="nav-mobile-extra">${t("nav.motorhomes")}</a>
   <a href="kontakt.html" class="btn btn-primary" style="margin-top:1rem">${t("common.enquire")}</a>
 </nav>`,
@@ -96,6 +97,10 @@ function footerHTML() {
       <a href="moter-firma.html">${t("nav.corporate")}</a>
       <a href="mat-servering.html">${t("nav.catering")}</a>
       <a href="lokaler.html">${t("nav.venues")}</a>
+      <a href="om-garden.html">${t("nav.about")}</a>
+      <a href="garden-fakta.html">${t("footer.farmFacts")}</a>
+      <a href="opplevelser.html">${t("nav.experiences")}</a>
+      <a href="nyheter.html">${t("nav.news")}</a>
       <a href="bobilhotell.html">${t("footer.motorhomeSmall")}</a>
     </div>
     <div>
