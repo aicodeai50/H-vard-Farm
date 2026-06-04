@@ -1,0 +1,16 @@
+{
+  "name": "sondre-haugen-gard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Søndre Haugen gård — farm.legal",
+  "scripts": {
+    "start": "serve -s . -l tcp://0.0.0.0:${PORT:-3000}",
+    "dev": "serve -s . -l 3000"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

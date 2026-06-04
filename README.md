@@ -9,7 +9,8 @@ cd website
 npx serve .
 ```
 
-**Live:** https://sondre-haugen-gard.netlify.app — koble `farm.legal` i Netlify (se `website/README.md`).
+**Deploy:** Railway (anbefalt) — repo `website/`, domene `farm.legal`. Se `website/DEPLOY-RAILWAY.md`.  
+Backup: https://sondre-haugen-gard.netlify.app
 
 ## Dokumentasjon til byrå
 
