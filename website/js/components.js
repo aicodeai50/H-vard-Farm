@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260605-lockup",
+  assetVer: "20260605-brand",
 };
 
 function t(key, fallback) {
@@ -58,7 +58,7 @@ function buildNav(active = "") {
 <header class="site-header" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen Gård — ${t("nav.home")}">
-      <img src="${assetUrl("assets/images/logo-header.svg")}" alt="Søndre Haugen Gård" class="logo-lockup" width="236" height="44" />
+      <img src="${assetUrl("assets/images/logo-header.png")}" alt="Søndre Haugen Gård" class="logo-lockup" width="200" height="56" />
     </a>
     <nav class="nav-desktop" aria-label="Main menu">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">${t("common.enquire")}</a></nav>
     ${langSwitcherHTML()}
@@ -83,7 +83,7 @@ function footerHTML() {
   <div class="container footer-grid">
     <div>
       <a href="index.html" class="footer-brand">
-        <img src="${assetUrl("assets/images/logo-footer.svg")}" alt="Søndre Haugen Gård" class="footer-lockup" width="260" height="52" />
+        <img src="${assetUrl("assets/images/logo-brand.png")}" alt="Søndre Haugen Gård" class="footer-lockup" width="180" height="180" />
       </a>
       <p class="footer-tagline">${t("brand.tagline")}</p>
       <p style="opacity:0.85;max-width:300px">${t("footer.blurb")}</p>

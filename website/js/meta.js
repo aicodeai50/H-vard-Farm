@@ -64,7 +64,7 @@
   setMeta("name", "twitter:card", "summary_large_image");
 
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {
-    ensureLink("apple-touch-icon", "/assets/images/logo-mark.svg");
+    ensureLink("apple-touch-icon", "/assets/images/logo-icon.png");
   }
 
   if (!document.querySelector('link[rel="manifest"]')) {
