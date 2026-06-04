@@ -3,15 +3,17 @@
 ## Original logo (2026)
 
 Filer:
-- `website/assets/images/logo.svg` — full hex shield + knot monogram
-- `website/assets/images/logo-mark.svg` — compact favicon / small UI
+- `website/assets/images/logo.svg` — full lockup: møne + luftfoto + typografi
+- `website/assets/images/logo-mark.svg` — møne/gavl for header og favicon
+- `website/assets/images/logo-header.svg` — horisontal variant
+- `website/assets/images/logo-farm.jpg` — luftfoto inne i logo
 
 Designet er **original vektorgrafikk** (ikke stock):
 
-- **Sirkelsegl** — gårdsillustrasjon (gul våningshus + rød låve) i sirkel
-- **Bue-tekst** — «SØNDRE HAUGEN» / «GÅRD · Svinndal»
-- **Tagline** — «BRYLLUP · SELSKAP · FEST»
-- **Hjerte** — signatur nederst
+- **Sveitserstil-møne** — dekorativ gavl / «tak-gjerde» fra skiltet på gården
+- **Luftfoto** — gårdsbygningene i oval ramme
+- **Typografi** — SØNDRE HAUGEN / GÅRD
+- **Tagline** — GÅRD · BRYLLUP · SELSKAP · FEST
 
 ## Fargepalett — Nordic fireside
 

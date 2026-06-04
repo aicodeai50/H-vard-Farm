@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260604-photos",
+  assetVer: "20260604-brand",
 };
 
 function t(key, fallback) {
@@ -34,8 +34,8 @@ function langSwitcherHTML() {
 </div>`;
 }
 
-function buildNav(active = "", transparent = false) {
-  const tc = transparent ? " site-header--transparent" : "";
+function buildNav(active = "", overlay = false) {
+  const hc = overlay ? " site-header--overlay" : "";
   const links = [
     ["index.html", "nav.home", ""],
     ["arrangement.html", "nav.arrangement", "arrangement"],
@@ -58,10 +58,10 @@ function buildNav(active = "", transparent = false) {
   return {
     skip: `<a class="skip-link" href="#main">${t("common.skip")}</a>`,
     header: `
-<header class="site-header${tc}" role="banner">
+<header class="site-header${hc}" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen — ${t("nav.home")}">
-      <img src="${assetUrl("assets/images/logo.svg")}" alt="" class="logo-img" width="52" height="52" />
+      <img src="${assetUrl("assets/images/logo-mark.svg")}" alt="" class="logo-img" width="56" height="40" />
       <div class="logo-text">SØNDRE HAUGEN<span>${t("brand.tag", "Gård")}</span></div>
     </a>
     <nav class="nav-desktop" aria-label="Main menu">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">${t("common.enquire")}</a></nav>
@@ -86,7 +86,7 @@ function footerHTML() {
   <div class="container footer-grid">
     <div>
       <a href="index.html" class="logo" style="margin-bottom:1rem">
-        <img src="${assetUrl("assets/images/logo.svg")}" alt="" width="72" height="72" style="margin-bottom:0.75rem" />
+        <img src="${assetUrl("assets/images/logo.svg")}" alt="" width="120" height="174" style="margin-bottom:0.75rem" />
         <div class="logo-text" style="color:var(--cream)">SØNDRE HAUGEN<span style="color:var(--gold)">${t("brand.tag")}</span></div>
       </a>
       <p class="footer-tagline">${t("brand.tagline")}</p>
@@ -168,11 +168,15 @@ function wrapMainContent() {
   toMove.forEach((el) => main.appendChild(el));
 }
 
+const OVERLAY_PAGES = new Set(["home", "wedding", "events", "motorhome"]);
+
 function initLayout() {
   const h = document.getElementById("site-header");
   const f = document.getElementById("site-footer");
   if (h) {
-    const parts = buildNav(h.dataset.active || "", h.dataset.transparent === "true");
+    const page = document.body.dataset.page || "";
+    const overlay = h.dataset.transparent === "true" || OVERLAY_PAGES.has(page);
+    const parts = buildNav(h.dataset.active || "", overlay);
     ensureSkipLink(h, parts.skip);
     h.innerHTML = parts.header;
     ensureMobileNav(h, parts.mobile);

@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node start.js",
     "dev": "node start.js",
-    "crop-photos": "node scripts/crop-gallery-photos.js"
+    "crop-photos": "node scripts/crop-gallery-photos.js",
+    "build-logo": "node scripts/write-logo-brand.js"
   },
   "engines": {
     "node": ">=18"

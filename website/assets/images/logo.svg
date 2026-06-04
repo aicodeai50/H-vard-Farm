@@ -1,51 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Søndre Haugen gård">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 580" role="img" aria-label="Søndre Haugen gård">
   <defs>
-    <linearGradient id="ring-gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e8dcc8"/>
-      <stop offset="100%" stop-color="#c17f59"/>
-    </linearGradient>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4a7a6e"/>
-      <stop offset="100%" stop-color="#1a3c34"/>
-    </linearGradient>
-    <clipPath id="circle-clip">
-      <circle cx="200" cy="200" r="168"/>
+    <clipPath id="photo-oval">
+      <ellipse cx="200" cy="228" rx="158" ry="108"/>
     </clipPath>
   </defs>
-  <circle cx="200" cy="200" r="196" fill="#f6efe4" stroke="url(#ring-gold)" stroke-width="5"/>
-  <circle cx="200" cy="200" r="176" fill="none" stroke="#1a3c34" stroke-width="1.5" opacity="0.35"/>
-  <path id="top-arc" fill="none" d="M 72 118 A 128 128 0 0 1 328 118"/>
-  <text font-family="Georgia, 'Cormorant Garamond', serif" font-size="17" font-weight="700" letter-spacing="0.22em" fill="#1a3c34">
-    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">SØNDRE HAUGEN</textPath>
-  </text>
-  <path id="bottom-arc" fill="none" d="M 328 282 A 128 128 0 0 1 72 282"/>
-  <text font-family="Georgia, 'Cormorant Garamond', serif" font-size="15" font-weight="600" letter-spacing="0.28em" fill="#c17f59">
-    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">GÅRD · Svinndal</textPath>
-  </text>
-  <g clip-path="url(#circle-clip)">
-    <rect x="32" y="32" width="336" height="336" fill="url(#sky)"/>
-    <path d="M32 260 Q120 210 200 230 Q280 205 368 250 L368 368 L32 368 Z" fill="#2d5a4f"/>
-    <path d="M32 285 Q150 245 200 260 Q250 240 368 278 L368 368 L32 368 Z" fill="#1a3c34"/>
-    <g transform="translate(188 168)">
-      <polygon points="-34,0 0,-22 34,0" fill="#5c4f3f"/>
-      <rect x="-30" y="0" width="60" height="42" fill="#d4a855" stroke="#5c4f3f" stroke-width="1.2"/>
-      <rect x="-18" y="12" width="10" height="14" fill="#f6efe4" opacity="0.9"/>
-      <rect x="8" y="12" width="10" height="14" fill="#f6efe4" opacity="0.9"/>
-      <rect x="-6" y="24" width="12" height="18" fill="#5c4f3f"/>
-    </g>
-    <g transform="translate(118 176)">
-      <polygon points="-42,0 0,-28 42,0" fill="#5c4f3f"/>
-      <rect x="-38" y="0" width="76" height="52" fill="#a64d3f" stroke="#5c4f3f" stroke-width="1.2"/>
-      <rect x="-28" y="8" width="14" height="12" fill="#f6efe4" opacity="0.85"/>
-      <rect x="-8" y="8" width="14" height="12" fill="#f6efe4" opacity="0.85"/>
-      <rect x="12" y="8" width="14" height="12" fill="#f6efe4" opacity="0.85"/>
-      <rect x="-18" y="28" width="36" height="24" fill="#5c4f3f" opacity="0.55"/>
-    </g>
-    <circle cx="92" cy="214" r="16" fill="#1a3c34" opacity="0.85"/>
-    <circle cx="308" cy="220" r="18" fill="#1a3c34" opacity="0.85"/>
-    <circle cx="278" cy="206" r="12" fill="#2d5a4f"/>
+  <rect width="400" height="580" fill="#faf7f2"/>
+  <g transform="translate(0 8) scale(0.95) translate(10 0)">
+    
+  <g id="gaeble" fill="none" stroke="#5c4f3f" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 92 L200 8 L352 92" stroke-width="2.4"/>
+    <path d="M200 8 L200 0" stroke-width="2"/>
+    <circle cx="200" cy="0" r="3.5" fill="#c17f59" stroke="#5c4f3f" stroke-width="1"/>
+    <path d="M193 12 L200 4 L207 12" stroke-width="1.6"/>
+    <path d="M68 92 Q200 48 332 92" stroke-width="2"/>
+    <path d="M92 92 Q200 62 308 92" stroke-width="1.6" opacity="0.85"/>
+    <path d="M110 86 Q138 72 162 82 Q148 94 110 92" stroke-width="1.5"/>
+    <path d="M290 86 Q262 72 238 82 Q252 94 290 92" stroke-width="1.5"/>
+    <path d="M178 78 Q200 68 222 78 Q200 88 178 78 Z" fill="#5c4f3f" stroke="none" opacity="0.35"/>
+    <path d="M58 92 H342" stroke-width="3"/>
+    <path d="M82 92 V78 M118 92 V74 M158 92 V70 M200 92 V66 M242 92 V70 M282 92 V74 M318 92 V78" stroke-width="1.8"/>
+    <path d="M72 92 V84 M328 92 V84" stroke-width="2.2"/>
   </g>
-  <circle cx="200" cy="200" r="168" fill="none" stroke="#f6efe4" stroke-width="2.5" opacity="0.9"/>
-  <text x="200" y="318" text-anchor="middle" font-family="Georgia, serif" font-size="9.5" letter-spacing="0.14em" fill="#1a3c34" opacity="0.85">BRYLLUP · SELSKAP · FEST</text>
-  <path transform="translate(200 338) scale(0.55)" d="M0 6 C-10 -5 -18 -2 -9 7 C0 16 0 16 0 16 C0 16 0 16 9 7 C18 -2 10 -5 0 6 Z" fill="#a64d3f"/>
+  </g>
+  <g clip-path="url(#photo-oval)">
+    <image href="logo-farm.jpg" xlink:href="logo-farm.jpg" x="42" y="118" width="316" height="220" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <ellipse cx="200" cy="228" rx="158" ry="108" fill="none" stroke="#c17f59" stroke-width="1.5" opacity="0.6"/>
+  <path d="M155 338 Q200 328 245 338" fill="none" stroke="#c17f59" stroke-width="1" opacity="0.5"/>
+  <text x="200" y="368" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="28" font-weight="700" letter-spacing="0.18em" fill="#3a3228">SØNDRE</text>
+  <text x="200" y="402" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="28" font-weight="700" letter-spacing="0.18em" fill="#3a3228">HAUGEN</text>
+  <line x1="130" y1="418" x2="170" y2="418" stroke="#c17f59" stroke-width="1"/>
+  <text x="200" y="424" text-anchor="middle" font-family="Georgia, serif" font-size="13" letter-spacing="0.42em" fill="#5c4f3f">G Å R D</text>
+  <line x1="230" y1="418" x2="270" y2="418" stroke="#c17f59" stroke-width="1"/>
+  <text x="200" y="452" text-anchor="middle" font-family="Georgia, serif" font-size="8.5" letter-spacing="0.12em" fill="#5c4f3f">GÅRD · BRYLLUP · SELSKAP · FEST</text>
+  <path d="M145 478 Q200 492 255 478" fill="none" stroke="#c17f59" stroke-width="0.8"/>
+  <text x="200" y="498" text-anchor="middle" font-family="Georgia, serif" font-size="9" letter-spacing="0.2em" fill="#5c4f3f">EST. 1760</text>
+  <path d="M168 512 Q200 524 232 512" fill="none" stroke="#2d5a4f" stroke-width="1" opacity="0.45"/>
+  <path d="M188 518 Q200 526 212 518" fill="#a64d3f" opacity="0.7"/>
 </svg>

@@ -1,14 +1,7 @@
 (function () {
-  const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("nav-mobile");
   const closeBtn = document.querySelector(".nav-mobile-close");
-
-  if (header) {
-    const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 40);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
 
   const openMobile = () => {
     mobileNav?.classList.add("open");
