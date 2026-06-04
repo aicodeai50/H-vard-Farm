@@ -4,8 +4,8 @@
 |--|--|
 | **Produksjons-URL** | https://farm.legal |
 | **WWW** | https://www.farm.legal → 301 til apex |
-| **Hosting (nå)** | Netlify (`sondre-haugen-gard`) |
-| **Alternativ hosting** | Railway — se `website/DEPLOY-RAILWAY.md` |
+| **Hosting (nå)** | **Railway** — farm.legal peker hit (auto-deploy fra GitHub) |
+| **Backup** | Netlify `sondre-haugen-gard.netlify.app` |
 | **DNS** | Name.com |
 | **Repo** | https://github.com/aicodeai50/H-vard-Farm |
 
