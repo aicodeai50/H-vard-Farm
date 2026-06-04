@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Pinyon+Script&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="assets/images/logo-mark.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://farm.legal/" />
   <meta property="og:url" content="https://farm.legal/" />
   <meta property="og:site_name" content="Søndre Haugen gård" />
@@ -23,11 +23,17 @@
     "@context": "https://schema.org",
     "@type": "EventVenue",
     "name": "Søndre Haugen gård",
-    "description": "Historisk gård fra 1700-tallet — bryllup, selskaper, arrangementer og bobilhotell i Våler, Østfold.",
+    "description": "Historisk gård fra 1700-tallet — bryllup, selskaper, arrangementer og bobilhotell i Våler. Et levende prosjekt under Håvard Pedersen.",
+    "founder": {
+      "@type": "Person",
+      "name": "Håvard Pedersen",
+      "url": "https://havardpederse.netlify.app",
+      "jobTitle": "Musiker og vertskap"
+    },
     "url": "https://farm.legal",
     "telephone": "+47-901-98-671",
     "email": "post@sondrehaugen.no",
-    "image": "https://farm.legal/assets/images/logo-mark.svg",
+    "image": "https://farm.legal/assets/images/logo.svg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Søndre Haugen gård",
@@ -62,8 +68,9 @@
   <section class="hero" aria-label="Velkommen til Søndre Haugen gård">
     <div class="hero-bg" role="presentation"></div>
     <div class="hero-content">
-      <img src="assets/images/logo-mark.svg" alt="Søndre Haugen gård — logo" class="hero-logo hero-logo-large" width="220" height="220" />
-      <p class="eyebrow" style="color:var(--gold);margin-bottom:0.5rem">Søndre Haugen gård · Våler · fra 1700-tallet</p>
+      <img src="assets/images/logo.svg" alt="Søndre Haugen gård — original merkevare" class="hero-logo hero-logo-large" width="260" height="260" />
+      <p class="eyebrow" style="color:var(--gold);margin-bottom:0.5rem">Søndre Haugen gård · Våler · fra 1700-tallet · farm.legal</p>
+      <p style="font-family:var(--font-serif);font-size:1.1rem;color:var(--gold);letter-spacing:0.15em;margin-bottom:1rem">Historisk. Ekte. Din.</p>
       <h1>Historiske omgivelser for livets store øyeblikk</h1>
       <p class="subtitle">Bryllup, selskaper, arrangementer, gårdsopplevelser og bobilparkering — der ro, natur og kvalitet møtes.</p>
       <div class="hero-buttons">
@@ -75,9 +82,11 @@
   </section>
 
   <div class="brand-strip" aria-hidden="true">
-    <img src="assets/images/logo-mark.svg" alt="" width="72" height="72" />
+    <img src="assets/images/logo.svg" alt="" width="80" height="80" />
     <div>EVENT · SELSKAP · BRYLLUP · FEST</div>
   </div>
+
+  <div id="founder-block"></div>
 
   <section class="section">
     <div class="container">
@@ -229,8 +238,10 @@
   </div>
 
   <div id="site-footer"></div>
+  <script src="js/site-data.js"></script>
   <script src="js/components.js"></script>
   <script src="js/meta.js"></script>
+  <script src="js/founder.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

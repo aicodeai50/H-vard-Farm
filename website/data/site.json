@@ -1,0 +1,24 @@
+{
+  "farm": {
+    "name": "Søndre Haugen gård",
+    "domain": "https://farm.legal",
+    "established": "1700-tallet",
+    "location": "2436 Våler i Østfold",
+    "motto": "Historiske omgivelser for livets store øyeblikk",
+    "brandLine": "Historisk. Ekte. Din.",
+    "services": ["Bryllup", "Selskap", "Arrangementer", "Bobilhotell", "Gårdsopplevelser"]
+  },
+  "founder": {
+    "name": "Håvard Pedersen",
+    "role": "Vertskap & drift",
+    "musicUrl": "https://havardpederse.netlify.app",
+    "musicLabel": "Musikk · live · kultur",
+    "bioShort": "Håvard Pedersen er musiker, arrangør og gründer — fra Vardø til Oslo, med Gretsch- og Mezzabarba-samarbeid og tiår på scenen. Søndre Haugen gård er hans visjon om et sted der historie, natur og arrangementer møtes med samme ekthet som musikken: raw on stage, refined on the farm.",
+    "traits": ["Ekte", "Kvalitet", "Uavhengig drift", "Skreddersøm", "Kultur & arrangement"]
+  },
+  "contact": {
+    "phone": "901 98 671",
+    "email": "post@sondrehaugen.no",
+    "emailBobil": "Bobil@sondrehaugen.no"
+  }
+}

@@ -38,7 +38,7 @@ function headerHTML(active = "", transparent = false) {
 <header class="site-header${t}" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Søndre Haugen gård — forsiden">
-      <img src="assets/images/logo-mark.svg" alt="" class="logo-img" width="52" height="52" />
+      <img src="assets/images/logo.svg" alt="" class="logo-img" width="52" height="52" />
       <div class="logo-text">SØNDRE HAUGEN<span>gård</span></div>
     </a>
     <nav class="nav-desktop" aria-label="Hovedmeny">${navLinks}<a href="kontakt.html" class="nav-link nav-cta">Send forespørsel</a></nav>
@@ -59,7 +59,7 @@ function footerHTML() {
   <div class="container footer-grid">
     <div>
       <a href="index.html" class="logo" style="margin-bottom:1rem">
-        <img src="assets/images/logo-mark.svg" alt="" width="64" height="64" style="margin-bottom:0.75rem" />
+        <img src="assets/images/logo.svg" alt="" width="72" height="72" style="margin-bottom:0.75rem" />
         <div class="logo-text" style="color:var(--cream)">SØNDRE HAUGEN<span style="color:var(--gold)">gård</span></div>
       </a>
       <p class="footer-tagline">${SITE.tagline}</p>
@@ -85,10 +85,11 @@ function footerHTML() {
       <a href="${SITE.url}">${SITE.domain}</a>
       <a href="kontakt.html#visning">Book visning</a>
       <a href="nyheter.html">Nyheter</a>
+      <a href="https://havardpederse.netlify.app" target="_blank" rel="noopener">Håvard Pedersen · musikk</a>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>&copy; ${year} Søndre Haugen gård · ${SITE.domain}</span>
+    <span>&copy; ${year} Søndre Haugen gård · ${SITE.domain} · et prosjekt under Håvard Pedersen</span>
     <span>2436 Våler i Østfold</span>
   </div>
 </footer>`;
