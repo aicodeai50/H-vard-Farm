@@ -55,6 +55,10 @@
       el.value = t(el.getAttribute("data-i18n-value"));
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      el.alt = t(el.getAttribute("data-i18n-alt"));
+    });
+
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       const on = btn.getAttribute("data-lang") === I18N.lang;
       btn.classList.toggle("lang-btn--active", on);

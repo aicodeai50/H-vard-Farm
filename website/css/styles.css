@@ -19,6 +19,8 @@
   --font-script: "Pinyon Script", cursive;
   --font-sans: "Source Sans 3", system-ui, sans-serif;
   --header-h: 84px;
+  --radius: 4px;
+  --radius-lg: 8px;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -805,6 +807,55 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.card--service {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card--service .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card--service .card-body .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.services-grid {
+  align-items: stretch;
+}
+
+.service-list {
+  margin: 0 0 1.25rem;
+  font-size: 0.92rem;
+}
+
+.section--earth .feature-row h2 {
+  color: var(--cream);
+}
+
+.section--earth .feature-row .btn-outline {
+  color: var(--cream);
+  border-color: var(--cream);
+}
+
+.section--earth .feature-row .btn-outline:hover {
+  background: var(--cream);
+  color: var(--earth);
+}
+
+.section-lead {
+  max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--earth-light);
+  font-size: 1.05rem;
 }
 
 /* Feature row */
