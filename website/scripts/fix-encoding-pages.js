@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const VER = "20260607-live";
+const VER = "20260607-simple";
 const root = path.join(__dirname, "..");
 
 const bobil = `<!DOCTYPE html>

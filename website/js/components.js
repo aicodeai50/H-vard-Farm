@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260607-live",
+  assetVer: "20260607-simple",
 };
 
 function t(key, fallback) {

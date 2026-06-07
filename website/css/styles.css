@@ -400,6 +400,112 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   text-align: left;
 }
 
+/* Simple homepage — farm photo first, clean text below */
+.hero--simple {
+  display: block;
+  min-height: auto;
+  text-align: left;
+  color: var(--earth);
+  background: var(--cream);
+}
+
+.hero--simple .hero-photo {
+  display: block;
+  width: 100%;
+  max-height: min(52vh, 28rem);
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.hero-content--simple {
+  position: static;
+  padding: 1.75rem 0 2rem;
+  max-width: 36rem;
+}
+
+.hero-content--simple .eyebrow {
+  color: var(--earth-light);
+  margin-bottom: 0.5rem;
+}
+
+.hero-content--simple h1 {
+  color: var(--green);
+  font-size: clamp(1.75rem, 5vw, 2.35rem);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.hero-content--simple .hero-lead {
+  color: var(--earth);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  opacity: 0.92;
+}
+
+.home-offers {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .home-offers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero--simple .hero-photo {
+    max-height: min(58vh, 32rem);
+  }
+}
+
+.home-offer {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-offer:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.home-offer h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+  color: var(--green);
+}
+
+.home-offer p {
+  font-size: 0.95rem;
+  color: var(--earth-light);
+  margin-bottom: 0.5rem;
+}
+
+.cta-band--compact {
+  padding: 3rem 1.5rem;
+}
+
+.cta-band--compact h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+@media (max-width: 640px) {
+  .property-photo {
+    border-radius: 2px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .hero--page {
   min-height: min(26rem, 48svh);
 }
