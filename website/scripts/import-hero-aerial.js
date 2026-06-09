@@ -10,7 +10,7 @@ const assetsRoot =
   "C:/Users/sandr/.cursor/projects/c-Users-sandr-OneDrive-Documents-H-vard-Farm/assets";
 const src = path.join(
   assetsRoot,
-  "c__Users_sandr_AppData_Roaming_Cursor_User_workspaceStorage_ff8c5c020eceb08493091341a8f4179e_images_WhatsApp_Image_2026-06-09_at_23.21.10-5c425f18-404d-4279-a1ef-a54100c6eb00.png"
+  "c__Users_sandr_AppData_Roaming_Cursor_User_workspaceStorage_ff8c5c020eceb08493091341a8f4179e_images_WhatsApp_Image_2026-06-09_at_23.21.10-4052611a-4726-4bf8-a655-12250b504b54.png"
 );
 
 const propertyDir = path.join(__dirname, "..", "assets", "images", "property");
