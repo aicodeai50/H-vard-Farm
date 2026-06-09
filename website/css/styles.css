@@ -586,15 +586,15 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 }
 
 .hero-bg--selskap {
-  background: var(--gradient-hero), url("../assets/images/property/barn-dining.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/barn-dining-formal.jpg") center/cover no-repeat;
 }
 
 .hero-bg--bobil {
-  background: var(--gradient-hero), url("../assets/images/property/motorhome-garage.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/finn-garage.jpg") center/cover no-repeat;
 }
 
 .hero-bg--om {
-  background: var(--gradient-hero), url("../assets/images/property/farm-landscape.jpg") center/cover no-repeat;
+  background: var(--gradient-hero), url("../assets/images/property/farm-overview.jpg") center/cover no-repeat;
 }
 
 .prose-home {

@@ -20,6 +20,8 @@ const PICKS = [
   { index: 48, out: "finn-barn-hall.jpg" },
   { index: 57, out: "finn-games-room.jpg" },
   { index: 58, out: "finn-lounge.jpg" },
+  { index: 73, out: "finn-garage.jpg" },
+  { index: 82, out: "finn-pool.jpg" },
 ];
 
 function parseImages(html) {
