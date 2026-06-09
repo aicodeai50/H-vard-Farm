@@ -25,4 +25,12 @@ npm run crop-photos
 | `barn-games.jpg` | Activity room · air hockey |
 | `grounds.jpg` | Alias of farm-yard (outdoor) |
 
-Legacy crops (`barn-dining.jpg`, `hero-aerial.jpg`, etc.) remain for pages not yet updated.
+| `finn-estate.jpg` | FINN · historic estate exterior |
+| `finn-pool.jpg` | FINN · heated pool 12×6 m |
+| `finn-barn-hall.jpg` | FINN · event barn interior |
+
+Import from FINN listing (requires `finn-page.html` saved locally):
+
+```bash
+npm run fetch-finn-photos
+```

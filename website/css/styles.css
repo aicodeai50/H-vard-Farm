@@ -433,10 +433,10 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(20, 41, 35, 0.08) 0%,
-    rgba(20, 41, 35, 0.18) 30%,
-    rgba(20, 41, 35, 0.48) 60%,
-    rgba(20, 41, 35, 0.72) 100%
+    rgba(20, 41, 35, 0.04) 0%,
+    rgba(20, 41, 35, 0.08) 30%,
+    rgba(20, 41, 35, 0.28) 60%,
+    rgba(20, 41, 35, 0.6) 100%
   );
   pointer-events: none;
 }
@@ -2165,6 +2165,16 @@ input:focus, select:focus, textarea:focus {
 
   .photo-mosaic--five .photo-mosaic__item:not(.photo-mosaic__item--featured) {
     grid-column: span 5;
+  }
+
+  .photo-mosaic--eight .photo-mosaic__item:not(.photo-mosaic__item--featured) {
+    grid-column: span 4;
+  }
+
+  .photo-mosaic--eight .photo-mosaic__item--featured {
+    grid-column: span 8;
+    grid-row: span 2;
+    min-height: 520px;
   }
 }
 
