@@ -2443,6 +2443,12 @@ input:focus, select:focus, textarea:focus {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
+
+  .photo-gallery-simple--duo {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 56rem;
+    margin-inline: auto;
+  }
 }
 
 .photo-gallery-simple__item {

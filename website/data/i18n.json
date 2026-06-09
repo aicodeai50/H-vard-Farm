@@ -651,6 +651,7 @@
     "venues.cinema.p": "Projector room and media lounge in the barn — ideal between programme items.",
     "venues.dining.h2": "Dining room & kitchen",
     "venues.dining.p": "The main house has a spacious dining room and classic kitchen — ideal for smaller gatherings, meetings or viewings by appointment.",
+    "venues.kitchen.p": "Main kitchen with Sigdal cabinetry, AGA range and stone worktop — authentic farmhouse character.",
     "arr.types.h2": "Popular events",
     "arr.types.wedding": "Outdoor ceremony and barn reception.",
     "arr.types.party": "Family celebrations and private parties.",
@@ -1311,6 +1312,7 @@
     "venues.cinema.h3": "Kinorom",
     "venues.cinema.p": "Projectorsal og medierom i låven — perfekt for avslapning mellom programpostene.",
     "venues.dining.h2": "Spisestue & kjøkken",
-    "venues.dining.p": "Våningshuset har romslig spisestue og klassisk kjøkken — ideelt for mindre sammenkomster, møter eller omvisning etter avtale."
+    "venues.dining.p": "Våningshuset har romslig spisestue og klassisk kjøkken — ideelt for mindre sammenkomster, møter eller omvisning etter avtale.",
+    "venues.kitchen.p": "Hovedkjøkken med Sigdal-innredning, AGA-komfyr og steinbenkeplate — autentisk gårdsstemning."
   }
 }
