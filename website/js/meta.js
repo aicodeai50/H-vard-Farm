@@ -57,10 +57,10 @@
   /* --- Open Graph / Twitter --- */
   setMeta("property", "og:url", canonical);
   setMeta("property", "og:site_name", "Søndre Haugen Farm");
-  setMeta("property", "og:image", BASE + "/assets/images/property/farm-yard.jpg?v=20260609-simple");
+  setMeta("property", "og:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260609-aerial");
   setMeta("property", "og:image:width", "1920");
   setMeta("property", "og:image:height", "1080");
-  setMeta("name", "twitter:image", BASE + "/assets/images/property/farm-yard.jpg?v=20260609-simple");
+  setMeta("name", "twitter:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260609-aerial");
   setMeta("name", "twitter:card", "summary_large_image");
 
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {
