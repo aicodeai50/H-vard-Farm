@@ -33,6 +33,7 @@
       { "@type": "LocationFeatureSpecification", name: "Barn event hall", value: "463 m²" },
       { "@type": "LocationFeatureSpecification", name: "Outdoor ceremony area" },
       { "@type": "LocationFeatureSpecification", name: "Motorhome parking" },
+      { "@type": "LocationFeatureSpecification", name: "Film & production location", value: "Commercial shoots, photography and creative projects" },
     ],
     maximumAttendeeCapacity: 100,
   };

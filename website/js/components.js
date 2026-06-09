@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260607-simple",
+  assetVer: "20260608-dream",
 };
 
 function t(key, fallback) {
@@ -40,6 +40,7 @@ function buildNav(active = "") {
     ["bryllup.html", "nav.weddingsLove", "bryllup"],
     ["selskap.html", "nav.parties", "selskap"],
     ["moter-firma.html", "nav.corporate", "moter"],
+    ["film-produksjon.html", "nav.film", "film"],
     ["mat-servering.html", "nav.catering", "mat"],
     ["lokaler.html", "nav.venues", "lokaler"],
     ["kontakt.html", "nav.contact", "kontakt"],
@@ -70,6 +71,7 @@ function buildNav(active = "") {
   <button type="button" class="nav-mobile-close" aria-label="${t("common.closeMenu")}">&times;</button>
   ${langSwitcherHTML()}
   ${mobileLinks}
+  <a href="film-produksjon.html" class="nav-mobile-extra">${t("nav.film")}</a>
   <a href="om-garden.html" class="nav-mobile-extra">${t("nav.about")}</a>
   <a href="bobilhotell.html" class="nav-mobile-extra">${t("nav.motorhomes")}</a>
   <a href="kontakt.html" class="btn btn-primary" style="margin-top:1rem">${t("common.enquire")}</a>
@@ -100,6 +102,7 @@ function footerHTML() {
       <a href="om-garden.html">${t("nav.about")}</a>
       <a href="garden-fakta.html">${t("footer.farmFacts")}</a>
       <a href="opplevelser.html">${t("nav.experiences")}</a>
+      <a href="film-produksjon.html">${t("footer.film")}</a>
       <a href="nyheter.html">${t("nav.news")}</a>
       <a href="bobilhotell.html">${t("footer.motorhomeSmall")}</a>
     </div>
