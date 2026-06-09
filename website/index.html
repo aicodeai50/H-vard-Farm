@@ -11,24 +11,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=20260609-finn" />
-  <link rel="icon" href="assets/images/logo-icon.png?v=20260609-finn" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css?v=20260609-simple" />
+  <link rel="icon" href="assets/images/logo-icon.png?v=20260609-simple" type="image/png" />
   <link rel="canonical" href="https://farm.legal/" />
-  <meta property="og:image" content="https://farm.legal/assets/images/property/farm-overview.jpg?v=20260609-finn" />
+  <meta property="og:image" content="https://farm.legal/assets/images/property/farm-yard.jpg?v=20260609-simple" />
 </head>
-<body data-page="home">
+<body data-page="home" class="home-simple">
   <div id="site-header" data-active=""></div>
 
   <section class="hero hero--simple" data-i18n-aria="home.hero.h1" aria-label="Søndre Haugen Gård">
     <div class="hero-photo-wrap">
       <img
-        src="assets/images/property/farm-overview.jpg?v=20260609-finn"
+        src="assets/images/property/farm-yard.jpg?v=20260609-simple"
         class="hero-photo"
         width="1920"
         height="1080"
         fetchpriority="high"
-        data-i18n-alt="home.showcase.caption6"
-         alt="Historisk eiendom · landlig sjarm"/>
+        data-i18n-alt="home.showcase.caption1"
+         alt="Gårdstun · rød låve og festbelysning"/>
       <div class="hero-content hero-content--simple container">
         <p class="eyebrow" data-i18n="home.hero.eyebrow">Svinndallinna 190 · Svinndal</p>
         <h1 data-i18n="home.hero.sub">Et unikt gårdsanlegg for arrangementer, produksjoner og uforglemmelige øyeblikk.</h1>
@@ -36,23 +36,21 @@
         <div class="hero-buttons">
           <a href="kontakt.html#visning" class="btn btn-primary" data-i18n="common.bookVisit">Book visning</a>
           <a href="kontakt.html" class="btn btn-outline" data-i18n="common.enquire">Send forespørsel</a>
-          <a href="kontakt.html?type=film" class="btn btn-primary btn-primary--film" data-i18n="film.cta.btn">Book filmlocation</a>
         </div>
-        <p class="hero-subtle-link"><a href="film-produksjon.html" class="btn btn-outline btn-outline--light" data-i18n="home.film.learnMore">Les mer om Film & produksjon</a></p>
+        <p class="hero-tertiary">
+          <a href="film-produksjon.html" data-i18n="home.film.link">Film & produksjon →</a>
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section intro-banner">
+  <section class="section intro-banner intro-banner--slim">
     <div class="container">
-      <div class="intro-banner__inner">
-        <span class="intro-banner__mark" aria-hidden="true"></span>
-        <p class="lead" data-i18n="home.intro.simple">Mer enn et bygg — en historisk gård der du kan forestille deg helg på landet, livets store feiring, eller det perfekte filmopptaket.</p>
-      </div>
+      <p class="lead intro-banner__text" data-i18n="home.intro.simple">Mer enn et bygg — en historisk gård der du kan forestille deg helg på landet, livets store feiring, eller det perfekte filmopptaket.</p>
     </div>
   </section>
 
-  <section class="section section--dark section--stats">
+  <section class="section section--dark section--stats section--stats-compact">
     <div class="container stats">
       <div class="stat">
         <div class="stat-value">1760</div>
@@ -75,43 +73,35 @@
 
   <section class="section section--cream photo-showcase">
     <div class="container">
-      <div class="section-intro">
+      <div class="section-intro section-intro--center">
         <p class="eyebrow" data-i18n="home.showcase.eyebrow">Gården</p>
         <h2 data-i18n="home.showcase.h2">Bilder som forklarer og selger stedet</h2>
         <p class="lead" data-i18n="home.showcase.p">Historiske bygg, åpne marker og intime gårdstun — ekte landlig atmosfære i hvert bilde.</p>
       </div>
-      <div class="photo-mosaic photo-mosaic--eight" aria-label="Gårdsbilder">
-        <figure class="photo-mosaic__item photo-mosaic__item--featured">
-          <img src="assets/images/property/farm-yard.jpg?v=20260609-photos" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption1"  alt="Gårdstun · rød låve og festbelysning"/>
+      <div class="photo-gallery-simple" aria-label="Gårdsbilder">
+        <figure class="photo-gallery-simple__item">
+          <img src="assets/images/property/farm-yard.jpg?v=20260609-simple" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption1"  alt="Gårdstun · rød låve og festbelysning"/>
           <figcaption data-i18n="home.showcase.caption1">Gårdstun · rød låve og festbelysning</figcaption>
         </figure>
-        <figure class="photo-mosaic__item">
-          <img src="assets/images/property/barn-exterior-red.jpg?v=20260609-photos" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption2"  alt="Låve · utvendig"/>
-          <figcaption data-i18n="home.showcase.caption2">Låve · utvendig</figcaption>
-        </figure>
-        <figure class="photo-mosaic__item">
-          <img src="assets/images/property/barn-cinema.jpg?v=20260609-photos" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption3"  alt="Kinorom · projectorsal"/>
-          <figcaption data-i18n="home.showcase.caption3">Kinorom · projectorsal</figcaption>
-        </figure>
-        <figure class="photo-mosaic__item">
-          <img src="assets/images/property/barn-pool.jpg?v=20260609-photos" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption4"  alt="Spillrom · biljard"/>
-          <figcaption data-i18n="home.showcase.caption4">Spillrom · biljard</figcaption>
-        </figure>
-        <figure class="photo-mosaic__item">
-          <img src="assets/images/property/barn-games.jpg?v=20260609-photos" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption5"  alt="Aktivitetsrom · air hockey"/>
-          <figcaption data-i18n="home.showcase.caption5">Aktivitetsrom · air hockey</figcaption>
-        </figure>
-        <figure class="photo-mosaic__item">
-          <img src="assets/images/property/finn-estate.jpg?v=20260609-finn" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption6"  alt="Historisk eiendom · landlig sjarm"/>
+        <figure class="photo-gallery-simple__item">
+          <img src="assets/images/property/finn-estate.jpg?v=20260609-simple" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption6"  alt="Historisk eiendom · landlig sjarm"/>
           <figcaption data-i18n="home.showcase.caption6">Historisk eiendom · landlig sjarm</figcaption>
         </figure>
-        <figure class="photo-mosaic__item">
-          <img src="assets/images/property/finn-pool.jpg?v=20260609-finn" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption7"  alt="Oppvarmet basseng · 12×6 m"/>
+        <figure class="photo-gallery-simple__item">
+          <img src="assets/images/property/finn-barn-hall.jpg?v=20260609-simple" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption8"  alt="Selskapslåve · inntil ca. 100 gjester"/>
+          <figcaption data-i18n="home.showcase.caption8">Selskapslåve · inntil ca. 100 gjester</figcaption>
+        </figure>
+        <figure class="photo-gallery-simple__item">
+          <img src="assets/images/property/finn-pool.jpg?v=20260609-simple" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption7"  alt="Oppvarmet basseng · 12×6 m"/>
           <figcaption data-i18n="home.showcase.caption7">Oppvarmet basseng · 12×6 m</figcaption>
         </figure>
-        <figure class="photo-mosaic__item">
-          <img src="assets/images/property/finn-barn-hall.jpg?v=20260609-finn" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption8"  alt="Selskapslåve · inntil ca. 100 gjester"/>
-          <figcaption data-i18n="home.showcase.caption8">Selskapslåve · inntil ca. 100 gjester</figcaption>
+        <figure class="photo-gallery-simple__item">
+          <img src="assets/images/property/barn-exterior-red.jpg?v=20260609-simple" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption2"  alt="Låve · utvendig"/>
+          <figcaption data-i18n="home.showcase.caption2">Låve · utvendig</figcaption>
+        </figure>
+        <figure class="photo-gallery-simple__item">
+          <img src="assets/images/property/barn-cinema.jpg?v=20260609-simple" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption3"  alt="Kinorom · projectorsal"/>
+          <figcaption data-i18n="home.showcase.caption3">Kinorom · projectorsal</figcaption>
         </figure>
       </div>
     </div>
@@ -119,14 +109,14 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-intro">
+      <div class="section-intro section-intro--center">
         <h2 data-i18n="home.suits.h2">Søndre Haugen Gård passer for</h2>
         <p class="lead" data-i18n="home.capacity">Vi har plass til arrangementer for inntil ca. 100 personer innendørs, og gode muligheter for større eller mer uformelle arrangementer ute på gården.</p>
       </div>
 
       <div class="home-offers">
         <a href="bryllup.html" class="home-offer card">
-          <img src="assets/images/property/farm-yard.jpg?v=20260609-photos" class="property-photo card-img" loading="lazy" data-i18n-alt="home.showcase.caption1"  alt="Gårdstun · rød låve og festbelysning"/>
+          <img src="assets/images/property/farm-yard.jpg?v=20260609-simple" class="property-photo card-img" loading="lazy" data-i18n-alt="home.showcase.caption1"  alt="Gårdstun · rød låve og festbelysning"/>
           <div class="card-body">
             <h2 data-i18n="home.card.wedding.h3">Bryllup & lovefest</h2>
             <p data-i18n="home.card.wedding.p">Vielse ute, fest i låven — på din måte.</p>
@@ -134,7 +124,7 @@
           </div>
         </a>
         <a href="selskap.html" class="home-offer card">
-          <img src="assets/images/property/finn-barn-hall.jpg?v=20260609-finn" class="property-photo card-img" loading="lazy" data-i18n-alt="home.showcase.caption8"  alt="Selskapslåve · inntil ca. 100 gjester"/>
+          <img src="assets/images/property/finn-barn-hall.jpg?v=20260609-simple" class="property-photo card-img" loading="lazy" data-i18n-alt="home.showcase.caption8"  alt="Selskapslåve · inntil ca. 100 gjester"/>
           <div class="card-body">
             <h2 data-i18n="home.card.events.h3">Selskap & feiring</h2>
             <p data-i18n="home.card.events.p">Dåp, konfirmasjon, jubileum og private selskaper.</p>
@@ -142,87 +132,33 @@
           </div>
         </a>
         <a href="film-produksjon.html" class="home-offer card">
-          <img src="assets/images/property/barn-exterior-red.jpg?v=20260609-photos" class="property-photo card-img" loading="lazy" data-i18n-alt="home.showcase.caption2"  alt="Låve · utvendig"/>
+          <img src="assets/images/property/finn-estate.jpg?v=20260609-simple" class="property-photo card-img" loading="lazy" data-i18n-alt="home.showcase.caption6"  alt="Historisk eiendom · landlig sjarm"/>
           <div class="card-body">
             <h2 data-i18n="home.film.h2">Film & produksjon</h2>
-            <p data-i18n="home.film.p">Kommersielle opptak, TV-prosjekter og musikkvideoer. Fotografi, branding og location hire i historiske Østfold-omgivelser.</p>
+            <p data-i18n="home.film.pShort">Location for reklame, TV, musikkvideo og foto.</p>
             <span class="card-link" data-i18n="home.film.link">Film & produksjon →</span>
           </div>
         </a>
       </div>
-      <p class="text-center mt-2">
-        <a href="arrangement.html" class="btn btn-outline" data-i18n="home.flex.link">Les mer om arrangement →</a>
-      </p>
     </div>
   </section>
 
-  <section class="section section--cream">
-    <div class="container feature-row">
-      <div class="feature-img">
-        <img src="assets/images/property/finn-pool.jpg?v=20260609-finn" class="property-photo" loading="lazy" data-i18n-alt="home.showcase.caption7"  alt="Oppvarmet basseng · 12×6 m"/>
-      </div>
-      <div>
-        <h2 data-i18n="home.outdoor.h2">Utearrangementer</h2>
-        <p class="mb-2" data-i18n="home.outdoor.p">Seremonier, sommerfester og mottakelser i gårdstunet — med låven som innendørs alternativ.</p>
-        <a href="https://www.facebook.com/share/1D2QnLT5sP/?mibextid=wwXIfr" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-i18n="home.outdoor.facebook">Se bilder på Facebook →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--dark film-section">
-    <div class="container film-panel">
-      <div class="film-panel__media">
-        <img src="assets/images/property/barn-exterior-red.jpg?v=20260609-photos" class="property-photo film-panel__photo" loading="lazy" data-i18n-alt="home.showcase.caption2"  alt="Låve · utvendig"/>
-      </div>
-      <div class="film-panel__content">
+  <section class="section section--dark home-film-band">
+    <div class="container home-film-band__inner">
+      <div class="home-film-band__copy">
         <p class="eyebrow eyebrow--light" data-i18n="home.film.eyebrow">Location hire</p>
         <h2 data-i18n="home.film.h2">Film & produksjon</h2>
-        <p class="lead film-panel__lead" data-i18n="home.film.p">Kommersielle opptak, TV-prosjekter og musikkvideoer. Fotografi, branding og location hire i historiske Østfold-omgivelser.</p>
-        <ul class="film-list">
+        <p data-i18n="home.film.pShort">Location for reklame, TV, musikkvideo og foto.</p>
+        <ul class="film-tags">
           <li data-i18n="home.film.l1">Kommersielle og reklameproduksjoner</li>
-          <li data-i18n="home.film.l2">TV- og strømmeprosjekter</li>
           <li data-i18n="home.film.l3">Musikkvideoer</li>
           <li data-i18n="home.film.l4">Foto, mote og livsstil</li>
-          <li data-i18n="home.film.l5">Bedriftsfilm og branded content</li>
         </ul>
-        <p class="film-panel__note" data-i18n="home.film.note">Tilgjengelig for korte og lengre produksjonsbookinger.</p>
-        <div class="hero-buttons">
-          <a href="kontakt.html?type=film" class="btn btn-primary" data-i18n="film.cta.btn">Book filmlocation</a>
-          <a href="film-produksjon.html" class="btn btn-outline btn-outline--light" data-i18n="home.film.link">Film & produksjon →</a>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--cream">
-    <div class="container">
-      <div class="section-intro">
-        <h2 data-i18n="home.experience.h2">Opplev gården</h2>
-        <p class="lead" data-i18n="home.experience.p">Tenk deg rolig landsbygd, historisk atmosfære og rom for bryllup, retreats, firma og kreative prosjekter.</p>
+      <div class="home-film-band__actions">
+        <a href="kontakt.html?type=film" class="btn btn-primary" data-i18n="film.cta.btn">Forespør location</a>
+        <a href="film-produksjon.html" class="btn btn-outline btn-outline--light" data-i18n="home.film.learnMore">Les mer om Film & produksjon</a>
       </div>
-      <div class="experience-grid">
-        <article class="feel-card">
-          <strong data-i18n="home.experience.card1.h3">Bryllup & feiringer</strong>
-          <span class="feel-desc" data-i18n="home.experience.card1.p">Historierike dager som føles personlige, elegante og varme.</span>
-        </article>
-        <article class="feel-card">
-          <strong data-i18n="home.experience.card2.h3">Retreats & firma</strong>
-          <span class="feel-desc" data-i18n="home.experience.card2.p">Rolige, historiske omgivelser for fokus, trivsel og teamkraft.</span>
-        </article>
-        <article class="feel-card">
-          <strong data-i18n="home.experience.card3.h3">Film & kreative locations</strong>
-          <span class="feel-desc" data-i18n="home.experience.card3.p">Et særegent sted for produksjoner, reklame og foto.</span>
-        </article>
-        <article class="feel-card">
-          <strong data-i18n="home.experience.card4.h3">Familiefeiringer</strong>
-          <span class="feel-desc" data-i18n="home.experience.card4.p">Dåp, konfirmasjon, jubileum og private selskaper.</span>
-        </article>
-        <article class="feel-card">
-          <strong data-i18n="home.experience.card5.h3">Kultur & opplevelser</strong>
-          <span class="feel-desc" data-i18n="home.experience.card5.p">Konserter, foredrag og kreative opplevelser på en levende gård.</span>
-        </article>
-      </div>
-      <p class="text-center mt-2"><a href="kontakt.html" class="btn btn-primary" data-i18n="common.enquire">Send forespørsel</a></p>
     </div>
   </section>
 
@@ -243,10 +179,10 @@
   </div>
 
   <div id="site-footer"></div>
-  <script src="js/i18n.js?v=20260609-finn"></script>
-  <script src="js/components.js?v=20260609-finn"></script>
-  <script src="js/meta.js?v=20260609-finn"></script>
-  <script src="js/schema.js?v=20260609-finn"></script>
-  <script src="js/main.js?v=20260609-finn"></script>
+  <script src="js/i18n.js?v=20260609-simple"></script>
+  <script src="js/components.js?v=20260609-simple"></script>
+  <script src="js/meta.js?v=20260609-simple"></script>
+  <script src="js/schema.js?v=20260609-simple"></script>
+  <script src="js/main.js?v=20260609-simple"></script>
 </body>
 </html>
