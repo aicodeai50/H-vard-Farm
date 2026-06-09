@@ -8,6 +8,7 @@
     "start": "node start.js",
     "dev": "node start.js",
     "crop-photos": "node scripts/crop-gallery-photos.js",
+    "import-photos": "node scripts/import-whatsapp-photos.js",
     "build-logo": "node scripts/write-logo-brand.js",
     "crop-logo": "node scripts/crop-logo-header.js",
     "fix-encoding": "node scripts/fix-encoding-pages.js"

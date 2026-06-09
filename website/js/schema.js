@@ -6,7 +6,7 @@
     name: "Søndre Haugen Gård",
     alternateName: "Søndre Haugen Farm",
     url: "https://farm.legal/",
-    image: "https://farm.legal/assets/images/property/hero-aerial.jpg",
+    image: "https://farm.legal/assets/images/property/farm-overview.jpg",
     description:
       "Historisk gård fra 1760 — selskapslokale i låven (463 m²), bryllup utendørs, bobilparkering. Leie uten tvungen catering.",
     telephone: "+4790198671",

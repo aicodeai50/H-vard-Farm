@@ -1,26 +1,28 @@
 # Property photos
 
-Cropped from FINN/WhatsApp gallery screenshots. Originals are kept in `_screenshots/`.
+Original WhatsApp photos live in `_source/whatsapp/`. Older FINN screenshot crops are in `_screenshots/`.
 
-Regenerate after adding screenshots (requires `npm install sharp` locally first):
+Import new WhatsApp originals:
 
 ```bash
-npm install sharp
+npm run import-photos
+```
+
+Regenerate screenshot crops (legacy):
+
+```bash
 npm run crop-photos
 ```
 
 | File | Use |
 |------|-----|
-| `hero-aerial.jpg` | Homepage hero background (drone) |
+| `farm-yard.jpg` | Farmyard · red barn, festoon lights |
+| `farm-overview.jpg` | Homepage hero, OG share image |
 | `hero-barn.jpg` | Bryllup page hero |
-| `barn-exterior-red.jpg` | Red barn exterior, gallery |
-| `farm-overview.jpg` | Farm aerial close-up |
-| `farm-landscape.jpg` | Wide estate / grounds |
-| `barn-dining.jpg` | Event hall interior |
-| `barn-hall-rustic.jpg` | Lounge / projector room |
-| `barn-games.jpg` | Games room |
-| `barn-lounge.jpg` | Chandelier hallway |
-| `guest-house.jpg` | Guest house kitchen |
-| `motorhome-garage.jpg` | Bobilhotell |
+| `barn-exterior-red.jpg` | Barn exterior · side view |
+| `barn-cinema.jpg` | Cinema & media room |
+| `barn-pool.jpg` | Games room · pool table |
+| `barn-games.jpg` | Activity room · air hockey |
+| `grounds.jpg` | Alias of farm-yard (outdoor) |
 
-**Note:** No main house (våningshus) interior until copy and photos are approved.
+Legacy crops (`barn-dining.jpg`, `hero-aerial.jpg`, etc.) remain for pages not yet updated.
