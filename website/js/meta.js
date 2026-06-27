@@ -3,6 +3,7 @@
   const BASE = "https://farm.legal";
   const SITEMAP = BASE + "/sitemap.xml";
   const GOOGLE_VERIFY = "1iAOryKfYzwHdKX1Cw8k0UISIsqrgIic3TlDsAYub8M";
+  const SITE_NAME = "S\u00f8ndre Haugen G\u00e5rd";
 
   const path = window.location.pathname.replace(/\\/g, "/");
   const canonicalPath =
@@ -52,7 +53,7 @@
   ensureLink("canonical", canonical);
 
   setMeta("property", "og:url", canonical);
-  setMeta("property", "og:site_name", "Søndre Haugen Gård");
+  setMeta("property", "og:site_name", SITE_NAME);
   setMeta("property", "og:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-restore");
   setMeta("property", "og:image:width", "1920");
   setMeta("property", "og:image:height", "1080");
