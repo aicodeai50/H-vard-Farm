@@ -2576,17 +2576,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 .hero-content--animate {
-  opacity: 1;
-  transform: none;
-}
-
-html.js-anim .hero-content--animate:not(.is-visible) {
   opacity: 0;
   transform: translateY(1.25rem);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-html.js-anim .hero-content--animate.is-visible {
+.hero-content--animate.is-visible {
   opacity: 1;
   transform: none;
 }
@@ -2631,24 +2626,19 @@ html.js-anim .hero-content--animate.is-visible {
 }
 
 .reveal {
-  opacity: 1;
-  transform: none;
-}
-
-html.js-anim .reveal:not(.is-visible) {
   opacity: 0;
   transform: translateY(1.5rem);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
-html.js-anim .reveal.is-visible {
+.reveal.is-visible {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js-anim .hero-content--animate:not(.is-visible),
-  html.js-anim .reveal:not(.is-visible) {
+  .hero-content--animate,
+  .reveal {
     opacity: 1;
     transform: none;
     transition: none;

@@ -59,10 +59,10 @@
   setMeta("property", "og:site_name", "Søndre Haugen Gård");
   setMeta("property", "og:type", "website");
   setMeta("property", "og:locale", "nb_NO");
-  setMeta("property", "og:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-venue");
+  setMeta("property", "og:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260610-venue");
   setMeta("property", "og:image:width", "1920");
   setMeta("property", "og:image:height", "1080");
-  setMeta("name", "twitter:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-venue");
+  setMeta("name", "twitter:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260610-venue");
   setMeta("name", "twitter:card", "summary_large_image");
 
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {

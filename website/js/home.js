@@ -1,5 +1,4 @@
 (function () {
-  document.documentElement.classList.add("js-anim");
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!prefersReduced) {
