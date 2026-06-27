@@ -27,6 +27,9 @@ window.updateContactFormI18n = updateContactFormI18n;
 
   const params = new URLSearchParams(location.search);
   const typeEl = document.getElementById("type");
+  const filmLegend = document.querySelector(".hero-lead--film");
+  const filmHint = document.querySelector(".form-note--film");
+  const formHeading = document.querySelector('[data-i18n="contact.form.h3"]');
   const typeMap = {
     bryllup: "bryllup",
     arrangement: "arrangement",
@@ -41,8 +44,20 @@ window.updateContactFormI18n = updateContactFormI18n;
     visning: "visning",
     prospekt: "prospekt",
   };
-  const typeParam = params.get("type");
-  if (typeParam && typeMap[typeParam] && typeEl) typeEl.value = typeMap[typeParam];
+  const typeParam = (params.get("type") || "").toLowerCase();
+  if (typeEl) {
+    if (typeParam && typeMap[typeParam]) typeEl.value = typeMap[typeParam];
+
+    const updateFilmUI = (value) => {
+      const show = value === "film";
+      if (filmLegend) filmLegend.style.display = show ? "block" : "none";
+      if (filmHint) filmHint.style.display = show ? "block" : "none";
+      if (formHeading) formHeading.textContent = show ? t("contact.form.h3Film", "Send filmhenvendelse") : t("contact.form.h3", "Send forespørsel");
+    };
+
+    updateFilmUI(typeEl.value);
+    typeEl.addEventListener("change", () => updateFilmUI(typeEl.value));
+  }
 
   const niva = (params.get("niva") || "").toLowerCase();
   const nivaLabel = { ute: "Ute", inne: "Inne", premium: "Premium" }[niva];
