@@ -1,4 +1,4 @@
-/** SEO metadata first — canonical, robots, sitemap, Open Graph (farm.legal) */
+/** SEO metadata first - canonical, robots, sitemap, Open Graph (farm.legal) */
 (function () {
   const BASE = "https://farm.legal";
   const SITEMAP = BASE + "/sitemap.xml";
@@ -46,17 +46,13 @@
     return el;
   }
 
-  /* --- Metadata first (Search Console, crawlers) --- */
   setMeta("name", "google-site-verification", GOOGLE_VERIFY);
   setMeta("name", "robots", isNoindexPage ? "noindex, follow" : "index, follow");
   ensureLink("sitemap", SITEMAP, { type: "application/xml", title: "Sitemap" });
-
-  /* --- Canonical --- */
   ensureLink("canonical", canonical);
 
-  /* --- Open Graph / Twitter --- */
   setMeta("property", "og:url", canonical);
-  setMeta("property", "og:site_name", "Søndre Haugen Farm");
+  setMeta("property", "og:site_name", "Søndre Haugen Gård");
   setMeta("property", "og:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-restore");
   setMeta("property", "og:image:width", "1920");
   setMeta("property", "og:image:height", "1080");
