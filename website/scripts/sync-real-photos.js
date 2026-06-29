@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 const websiteDir = path.join(__dirname, "..");
-const assetVer = "20260627-restore";
+const assetVer = "20260610-real";
 
 /** Old screenshot filename → real photo */
 const REPLACEMENTS = [

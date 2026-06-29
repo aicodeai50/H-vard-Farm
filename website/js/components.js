@@ -9,7 +9,7 @@ const SITE = {
   domain: "farm.legal",
   url: "https://farm.legal",
   calendly: "",
-  assetVer: "20260627-restore",
+  assetVer: "20260627-venue",
 };
 
 function t(key, fallback) {
@@ -99,6 +99,7 @@ function footerHTML() {
       <a href="moter-firma.html">${t("nav.corporate")}</a>
       <a href="mat-servering.html">${t("nav.catering")}</a>
       <a href="lokaler.html">${t("nav.venues")}</a>
+      <a href="galleri.html">${t("page.galleri.h1")}</a>
       <a href="om-garden.html">${t("nav.about")}</a>
       <a href="garden-fakta.html">${t("footer.farmFacts")}</a>
       <a href="opplevelser.html">${t("nav.experiences")}</a>
@@ -118,13 +119,16 @@ function footerHTML() {
       <a href="${SITE.url}">${SITE.domain}</a>
       <a href="kontakt.html#visning">${t("common.bookVisit")}</a>
       <a href="https://www.facebook.com/share/1D2QnLT5sP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">${t("footer.facebook")}</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-disabled="true">${t("footer.instagram")}</a>
+      <a href="https://maps.google.com/maps?q=Svinndallinna+190,+1593+Svinndal" target="_blank" rel="noopener noreferrer">${t("footer.maps")}</a>
+      <a href="kontakt.html">${t("common.enquire")}</a>
       <a href="personvern.html">${t("common.privacy")}</a>
     </div>
   </div>
   <div class="container footer-bottom">
     <span>&copy; ${year} Søndre Haugen ${t("brand.tag")} · ${SITE.domain}</span>
     <span>
-      <a href="https://havardpederse.netlify.app/" target="_blank" rel="noopener noreferrer">${t("footer.musicLink")}</a>
+      <a href="kontakt.html">${t("common.enquire")}</a>
       · <a href="personvern.html">${t("common.privacy")}</a> · Svinndallinna 190, 1593 Svinndal
     </span>
   </div>
