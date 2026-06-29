@@ -1,4 +1,5 @@
-# Railway deploy from repo root (website/ subfolder)
+# Railway deploy — default: agriculture app (app/)
+# For event venue site (farm.legal): set startCommand to npm run start:website
 [build]
 builder = "NIXPACKS"
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — H-vard Farm</title>
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a href="/" class="brand"><img src="/assets/logo.svg" alt="" width="32" height="32" /> H-vard Farm</a>
+      <ul class="sidebar__nav">
+        <li><a href="/dashboard.html">Overview</a></li>
+        <li><a href="/billing.html">Billing</a></li>
+        <li><a href="/settings.html" class="active">Settings</a></li>
+      </ul>
+    </aside>
+    <div class="app-main">
+      <header class="topbar"><h1 style="font-size:1.125rem">Settings</h1></header>
+      <div class="content">
+        <section class="card" style="margin-bottom:var(--space-3)">
+          <h2 style="margin-bottom:var(--space-2)">Profile</h2>
+          <div class="form-group"><label>Email</label><input class="form-control" id="profile-email" readonly /></div>
+          <div class="form-group"><label>Name</label><input class="form-control" id="profile-name" readonly /></div>
+        </section>
+        <section class="card" style="margin-bottom:var(--space-3)">
+          <h2 style="margin-bottom:var(--space-2)">Notifications</h2>
+          <label style="display:flex;align-items:center;gap:var(--space-1);margin-bottom:var(--space-1)">
+            <input type="checkbox" checked /> Harvest reminders
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-1)">
+            <input type="checkbox" checked /> Billing alerts
+          </label>
+        </section>
+        <section class="card" style="margin-bottom:var(--space-3)">
+          <h2 style="margin-bottom:var(--space-2)">Data</h2>
+          <button type="button" class="btn btn-outline btn-sm" id="export-btn">Export fields (JSON)</button>
+        </section>
+        <section class="card">
+          <h2 style="margin-bottom:var(--space-2);color:var(--soil)">Danger zone</h2>
+          <button type="button" class="btn btn-outline btn-sm" id="delete-btn" style="border-color:var(--soil);color:var(--soil)">Request account deletion</button>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      if (!(await App.requireAuth())) return;
+      const { user } = await App.api("/api/me");
+      document.getElementById("profile-email").value = user.email;
+      document.getElementById("profile-name").value = user.name;
+      document.getElementById("export-btn").addEventListener("click", async () => {
+        const { fields } = await App.api("/api/fields");
+        const blob = new Blob([JSON.stringify(fields, null, 2)], { type: "application/json" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "hvard-farm-fields.json";
+        a.click();
+      });
+      document.getElementById("delete-btn").addEventListener("click", () => {
+        App.toast("Contact support to delete your account.");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,10 +1,12 @@
 {
   "name": "h-vard-farm",
   "private": true,
-  "description": "Søndre Haugen gård — deploy root for Railway (runs website/)",
+  "description": "H-vard Farm monorepo — agriculture app (app/) + event venue site (website/)",
   "scripts": {
-    "build": "npm ci --prefix website",
-    "start": "npm start --prefix website"
+    "build": "npm ci --prefix website && npm ci --prefix app",
+    "start": "npm start --prefix app",
+    "start:app": "npm start --prefix app",
+    "start:website": "npm start --prefix website"
   },
   "engines": {
     "node": ">=18"

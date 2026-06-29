@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — H-vard Farm</title>
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a href="/" class="brand"><img src="/assets/logo.svg" alt="" width="32" height="32" /> H-vard Farm</a>
+      <ul class="sidebar__nav">
+        <li><a href="/dashboard.html" class="active">Overview</a></li>
+        <li><a href="/dashboard.html#fields">Fields</a></li>
+        <li><a href="/dashboard.html#weather">Weather</a></li>
+        <li><a href="/dashboard.html#activity">Activity</a></li>
+        <li><a href="/billing.html">Billing</a></li>
+        <li><a href="/settings.html">Settings</a></li>
+      </ul>
+      <button type="button" class="btn btn-ghost btn-sm" id="logout-btn">Log out</button>
+    </aside>
+    <div class="app-main">
+      <header class="topbar">
+        <h1 style="font-size:1.125rem">Farm overview</h1>
+        <div style="display:flex;align-items:center;gap:var(--space-2)">
+          <button type="button" class="theme-toggle" data-theme-toggle>◐</button>
+          <span class="topbar__user" id="user-label">—</span>
+        </div>
+      </header>
+      <div class="content">
+        <div class="card-grid card-grid--4" id="stats" style="margin-bottom:var(--space-3)"></div>
+
+        <section id="fields" style="margin-bottom:var(--space-4)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-2)">
+            <h2>Fields & crops</h2>
+            <button type="button" class="btn btn-primary btn-sm" id="add-field-btn">Add field</button>
+          </div>
+          <div class="card-grid card-grid--3" id="fields-grid"></div>
+        </section>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)">
+          <section class="card" id="weather">
+            <h2 style="margin-bottom:var(--space-2)">Weather</h2>
+            <div id="weather-panel">Loading…</div>
+          </section>
+          <section class="card" id="activity">
+            <h2 style="margin-bottom:var(--space-2)">Recent activity</h2>
+            <div id="activity-list">Loading…</div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="field-modal">
+    <div class="modal">
+      <h3 style="margin-bottom:var(--space-2)">Add field</h3>
+      <form id="field-form">
+        <div class="form-group"><label>Name</label><input class="form-control" name="name" required /></div>
+        <div class="form-group"><label>Area (ha)</label><input class="form-control" name="area_ha" type="number" step="0.1" required /></div>
+        <div class="form-group"><label>Crop</label><input class="form-control" name="crop" /></div>
+        <div class="modal__actions">
+          <button type="button" class="btn btn-ghost" id="modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

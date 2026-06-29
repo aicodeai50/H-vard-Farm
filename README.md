@@ -8,8 +8,9 @@ Nettside, Railway-deploy og dokumentasjon for Søndre Haugen gård (bryllup, sel
 
 | Mappe | Innhold |
 |-------|---------|
-| **`website/`** | Hele nettsiden (HTML, CSS, JS, bilder) — deploy denne til Railway |
-| **`docs/`** | Brief til webbyrå |
+| **`app/`** | **H-vard Farm** — agriculture management platform (landing, dashboard, billing, API) |
+| **`website/`** | Event venue marketing site for **farm.legal** |
+| **`docs/`** | Product docs, investigation, agency briefs |
 | **`DOMAIN.md`** | Domene farm.legal |
 
 ## GitHub — push til begge kontoer
@@ -30,12 +31,18 @@ Eller: `git push origin main` (pusher til begge når begge er innlogget i Git).
 
 ## Deploy (Railway)
 
-1. Push kode til GitHub (over)
-2. [railway.app](https://railway.app) → Deploy from GitHub → `aicodeai50/H-vard-Farm`
-3. **Root Directory:** `website`
-4. Custom domain: **farm.legal**
+**Two products, two services recommended:**
 
-Se `website/DEPLOY-RAILWAY.md` og `website/DEPLOY-DNS.md`.
+| Service | Start command | Domain |
+|---------|---------------|--------|
+| Agriculture app | `npm start` (runs `app/`) | `h-vard-farm-production.up.railway.app` |
+| Event venue site | `npm run start:website` | `farm.legal` |
+
+1. Push code to GitHub
+2. [railway.app](https://railway.app) → Deploy from GitHub → `aicodeai50/H-vard-Farm`
+3. See `app/README.md` and `website/DEPLOY-RAILWAY.md`
+
+Docs: `docs/INVESTIGATION.md`, `docs/PRODUCT-IDENTITY.md`
 
 ## Lokal forhåndsvisning
 

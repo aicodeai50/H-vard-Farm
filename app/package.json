@@ -1,0 +1,20 @@
+{
+  "name": "h-vard-farm-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "H-vard Farm — agriculture management platform",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}
