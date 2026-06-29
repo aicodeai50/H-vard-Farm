@@ -1,9 +1,8 @@
-/** SEO metadata first - canonical, robots, sitemap, Open Graph (farm.legal) */
+/** SEO metadata first — canonical, robots, sitemap, Open Graph (farm.legal) */
 (function () {
   const BASE = "https://farm.legal";
   const SITEMAP = BASE + "/sitemap.xml";
   const GOOGLE_VERIFY = "1iAOryKfYzwHdKX1Cw8k0UISIsqrgIic3TlDsAYub8M";
-  const SITE_NAME = "S\u00f8ndre Haugen G\u00e5rd";
 
   const path = window.location.pathname.replace(/\\/g, "/");
   const canonicalPath =
@@ -47,17 +46,23 @@
     return el;
   }
 
+  /* --- Metadata first (Search Console, crawlers) --- */
   setMeta("name", "google-site-verification", GOOGLE_VERIFY);
   setMeta("name", "robots", isNoindexPage ? "noindex, follow" : "index, follow");
   ensureLink("sitemap", SITEMAP, { type: "application/xml", title: "Sitemap" });
+
+  /* --- Canonical --- */
   ensureLink("canonical", canonical);
 
+  /* --- Open Graph / Twitter --- */
   setMeta("property", "og:url", canonical);
-  setMeta("property", "og:site_name", SITE_NAME);
-  setMeta("property", "og:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-restore");
+  setMeta("property", "og:site_name", "Søndre Haugen Gård");
+  setMeta("property", "og:type", "website");
+  setMeta("property", "og:locale", "nb_NO");
+  setMeta("property", "og:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-venue");
   setMeta("property", "og:image:width", "1920");
   setMeta("property", "og:image:height", "1080");
-  setMeta("name", "twitter:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-restore");
+  setMeta("name", "twitter:image", BASE + "/assets/images/property/farm-overview.jpg?v=20260627-venue");
   setMeta("name", "twitter:card", "summary_large_image");
 
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {
