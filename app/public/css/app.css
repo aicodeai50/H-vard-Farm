@@ -284,6 +284,28 @@ td.mono { font-family: var(--font-mono); font-size: 0.875rem; }
 }
 .modal__actions { display: flex; gap: var(--space-1); justify-content: flex-end; margin-top: var(--space-3); }
 
+.dashboard-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+@media (max-width: 768px) {
+  .dashboard-split { grid-template-columns: 1fr; }
+  .sidebar { position: fixed; transform: translateX(-100%); }
+}
+
+.activity-list { list-style: none; }
+.activity-list li {
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9375rem;
+}
+.activity-list li span { color: var(--text-muted); font-size: 0.8125rem; }
+
+textarea.form-control { resize: vertical; min-height: 4rem; }
+select.form-control { appearance: auto; }
+
 .theme-toggle { background: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 10px; cursor: pointer; color: var(--text-muted); font-size: 0.875rem; }
 
 @media (max-width: 768px) {

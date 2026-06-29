@@ -40,17 +40,49 @@
           <div class="card-grid card-grid--3" id="fields-grid"></div>
         </section>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)">
+        <section id="harvest" style="margin-bottom:var(--space-4)">
+          <h2 style="margin-bottom:var(--space-2)">Harvest planning</h2>
+          <div class="card-grid card-grid--3" id="harvest-grid"></div>
+        </section>
+
+        <div class="dashboard-split">
           <section class="card" id="weather">
             <h2 style="margin-bottom:var(--space-2)">Weather</h2>
             <div id="weather-panel">Loading…</div>
           </section>
           <section class="card" id="activity">
-            <h2 style="margin-bottom:var(--space-2)">Recent activity</h2>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-2)">
+              <h2>Recent activity</h2>
+              <button type="button" class="btn btn-outline btn-sm" id="log-activity-btn">Log activity</button>
+            </div>
             <div id="activity-list">Loading…</div>
           </section>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="activity-modal">
+    <div class="modal">
+      <h3 style="margin-bottom:var(--space-2)">Log activity</h3>
+      <form id="activity-form">
+        <div class="form-group">
+          <label>Type</label>
+          <select class="form-control" name="type" required>
+            <option value="seeding">Seeding</option>
+            <option value="fertilizing">Fertilizing</option>
+            <option value="inspection">Inspection</option>
+            <option value="harvest">Harvest</option>
+            <option value="note">Note</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Field (optional)</label><select class="form-control" name="field_id" id="activity-field-select"></select></div>
+        <div class="form-group"><label>Description</label><textarea class="form-control" name="description" rows="3"></textarea></div>
+        <div class="modal__actions">
+          <button type="button" class="btn btn-ghost" id="activity-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
     </div>
   </div>
 
@@ -61,6 +93,8 @@
         <div class="form-group"><label>Name</label><input class="form-control" name="name" required /></div>
         <div class="form-group"><label>Area (ha)</label><input class="form-control" name="area_ha" type="number" step="0.1" required /></div>
         <div class="form-group"><label>Crop</label><input class="form-control" name="crop" /></div>
+        <div class="form-group"><label>Planted</label><input class="form-control" name="planted_at" type="date" /></div>
+        <div class="form-group"><label>Harvest target</label><input class="form-control" name="harvest_at" type="date" /></div>
         <div class="modal__actions">
           <button type="button" class="btn btn-ghost" id="modal-cancel">Cancel</button>
           <button type="submit" class="btn btn-primary">Save</button>

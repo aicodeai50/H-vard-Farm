@@ -15,6 +15,15 @@ router.get("/me", requireUser, (req, res) => {
   res.json({ user });
 });
 
+router.patch("/me", requireUser, (req, res) => {
+  const { name } = req.body;
+  if (name != null) {
+    db.prepare("UPDATE users SET name = ? WHERE id = ?").run(String(name).trim(), req.session.userId);
+  }
+  const user = db.prepare("SELECT id, email, name, plan, balance_cents FROM users WHERE id = ?").get(req.session.userId);
+  res.json({ user });
+});
+
 router.get("/fields", requireUser, (req, res) => {
   const fields = db
     .prepare("SELECT * FROM fields WHERE user_id = ? ORDER BY name")

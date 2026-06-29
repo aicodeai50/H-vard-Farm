@@ -27,7 +27,7 @@ Or from repo root: `npm run start:app`
 ## PayPal
 
 Set `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, `PAYPAL_MODE=sandbox`.
-Webhook URL: `https://your-domain/api/paypal/webhook`
+Webhook URL: `https://your-domain/api/billing/webhook`
 
 ## ZENTRO-OWN-API
 
