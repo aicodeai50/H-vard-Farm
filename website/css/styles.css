@@ -2575,6 +2575,110 @@ input:focus, select:focus, textarea:focus {
   min-height: min(58vh, 36rem);
 }
 
+/* Stacked hero — lounge interior + barn exterior */
+.hero--stack {
+  display: block;
+  background: var(--green);
+  color: var(--cream);
+}
+
+.hero-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stack__panel {
+  position: relative;
+  overflow: hidden;
+  min-height: min(42vh, 22rem);
+}
+
+.hero-stack__panel--primary {
+  min-height: min(48vh, 26rem);
+}
+
+.hero-stack__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-stack__panel--primary .hero-stack__photo {
+  object-position: center 40%;
+}
+
+.hero-stack__panel--secondary .hero-stack__photo {
+  object-position: center 55%;
+}
+
+.hero-stack__overlay {
+  position: relative;
+  z-index: 2;
+  min-height: inherit;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 41, 35, 0.08) 0%,
+    rgba(20, 41, 35, 0.35) 45%,
+    rgba(20, 41, 35, 0.72) 100%
+  );
+}
+
+.hero-stack__overlay--cta {
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.75rem, 5vw, 2.5rem) 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 41, 35, 0.2) 0%,
+    rgba(20, 41, 35, 0.55) 100%
+  );
+}
+
+.hero--stack .hero-content--simple {
+  padding: clamp(2.5rem, 6vw, 3.5rem) 0 clamp(2rem, 5vw, 2.75rem);
+}
+
+.hero--stack .hero-content--simple h1 {
+  max-width: 14ch;
+}
+
+.btn-outline--wide {
+  min-width: min(100%, 20rem);
+  text-align: center;
+  justify-content: center;
+}
+
+.home-outdoor h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+  .hero-stack {
+    flex-direction: row;
+    min-height: min(72vh, 40rem);
+  }
+
+  .hero-stack__panel {
+    flex: 1;
+    min-height: min(72vh, 40rem);
+  }
+
+  .hero-stack__panel--primary,
+  .hero-stack__panel--secondary {
+    min-height: min(72vh, 40rem);
+  }
+
+  .hero--stack .hero-content--simple h1 {
+    max-width: 12ch;
+  }
+}
+
 .hero-content--animate {
   opacity: 1;
   transform: none;
