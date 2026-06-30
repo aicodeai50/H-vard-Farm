@@ -46,7 +46,7 @@ function renderFounderBlock() {
               <li>${t("founder.h1")}</li>
             </ul>
             <div class="hero-buttons" style="justify-content:flex-start">
-              <a href="https://havardpederse.netlify.app" class="btn btn-green" target="_blank" rel="noopener noreferrer">${t("founder.musicLabel")}</a>
+              <a href="https://havardpedersen.netlify.app" class="btn btn-green" target="_blank" rel="noopener noreferrer">${t("founder.musicLabel")}</a>
               <a href="om-garden.html" class="btn btn-outline">${t("founder.aboutFarm")}</a>
             </div>
           </div>

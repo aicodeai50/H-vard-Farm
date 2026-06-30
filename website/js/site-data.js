@@ -11,7 +11,7 @@
     founder: {
       name: "Håvard Pedersen",
       role: "Host & operations",
-      musicUrl: "https://havardpederse.netlify.app",
+      musicUrl: "https://havardpedersen.netlify.app",
       musicLabel: "Music · Håvard Pedersen",
       musicTagline: "Raw. Real. Live.",
       bioShort:

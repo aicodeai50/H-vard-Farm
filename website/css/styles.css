@@ -1419,6 +1419,24 @@ textarea { min-height: 140px; resize: vertical; }
   opacity: 0.75;
 }
 
+.footer-music {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(247, 243, 235, 0.12);
+  text-align: center;
+}
+
+.footer-music a {
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.footer-music a:hover {
+  color: var(--cream);
+}
+
 /* Page header (subpages) */
 .page-hero {
   padding: clamp(3.5rem, 9vw, 5rem) 0 clamp(2.75rem, 6vw, 3.75rem);

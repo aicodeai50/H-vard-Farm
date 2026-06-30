@@ -8,8 +8,9 @@ const SITE = {
   address: "Svinndallinna 190 · 1593 Svinndal · Våler, Østfold",
   domain: "farm.legal",
   url: "https://farm.legal",
+  musicUrl: "https://havardpedersen.netlify.app",
   calendly: "",
-  assetVer: "20260702-hero",
+  assetVer: "20260703-music",
 };
 
 function t(key, fallback) {
@@ -123,13 +124,19 @@ function footerHTML() {
       <a href="https://maps.google.com/maps?q=Svinndallinna+190,+1593+Svinndal" target="_blank" rel="noopener noreferrer">${t("footer.maps")}</a>
       <a href="kontakt.html">${t("common.enquire")}</a>
       <a href="personvern.html">${t("common.privacy")}</a>
+      <a href="${SITE.musicUrl}" target="_blank" rel="noopener noreferrer">${t("footer.musicLink")}</a>
     </div>
+  </div>
+  <div class="container footer-music">
+    <a href="${SITE.musicUrl}" target="_blank" rel="noopener noreferrer">${t("footer.musicLink")} →</a>
   </div>
   <div class="container footer-bottom">
     <span>&copy; ${year} Søndre Haugen ${t("brand.tag")} · ${SITE.domain}</span>
     <span>
       <a href="kontakt.html">${t("common.enquire")}</a>
-      · <a href="personvern.html">${t("common.privacy")}</a> · Svinndallinna 190, 1593 Svinndal
+      · <a href="personvern.html">${t("common.privacy")}</a>
+      · <a href="${SITE.musicUrl}" target="_blank" rel="noopener noreferrer">${t("footer.musicLink")}</a>
+      · Svinndallinna 190, 1593 Svinndal
     </span>
   </div>
 </footer>`;
